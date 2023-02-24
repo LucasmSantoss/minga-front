@@ -1,0 +1,85 @@
+.section-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    color: #ffffff;
+    margin-top: 5rem;
+  }
+  
+  .title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .subTitle {
+    
+    height: 56px;
+  
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  
+    color: #ffffff;
+  }
+  
+  .button {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 10px;
+    color: #ffffff;
+    border: none;
+    width: 240px;
+    height: 55px;
+  
+    /* gradient */
+  
+    background: linear-gradient(87.46deg, #4338ca 0%, #5e52f3 100%);
+    border-radius: 6px;
+  }
+  
+  .p-button {
+    width: 90px;
+    height: 23px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 95.19%;
+    /* identical to box height, or 23px */
+  
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: 750px) {
+    .section-main     {
+      width: 100%;
+    }
+    .title   {
+      width: 90%;
+      text-align: center;
+      font-size: 35px;
+    }
+    .subTitle  {
+      width: 90%;
+      text-align: center;
+    }
+
+  }
