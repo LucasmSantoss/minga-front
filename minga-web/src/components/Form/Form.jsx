@@ -24,7 +24,7 @@ export default function Form() {
         [confirmPasswordRef.current.name]: confirmPasswordRef.current.value
         
     }
-    console.log(data)
+    
     let url = 'http://localhost:8080/users'
     if(passwordRef.current.value === confirmPasswordRef.current.value){
     try {
@@ -68,8 +68,8 @@ export default function Form() {
             <legend>Confirm Password</legend>
             <input
               type="password"
-              name="confirm-password"
-              id="confirm-password"
+              name="confirm_password"
+              id="confirm_password"
               ref={confirmPasswordRef}
               required 
             />
