@@ -4,16 +4,19 @@ import Wellcome from "../Wellcome/Wellcome";
 import Image from "../Image/Image";
 import axios from "axios";
 
+
 export default function Form() {
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
   
+  const form = document.getElementById('formulario')
 
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+    
     let data = {
         [nameRef.current.name]: nameRef.current.value,
         [emailRef.current.name]: emailRef.current.value,
@@ -23,35 +26,42 @@ export default function Form() {
     }
     console.log(data)
     let url = 'http://localhost:8080/users'
+    if(passwordRef.current.value === confirmPasswordRef.current.value){
     try {
         await axios.post(
             url,    /* URL del endpoint para crear una categoria */
             data    /* objeto necesario para crear una categoria (tal cual lo armo en postman) */
         )
+        form.reset()
+        alert(mostrarAlerta)
     } catch(error) {
         console.log(error)
         console.log('ocurrio un error')
     }
+}else{
+  alert("Passwords do not match")
+}
+
 }
 
   return (
     <div className="register-fondo">
       <div className="register">
         <Wellcome />
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="form" id="formulario" onSubmit={handleSubmit}>
           <fieldset>
             <legend>Name</legend>
-            <input type="text" name="name" id="name" ref={nameRef} />
+            <input type="text" name="name" id="name" ref={nameRef} required />
             <Image src="./form-img/profile.svg" />
           </fieldset>
           <fieldset>
             <legend>Email</legend>
-            <input type="email" name="mail" id="mail" ref={emailRef} />
+            <input type="email" name="mail" id="mail" ref={emailRef}  required />
             <Image src="./form-img/@.svg" />
           </fieldset>
           <fieldset>
             <legend>Password</legend>
-            <input type="password" name="password" id="password" ref={passwordRef} />
+            <input type="password" name="password" id="password" ref={passwordRef}  required />
             <Image src="./form-img/lock1.svg" />
           </fieldset>
           <fieldset>
@@ -61,6 +71,7 @@ export default function Form() {
               name="confirm-password"
               id="confirm-password"
               ref={confirmPasswordRef}
+              required 
             />
             <Image src="./form-img/lock1.svg" />
           </fieldset>

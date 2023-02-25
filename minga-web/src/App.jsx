@@ -9,7 +9,7 @@ function App() {
 	
 	
 	return (
-		<body>
+		<div>
 			<div className='fondo'>
 			<Header/>
 			<SectionMain/>
@@ -23,7 +23,7 @@ function App() {
 			<img className="img-form" src="./imgs/formImg.png" alt="Img-Pagina-Form" />
 			</div>
 		</div>
-		</body>
+		</div>
 		
 
 		

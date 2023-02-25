@@ -17,10 +17,11 @@
 .form{
     display: flex;
     flex-direction: column;
+    margin-top: -200px;
     gap: 22px;
     margin: 0 136px;
     margin-bottom: 183px;
-    padding-top: 30px;
+    
 }
 
 .form fieldset {
@@ -59,6 +60,7 @@
 
 .form .notification-check{
     border: none;
+    background-color: white;
     display: flex;
     gap: 4px;
     align-items: center;
