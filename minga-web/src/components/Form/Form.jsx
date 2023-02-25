@@ -33,7 +33,7 @@ export default function Form() {
             data    /* objeto necesario para crear una categoria (tal cual lo armo en postman) */
         )
         form.reset()
-        alert(mostrarAlerta)
+        alert("Successful registration")
     } catch(error) {
         console.log(error)
         console.log('ocurrio un error')
