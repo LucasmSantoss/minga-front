@@ -18,7 +18,8 @@ export default function Form() {
         [nameRef.current.name]: nameRef.current.value,
         [emailRef.current.name]: emailRef.current.value,
         [passwordRef.current.name]: passwordRef.current.value,
-        [confirmPasswordRef.current.name]: confirmPasswordRef.current.value,
+        [confirmPasswordRef.current.name]: confirmPasswordRef.current.value
+        
     }
     console.log(data)
     let url = 'http://localhost:8080/users'
@@ -45,7 +46,7 @@ export default function Form() {
           </fieldset>
           <fieldset>
             <legend>Email</legend>
-            <input type="email" name="email" id="email" ref={emailRef} />
+            <input type="email" name="mail" id="mail" ref={emailRef} />
             <Image src="./form-img/@.svg" />
           </fieldset>
           <fieldset>
