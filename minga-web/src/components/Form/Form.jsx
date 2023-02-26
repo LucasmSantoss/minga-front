@@ -33,8 +33,9 @@ export default function Form() {
             url,    /* URL del endpoint para crear una categoria */
             data    /* objeto necesario para crear una categoria (tal cual lo armo en postman) */
         )
-        form.reset()
+        
         alert("Successful registration")
+        form.reset()
     } catch(error) {
         console.log(error)
         console.log('ocurrio un error')

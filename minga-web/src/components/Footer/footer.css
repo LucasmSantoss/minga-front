@@ -1,0 +1,133 @@
+.Subscribe {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+h2 {
+  height: 48px;
+  left: 19.86%;
+  right: 69.1%;
+  top: calc(50% - 48px / 2 + 4px);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 48px;
+  color: #222222;
+}
+
+fieldset {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-items: center;
+} 
+
+#buttonSubscribe {
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 15px 34px;
+gap: 15px;
+
+
+
+/* gradient */
+
+background: linear-gradient(87.46deg, #4338CA 0%, #5E52F3 100%);
+border-radius: 4px;
+}
+
+#buttonSubscribe p {
+    font-family: 'Roboto';
+    font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+}
+
+#ancorHome-Comics {
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+margin: 1rem;
+text-decoration: none;
+
+
+color: #222222;
+}
+
+.divSocials {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem ;
+}
+
+#buttonDonate {
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 18px 62px;
+gap: 10px;
+
+width: 221px;
+height: 43px;
+
+/* gradient */
+
+background: linear-gradient(87.46deg, #4338CA 0%, #5E52F3 100%);
+border-radius: 30px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+#buttonDonate p{
+    
+width: 59px;
+height: 15px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 95.19%;
+/* or 15px */
+
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+}
+
+
+.lastPartFooter {
+  display: flex;
+  justify-content: space-around;
+}
+
+#logo {
+  width: 200px;
+  height: 70px;
+}
+
+#ancorSocials {
+  width: 24px;
+  height: 24px;
+}
