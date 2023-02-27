@@ -11,7 +11,7 @@ export default function Form() {
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
   
-  const form = document.getElementById('formulario')
+  
 
   
   const handleSubmit = async (event) => {
@@ -35,7 +35,7 @@ export default function Form() {
         )
         
         alert("Successful registration")
-        form.reset()
+        event.target.reset()
     } catch(error) {
         console.log(error)
         console.log('ocurrio un error')
@@ -43,14 +43,13 @@ export default function Form() {
 }else{
   alert("Passwords do not match")
 }
-
 }
 
   return (
     <div className="register-fondo">
       <div className="register">
         <Wellcome />
-        <form className="form" id="formulario" onSubmit={handleSubmit}>
+        <form className="form"  onSubmit={handleSubmit}>
           <fieldset>
             <legend>Name</legend>
             <input type="text" name="name" id="name" ref={nameRef} required />
