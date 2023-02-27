@@ -99,6 +99,7 @@ border-radius: 10px;
     box-shadow: 5px 5px rgb(244, 179, 51);
     text-decoration: none;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .form .sign-in-google{
@@ -115,6 +116,7 @@ border-radius: 10px;
     text-decoration: none;
     margin: 0 auto;
 }
+
 
 .form .sign-in-google span{
     opacity: 0.5;
