@@ -10,23 +10,30 @@
     position: relative;
     text-decoration: none;
     display: none;
-    text-align: center;
+    text-align: start;
    
 }
 
-.nav_items span {
+.divAncor {
+    margin-top: 10px;
+    width: 20px;
     background-color: #fff;
-    padding: 10px 8rem;
+    margin-left: 1.4rem;
     border-radius: 10px;
+    
+    width: 90%;
+}
+
+#ancor {
     color: blue;
-    width: 100%;
+    margin-left: 0.4rem;
 }
 
 .nav_items{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
 }
 
 
@@ -44,17 +51,23 @@ nav{
 
 .porfile{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 1rem;
     gap: 1rem;
+}
+
+.porfile img{
+    margin-left: 1rem;
 }
 .porfile-text{
     text-align:left;
     color: #fff;
+    margin-top: 0.5rem;
 }
 
 .porfile-text p{
-    font-family: 'Poppins';
+    font-family: 'Roboto'; 
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -79,10 +92,12 @@ nav{
 }
 .nav_items.open{
     transform: translateX(0) !important
+    
 }
 
 .nav_items a{
     display: flex;
+    margin-left: 1.7rem;
 }
 
 .nav_toggle{
@@ -182,6 +197,8 @@ background: #fff;
 
     .nav_items a{
         display: flex;
+        align-items: flex-start;
+        
     }
     .porfile-text p{
         font-size: 14px;
@@ -196,6 +213,7 @@ background: #fff;
         width: 30px;
         height: 4px;
         background: white;
+        text-align: start;
         margin-bottom: 5px;
         border-radius: 2px;             
         transform-origin: 5px 0px;
