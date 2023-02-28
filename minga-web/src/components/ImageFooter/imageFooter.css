@@ -1,0 +1,9 @@
+.fondo{
+    background-image: url(../../../public/imgs/footer-fondo.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: 40vh;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
