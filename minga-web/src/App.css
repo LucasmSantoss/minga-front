@@ -3,4 +3,62 @@
   padding: 0;
   margin: 0;
 }
+.fondo-manga {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../public/imgs/fondo-manga.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 40%;
+}
+.fondo-manga h1 {
+  width: 230px;
+  height: 61px;
+  margin-bottom: 3rem;
+  margin-top: 8rem;
 
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 95.19%;
+  color: #FFFFFF;
+}
+
+.div-input input {
+  display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px 25px;
+gap: 10px;
+padding: 15px 15px 15px 35px;
+
+width: 900px;
+height: 57px;
+
+
+/* bkg */
+
+background: #EBEBEB;
+border-radius: 10px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 95.19%;
+color: #999999;
+/* identical to box height, or 23px */
+
+display: flex;
+align-items: center;
+}
+.img {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  bottom: 2.8rem; left: 0.3rem;
+}
