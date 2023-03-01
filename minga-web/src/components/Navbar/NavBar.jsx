@@ -14,7 +14,7 @@ return (
     <div className={`nav_items ${isOpen && "open"}`}>
       <div className='porfile'>
       
-        <img src="./imgs/killua.png" alt="killua" />
+        <img className='img-navbar' src="./image/Rectangle 10.png" alt="" />
 
         <div className='porfile-text'>
         <p>Lucas Ezequiel Silva</p>
@@ -22,11 +22,11 @@ return (
         </div>
   
       </div>
-      
-      <div className='divAncor'><a  id="ancor"href="#">Read</a></div>
-        <a  href="#">Register</a>
-        <a  href="#">Login</a>
-        <a  href="#">Logout</a>
+
+      <div className='divAncor'><a  id="ancor"href="#">Read</a></div>      
+        <a href="#">Register</a>
+        <a href="#">Login</a>
+        <a href="#">Logout</a>
     </div>
     <div className={`nav_toggle  ${isOpen && "open"}`} onClick={()=> setIsOpen(!isOpen)}>
       <span></span>
