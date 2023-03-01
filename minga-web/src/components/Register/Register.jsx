@@ -1,12 +1,16 @@
 import React from 'react';
 import Form from '../Form/Form'
+import Header from '../Header/Header';
 import './register.css'
 
-function Register(props) {
+function Register() {
     return (
         <div>
+			<Header/>
             <div className='conteiner'>
+			
 			<div className='conteiner-form'>
+			
 			<Form/>
 			</div>	
 			<div className='conteiner-img'>

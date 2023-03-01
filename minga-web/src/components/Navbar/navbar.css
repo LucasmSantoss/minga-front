@@ -110,7 +110,7 @@ nav{
 .nav_toggle span{
     width: 30px;
     height: 4px;
-    background: white;
+    background: blue;
     margin-bottom: 5px;
     border-radius: 2px;             
     transform-origin: 5px 0px;
@@ -127,7 +127,7 @@ nav{
     transform: rotate(45deg) translate(0px, 0px);
     margin-top: -8px;
     margin-left: 230px;
-    background: #fff;
+    background: blue;
     z-index: 10000;
     position: fixed;
 }
