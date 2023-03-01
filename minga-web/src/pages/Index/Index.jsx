@@ -1,6 +1,6 @@
 import React from 'react';
-import Hero from '/pages';
-import Register from '../../components/Register/Register'
+import Hero from '../Hero/Hero.jsx';
+import Register from '../Register/Register.jsx';
 
 function Index(props) {
     return (

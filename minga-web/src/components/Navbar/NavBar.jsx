@@ -27,6 +27,7 @@ return (
         <a  href="#">Register</a>
         <a  href="#">Login</a>
         <a  href="#">Logout</a>
+        <a href="#">Create chapter</a>
     </div>
     <div className={`nav_toggle  ${isOpen && "open"}`} onClick={()=> setIsOpen(!isOpen)}>
       <span></span>
