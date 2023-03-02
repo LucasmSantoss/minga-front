@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from '../Form/Form'
+import Form from '../../components/Form/Form.jsx'
 import './register.css'
 
 function Register(props) {

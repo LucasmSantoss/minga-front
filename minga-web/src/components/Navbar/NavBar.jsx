@@ -25,9 +25,9 @@ return (
       
       <div className='divAncor'><a  id="ancor"href="#">Read</a></div>
         <a  href="#">Register</a>
-        <a  href="#">Login</a>
-        <a  href="#">Logout</a>
-        <a href="#">Create chapter</a>
+        <a  href="#">Log in</a>
+        <a  href="#">Log out</a>
+        <a href="#">Create Chapter</a>
     </div>
     <div className={`nav_toggle  ${isOpen && "open"}`} onClick={()=> setIsOpen(!isOpen)}>
       <span></span>
