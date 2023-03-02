@@ -2,11 +2,9 @@
     padding: 12px;
     gap: 10px;
 
-
     width: 57px;
     height: 35px;
    
-
     /* parrafo */
 
     background: #999999;
@@ -116,4 +114,29 @@
     line-height: 95.19%;
 
     color: #8883F0;
+}
+
+.read {
+    padding: 12px;
+    gap: 10px;
+
+
+    width: 69px;
+    height: 35px;
+   
+
+    /* parrafo */
+
+    background: #D1FBF0;
+    border: #D1FBF0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 50px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 95.19%;
+
+    color: #00BA88;
 }

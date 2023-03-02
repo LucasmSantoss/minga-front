@@ -56,9 +56,38 @@ color: #999999;
 display: flex;
 align-items: center;
 }
+.container-categories {
+  width: 90%;
+  min-height: 30vh;
+  margin-left: 4rem;
+  margin-top: -3rem;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+}
 .img {
   width: 2rem;
   height: 2rem;
   position: relative;
   bottom: 2.8rem; left: 0.3rem;
+}
+.div-buttons {
+  height: 5rem;
+  padding-left: 8rem;
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+}
+.div-cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 3rem;
+}
+
+@media (max-width: 500px) {
+  .fondo-manga {
+    min-height: 15vh;
+    background-position: 35% 30%;
+  }
 }
