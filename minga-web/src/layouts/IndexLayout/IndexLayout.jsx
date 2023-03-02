@@ -1,10 +1,12 @@
 import React from 'react';
-import Index  from '../../components/Index/Index'
+import Index from '../../pages/Index/Index'
+import { Outlet } from 'react-router-dom';
 
 function IndexLayout(props) {
     return (
         <div>
-            <Index/>
+            <Index />
+            <Outlet />
         </div>
     );
 }
