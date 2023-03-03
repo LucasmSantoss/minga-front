@@ -1,0 +1,36 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: 60vh;
+    width: 70vw;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.form-container img {
+    width: 30%;
+}
+
+.form-container input {
+    width: 90%;
+    height: 2em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: none;
+    border-bottom: solid 1px black;
+}
+
+#send {
+    height: 3em;
+    width: 90%;
+    border-radius: 8rem;
+    border-style: none;
+    background-color: #4338CA;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
