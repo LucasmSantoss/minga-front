@@ -1,20 +1,14 @@
 import React from 'react';
 import NavBar from '../../components/Navbar/NavBar'
 import Footer from "../../components/Footer/Footer.jsx"
-import NotFound from '../../pages/NotFound/NotFound';
+import { Outlet } from 'react-router-dom';
 
 function MainLayout() {
     return (
-        <div>
-            <header>
-                <NavBar/>
-            </header>
-            <main className='mainlayout'>
-                <NotFound/>
-            </main>
-            <footer>
-                <Footer/>
-            </footer>
+        <div >         
+            <NavBar/>
+            <Outlet/> 
+            <Footer/>
         </div>
     );
 }

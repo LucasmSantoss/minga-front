@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './navbar.css'
-
+import { Link as Anchor } from 'react-router-dom'
 
 const Navbar = ()=>{
 
@@ -23,11 +23,11 @@ return (
   
       </div>
       
-      <div className='divAncor'><a  id="ancor"href="#">Read</a></div>
-        <a  href="#">Register</a>
+      <div className='divAncor'><Anchor to="/" id="ancor">Read</Anchor></div>
+        <Anchor to="/register"> Register </Anchor>
         <a  href="#">Log in</a>
         <a  href="#">Log out</a>
-        <a href="#">Create Chapter</a>
+        <Anchor to="/newchapter">Create Chapter</Anchor>
     </div>
     <div className={`nav_toggle  ${isOpen && "open"}`} onClick={()=> setIsOpen(!isOpen)}>
       <span></span>

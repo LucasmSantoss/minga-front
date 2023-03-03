@@ -1,11 +1,13 @@
 import React from 'react'
-import NavBar from "../../components/Navbar/NavBar.jsx"
-
+import NewChapter from '../../components/NewChapter/NewChapter.jsx'
+import "./chapterForm.css"
 export default function ChapterForm() {
   return (
-    <div>
-    <NavBar/>
-    
+    <div className='divchapter'>
+      <div className='divh2'>
+        <h2 className='h2chapter'>New Chapter</h2>
+      </div>
+      <NewChapter/>
     
     </div>
   )
