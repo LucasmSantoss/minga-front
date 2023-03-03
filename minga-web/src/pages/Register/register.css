@@ -16,7 +16,7 @@
   width: 50%;
   justify-content: center;
   align-items: center;
-  margin-bottom: 120px;
+  margin-bottom: 250px;
 }
 
 .conteiner-img {
@@ -39,10 +39,12 @@
       width: 100%;
       display: flex;  
       justify-content: center;
+      
     }
     .conteiner-img {
       display: none;
     }
+    
   }
   
   @media (max-width:720px) {

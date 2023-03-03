@@ -34,6 +34,7 @@
   margin: auto;
   width: 553.42px;
   height: 106px;
+  margin-top: 50px;
 
   font-family: "Roboto";
   font-style: normal;
@@ -47,9 +48,12 @@
 }
 
 .igna {
-  width: 119.63px;
-  height: 19px;
-  margin: auto;
+  width: 100%;
+      display: flex;
+      margin-left: 190px;
+      align-items: center;
+   justify-content: flex-start;
+    margin-top: 20px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -62,6 +66,16 @@
   color: #ffffff;
 }
 
+.line {
+
+
+
+
+  display: flex;
+  
+
+
+}
 .form-conteiner {
   display: flex;
   justify-content: center;
@@ -73,7 +87,7 @@
   height: 1024px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1300px) {
   .conteiner {
     width: 100%;
     display: flex;
@@ -82,7 +96,13 @@
   .conteiner-img {
     display: none;
   }
+  .conteiner-form {
+    display: grid;
+    justify-content: end;
+
+  }
 }
+
 
 @media (max-width: 720px) {
   .conteiner {

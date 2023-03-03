@@ -9,11 +9,7 @@ export default function Form() {
   
   const emailRef = useRef();
   const passwordRef = useRef();
-  
-  
-  
-
-  
+ 
   const handleSubmit = async (event) => {
     event.preventDefault();
     
@@ -21,12 +17,9 @@ export default function Form() {
       
         [emailRef.current.name]: emailRef.current.value,
         [passwordRef.current.name]: passwordRef.current.value,
-        
-        
     }
     
-    
-    let url = 'http://localhost:8080/users'
+    let url = 'http://localhost:8080/auth/signin'
     
     try {
         await axios.post(

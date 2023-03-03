@@ -7,7 +7,8 @@
     align-self: center;
     justify-content: center;
     height: 100vh;
-    margin-top: 10%;
+    
+
 }
 
 .register>div{
@@ -20,8 +21,6 @@
     margin-top: -200px;
     gap: 22px;
     margin: 0 136px;
-    margin-bottom: 220px;
-    
 }
 
 .form fieldset {
@@ -147,6 +146,7 @@ border-radius: 10px;
 	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     gap: 4rem;
     width: 100%;
+    margin-bottom: 500px;
 }
 
 .img-register img{
@@ -182,14 +182,21 @@ border-radius: 10px;
     line-height: 39px;
 }
 
+swal2-title {
+    margin: 0 auto !important;
+}
+.swal2-styled.swal2-confirm {
+    background: linear-gradient(87.46deg, #4338CA 0%, #5E52F3 100%)!important;
+}
+
 
 
 
 @media (max-width: 1024px){
     .register {
-        
         margin-top: 30%;
     }
+
     .form fieldset {
         width: 100%;
        
@@ -197,13 +204,16 @@ border-radius: 10px;
     .form .sign-up{
         width: 100%;
     }
+
+    
     
     .form .sign-in-google{
     width: 270px;
 }
-.register-fondo{
-    padding-top: 100px;
-}
+    .register-fondo{
+   
+    height: 60vh;
+    }
  }
 
 @media (max-width: 660px){

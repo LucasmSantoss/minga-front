@@ -212,7 +212,7 @@ background: #fff;
     .nav_toggle span{
         width: 30px;
         height: 4px;
-        background: white;
+        background: blue;
         text-align: start;
         margin-bottom: 5px;
         border-radius: 2px;             

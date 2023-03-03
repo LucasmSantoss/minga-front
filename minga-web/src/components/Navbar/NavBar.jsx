@@ -23,10 +23,10 @@ return (
   
       </div>
       
-      <div className='divAncor'><a  id="ancor"href="#">Read</a></div>
-        <a  href="#">Register</a>
-        <a  href="#">Login</a>
-        <a  href="#">Logout</a>
+      <div className='divAncor'><a  id="ancor"href="/">Home</a></div>
+        <a  href="/signup">Register</a>
+        <a  href="signin">Login</a>
+        <a  href="/logout">Logout</a>
     </div>
     <div className={`nav_toggle  ${isOpen && "open"}`} onClick={()=> setIsOpen(!isOpen)}>
       <span></span>

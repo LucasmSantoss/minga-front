@@ -1,5 +1,9 @@
 .container {
     margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ 
 }
 
 
@@ -37,8 +41,8 @@
 
 .container1 {
   display: flex;
-  width: 570px;
-  height: 86px;
+  width: 100%;
+  
   border: 1px solid #e5e5e5;
   border-radius: 15px;
   
@@ -50,8 +54,8 @@
 
 .container2 {
   display: flex;
-  width: 570px;
-  height: 86px;
+  width: 100%;
+  
   border: 1px solid blue;
   border-radius: 15px;
   justify-content: space-evenly;
@@ -70,4 +74,14 @@ input {
   height: 25px;
   border-radius: 100%;
   background:  blue;
+}
+
+
+@media (max-width: 1200px){
+  .container1 .container2 img {
+    width: 50px;
+  }
+  .container2 h2{
+   font-size: small;
+  }
 }
