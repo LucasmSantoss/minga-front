@@ -2,8 +2,7 @@ import React from 'react'
 import ButtonCategory from '../ButtonCategory/ButtonCategory'
 import './cards.css'
 
-export default function 
-() {
+export default function () {
   return (
     <div className='div-card'>
         <div className='div-text'>

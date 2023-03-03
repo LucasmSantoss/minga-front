@@ -16,13 +16,22 @@ function App() {
 		<div>
 			<div className='fondo-manga'>
 				<Header />
-				<h1>Manga</h1>
+				<h1>Mangas</h1>
 				<div className='div-input'>
 					<input type="search" placeholder="Find your manga here"/>
 					<img className='img' src="./form-img/search.png" alt="" />
 				</div>
 			</div>
 			<div className='container-categories'>
+				<div className='explore'>
+					<h3>Explore</h3>
+					<div className='img-category'>
+						<img src="./imgs/adventurers.png" alt="category-adventurers" />
+						<img src="./imgs/nostalgic.png" alt="category-nostalgic" />
+						<img src="./imgs/popular.png" alt="category-popular" />
+					</div>
+
+				</div>
 				<div className='div-buttons'>
 						<ButtonCategory style='todos' text='Todos'/>
 						<ButtonCategory style='shonen' text='Shōnen' />
