@@ -8,7 +8,7 @@ export default function NotFound() {
     return (
         <div className='not-main'>
             <h3>PAGINA NO ENCONTRADA!</h3>
-            <Anchor to='/nueva-categoria'>REGISTRO CATEGORIA</Anchor>
+            <Anchor to='/home'>REGISTRO CATEGORIA</Anchor>
         </div>
     )
 }

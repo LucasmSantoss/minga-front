@@ -3,7 +3,7 @@ import "./formLg.css";
 import Wellcome2 from "../Wellcome2/Wellcome2";
 import Image from "../Image/Image";
 import axios from "axios";
-
+import Swal from 'sweetalert2'
 
 export default function Form() {
   
@@ -26,12 +26,34 @@ export default function Form() {
             url,    /* URL del endpoint para crear una categoria */
             data    /* objeto necesario para crear una categoria (tal cual lo armo en postman) */
         )
+        .then(res => {
+          localStorage.setItem('token', res.data.token)
+          localStorage.setItem('user', JSON.stringify({
+            name: res.data.user.name,
+            mail: res.data.user.mail,
+            photo: res.data.user.photo,
+          }))
+          setInterval(() => window.location.href='/', 1000)
+        })
         
-        alert("Successful registration")
+        Swal.fire({
+          title: 'Loggin succe',
+          showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+          },
+          hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+          }
+        })
         event.target.reset()
     } catch(error) {
         console.log(error)
-        console.log('ocurrio un error')
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Wrong Credentials! ',
+          
+        })
     }
 
 }

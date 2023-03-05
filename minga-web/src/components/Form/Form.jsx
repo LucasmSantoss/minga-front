@@ -39,8 +39,9 @@ export default function Form() {
             url,    /* URL del endpoint para crear una categoria */
             data    /* objeto necesario para crear una categoria (tal cual lo armo en postman) */
         )
+       
         Swal.fire({
-          title: 'Custom animation with Animate.css',
+          title: 'User successfully created',
           showClass: {
             popup: 'animate__animated animate__fadeInDown'
           },
@@ -55,8 +56,8 @@ export default function Form() {
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
-          text: 'Something went wrong!',
-          footer: '<a href="">Why do I have this issue?</a>'
+          text: 'Something went wrong Check that inputs are corrects! ',
+          
         })
         console.log('ocurrio un error')
     }
@@ -107,15 +108,19 @@ export default function Form() {
             />
             <label htmlFor="email-notification">Send notification to my email</label>
           </fieldset>
+          <div className="buttons-container">
           <div>
             <button type="submit" className="sign-up">
               Sign up
             </button>
           </div>
+          <div>
           <a href="#" className="sign-in-google">
             <Image src="./form-img/Google.svg" />
             <span>Sign in with Google</span>
           </a>
+          </div>
+          </div>
           <p>
             Already have an account?{" "}
             <a href="#" className="link">

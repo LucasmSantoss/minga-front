@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 
 
- export default function App() {
+export default function App() {
     useEffect(() => {
         let url = `http://localhost:8080/auth/token`
         let token = localStorage.getItem('token')
