@@ -1,8 +1,8 @@
 import React from 'react';
 import Hero from '../Hero/Hero';
-import Register from '../Register/Register'
+import Register from '../../components/Register/Register'
 
-function Index(props) {
+function Index() {
     return (
         <div>
             <Hero/>

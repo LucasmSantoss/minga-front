@@ -1,5 +1,5 @@
 import React from 'react';
-import Index  from '../../components/Index/Index'
+import Index  from '../../Pages/Index/Index'
 
 function IndexLayout(props) {
     return (

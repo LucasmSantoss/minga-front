@@ -1,7 +1,7 @@
 import React from 'react';
-import NavBar from '../Navbar/NavBar.jsx';
-import SectionMain from '../Section-main/SectionMain';
-import SectionDown from '../Section-Down/SectionDown';
+import NavBar from '../../components/NavBar/NavBar';
+import SectionMain from '../../components/Section-main/SectionMain';
+import SectionDown from '../../components/Section-Down/SectionDown';
 import './hero.css'
 
 
