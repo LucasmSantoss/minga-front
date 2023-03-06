@@ -30,7 +30,6 @@
 }
 
 .description {
-  
   margin: auto;
   width: 553.42px;
   height: 106px;
@@ -42,24 +41,21 @@
   font-size: 24px;
   line-height: 36px;
 
- 
-
   color: #ffffff;
 }
 
 .igna {
   width: 100%;
-      display: flex;
-      margin-left: 190px;
-      align-items: center;
-   justify-content: flex-start;
-    margin-top: 20px;
+  display: flex;
+  margin-left: 190px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
- 
 
   letter-spacing: 0.02em;
 
@@ -67,14 +63,7 @@
 }
 
 .line {
-
-
-
-
   display: flex;
-  
-
-
 }
 .form-conteiner {
   display: flex;
@@ -93,13 +82,16 @@
     display: flex;
     justify-content: center;
   }
-  .conteiner-img {
-    display: none;
-  }
+  
   .conteiner-form {
     display: grid;
     justify-content: end;
+  }
+}
 
+@media (max-width: 900px) {
+  .conteiner-img {
+    display: none;
   }
 }
 

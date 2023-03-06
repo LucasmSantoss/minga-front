@@ -36,15 +36,16 @@
 
 
 
-@media (max-width: 960px){
+@media (max-width: 1200px){
     .conteiner {
       width: 100%;
       display: flex;  
       justify-content: center;
       
     }
-    .conteiner-img {
-      display: none;
+    
+    .conteiner-form{
+      margin-top: 100px;
     }
     
   }
@@ -56,10 +57,12 @@
       
       display: flex;  
       justify-content: center;
-      margin-top: -150px;
+      margin-bottom: 400px;
       
     }
     .conteiner-form {
       width: 30rem;
+      margin-top: 120px;
+
     }
   }

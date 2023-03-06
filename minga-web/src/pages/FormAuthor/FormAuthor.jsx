@@ -1,37 +1,4 @@
-// import React from 'react';
 
-// import Author from '../../components/Author/Author';
-// import './formAuthor.css'
-
-// function FormAuthor() {
-//     return (
-//         <div>
-        
-//             <div className='conteiner'>
-// 			<div className='conteiner-form'>
-//             <Author />
-// 			</div>	
-// 			<div className='conteiner-img'>
-//                 <div>
-//                 <p className='description'>
-//                 Minga.com is the best place to find manga reviews. We’ve been super impress by the quality of applicants.   
-//                 </p>
-               
-//         </div>  
-         
-//         <p className='igna'>
-//         <img  id="line" src="./imgs/line.png" alt="line" />
-//                  Ignacio Borraz
-//                 </p>    
-// 			</div>
-            
-//             </div>
-           
-//         </div>
-//     );
-// }
-
-// export default FormAuthor;
 
 import React from 'react'
 import './formAuthor.css'

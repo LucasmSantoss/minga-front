@@ -188,7 +188,7 @@ border-radius: 10px;
 @media (max-width: 1024px){
     .register {
         
-        margin-top: 30%;
+        margin-top: -5%;
     }
     .form fieldset {
         width: 100%;
@@ -210,7 +210,11 @@ border-radius: 10px;
 }
  }
 
-@media (max-width: 660px){
+@media (max-width: 720px){
+    .register {
+        
+        margin-top: -14%;
+    }
 
     .form fieldset {
         width: 100%;

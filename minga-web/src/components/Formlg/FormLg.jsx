@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./formLg.css";
-import Wellcome2 from "../Wellcome2/Wellcome2";
+import Wellcome from "../Wellcome/Wellcome";
 import Image from "../Image/Image";
 import axios from "axios";
 import Swal from 'sweetalert2'
@@ -37,7 +37,7 @@ export default function Form() {
         })
         
         Swal.fire({
-          title: 'Loggin succe',
+          title: 'Loggin success',
           showClass: {
             popup: 'animate__animated animate__fadeInDown'
           },
@@ -61,7 +61,7 @@ export default function Form() {
   return (
     <div className="register-fondo">
       <div className="register">
-        <Wellcome2 />
+        <Wellcome />
         <form className="form"  onSubmit={handleSubmit}>
           <fieldset>
             <legend>Email</legend>
@@ -73,16 +73,19 @@ export default function Form() {
             <input type="password" name="password" id="password" ref={passwordRef}  required />
             <Image src="./form-img/lock1.svg" />
           </fieldset>
-          
+          <div className="buttons-container">
           <div>
             <button type="submit" className="sign-up">
               Sign up
             </button>
           </div>
+          <div>
           <a href="#" className="sign-in-google">
             <Image src="./form-img/Google.svg" />
             <span>Sign in with Google</span>
           </a>
+          </div>
+          </div>
           <p>
             Already have an account?{" "}
             <a href="#" className="link">
