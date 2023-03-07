@@ -22,7 +22,7 @@ export default function Form() {
     }
     
     
-    let url = 'http://localhost:8080/auth/signup'
+    let url = 'http://localhost:8080/api/signup'
     console.log(data)
 
     if (data.name.length < 3) {

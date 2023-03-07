@@ -14,7 +14,7 @@ export default function NavHeader({handleRender}) {
         localStorage.setItem('user',JSON.stringify({
             name: "",
             mail: "",
-            photo: ""
+            photo: "",
         }))
     }
 
@@ -24,7 +24,7 @@ export default function NavHeader({handleRender}) {
     let photo = user.photo
 
     useEffect(() => {
-        let url = `http://localhost:8080/auth/token`
+        let url = `http://localhost:8080/api/token`
         if (token) {
             let headers = {headers:{'Authorization':`Bearer ${token}`}}
             axios.post(url,null,headers)

@@ -19,7 +19,7 @@ export default function Form() {
         [passwordRef.current.name]: passwordRef.current.value,
     }
     
-    let url = 'http://localhost:8080/auth/signin'
+    let url = 'http://localhost:8080/api/signin'
     
     try {
         await axios.post(
@@ -35,7 +35,6 @@ export default function Form() {
           }))
           setInterval(() => window.location.href='/', 1000)
         })
-        
         Swal.fire({
           title: 'Loggin success',
           showClass: {
@@ -98,7 +97,6 @@ export default function Form() {
               home page
             </a>
           </p>
-        
         </form>
       </div>
     </div>
