@@ -17,10 +17,10 @@ export const router = createBrowserRouter([
         {path: "/hero", element: <Hero/>},
         {path: "/register", element: <Register/>},
     ]   },
-    { path: "/newchapter",
+    { path: "/chapters",
       element: <MainLayout/>,
       children: [
-        {path: "/newchapter", element: <ChapterForm/>}
+        {path: "/chapters", element: <ChapterForm/>}
     ]    },
 
     {path: "/*", element: <NotFound/>},

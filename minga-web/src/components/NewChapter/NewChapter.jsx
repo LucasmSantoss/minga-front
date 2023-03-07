@@ -1,7 +1,7 @@
-import React, { useRef } from 'react'
-import "./newchapter.css"
-import axios from "axios"
+import React, { useRef } from 'react';
+import "./newchapter.css";
 import Swal from 'sweetalert2';
+import axios from "axios";
 
 export default function NewChapter() {
  const titleRef = useRef();
@@ -18,7 +18,7 @@ export default function NewChapter() {
   
 }
 
-let url = 'http://localhost:8080/chapters'
+let url = 'http://localhost:8080/api/chapters'
 {
   try {
     await axios.post(

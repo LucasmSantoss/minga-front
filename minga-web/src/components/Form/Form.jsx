@@ -11,9 +11,6 @@ export default function Form() {
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
   
-  
-
-  
   const handleSubmit = async (event) => {
     event.preventDefault();
     

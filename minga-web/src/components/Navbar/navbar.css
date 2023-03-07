@@ -214,7 +214,7 @@ background: #fff;
     .nav_toggle span{
         width: 30px;
         height: 4px;
-        background: white;
+        background: rgb(47, 0, 255);
         text-align: start;
         margin-bottom: 5px;
         border-radius: 2px;             
@@ -222,7 +222,6 @@ background: #fff;
         transition: all 0.2s linear;
         
     }
-
    
     .nav_toggle.open > span{
         transform: rotate(45deg) translate(0px, 0px);
