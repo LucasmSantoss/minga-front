@@ -1,74 +1,69 @@
-import React, { useEffect, useState } from 'react';
-import NavBar from '../../components/NavBar/NavBar';
-
+import React, { useState } from 'react';
+import NavBar from '../../components/NavBar/NavBar'
 import { useRef } from 'react';
-import './mangaform.css';
+import '../MangaForm/mangaform.css';
 import axios from 'axios';
+import Swal from 'sweetalert2';
+
 
 export default function CreateManga() {
-    const [categorias, setCategorias ] = useState([])
-    const [selectValue, setSelectValue] = useState([]);
+    const [categorias, setCategorias] = useState([])
     let title = useRef();
     let category = useRef();
     let description = useRef();
     let coverPhoto = useRef();
+    let formulario = useRef();
 
     async function handleSubmit(e) {
         e.preventDefault();
         let manga = {
             title: title.current.value,
-            category: category.current.value,
             description: description.current.value,
-            coverPhoto: coverPhoto.current.value,
-            
+            cover_photo: coverPhoto.current.value,
+            category_id: "63fe8112f09373806fd89fe5"
         };
-        console.log(manga);
-        const url = 'http://localhost:8080/mangas'
-    try {
-        await axios.post(url, manga)
-        alert("Manga created successfully")
-            // e.target.reset()
-            console.log(setSelectValue())
-    
-    } catch (error) {
-        console.log(error)
-        console.log("ocurrio un error")
+        const url = 'http://localhost:8080/api/manga'
+        try {
+            await axios.post(url, manga)
+            formulario.current.reset()
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: "Manga created successfully",
+                showConfirmButton: false,
+                timer: 1500
+              })
+        } catch (error) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: error.response.data.message[0],
+              })
+        }
     }
+
+    async function renderCategory() {
+        await axios.get('http://localhost:8080/api/manga').then((response) => { setCategorias(response.data.categories) })
     }
-    const handleSelectChange = (event) => {
-        setSelectValue(console.log(event.target.value));
-        
-    };
-    
-    
-    useEffect( ()=>  { 
-        axios.get ('http://localhost:8080/categories').then((response) => 
-        { setCategorias(response.data) } )
-        
 
-        
-    }, [] ) 
-    // console.log(categorias)
-
-return (
-    <div>
-         <NavBar />
-        <div className='manga-content'>  
-            {/* <section className='new-author'>
-              
-            </section> */}
-            <form className='author-form' onSubmit={handleSubmit}>
-                    <input className='author-input' type='text' placeholder='Insert title' ref={title} />
-                    <select className='author-input' id='selectMove' ref={category} value={selectValue} onChange={handleSelectChange}>
-                    <option value=''> Insert category</option>
-                        {categorias.map(categoria =>  <option key={categoria.value} value={categoria.value}>{categoria.name}</option>
-                        )}
+    return (
+        <div>
+            <NavBar />
+        <div className='manga-content'>
+                <section >
+                    <h2 className='title'>New Manga</h2>
+                </section>
+                <form ref={formulario} className='manga-form' onSubmit={handleSubmit}>
+                    <input className='manga-input' type='text' placeholder='Insert title' ref={title} />
+                    <select className='manga-input' id='selectMove' ref={category} onClick={renderCategory}>
+                        <option value=''> Insert category</option>
+                        {categorias.map(categoria => <option key={categoria.name} value={categoria.name}>{categoria.name}</option>)}
                     </select>
-                    <input className='author-input' type='text' placeholder='Insert description' ref={description} />
-                    <input className='author-input' type='text' placeholder='Insert cover photo' ref={coverPhoto} />
+                    <input className='manga-input' type='text' placeholder='Insert description' ref={description} />
+                    <input className='manga-input' type='text' placeholder='Insert cover photo' ref={coverPhoto} />
                     <input className='send' type="submit" value="Send" />
-            </form>
+                </form>
+                </div>
         </div>
-    </div>
-)
+    )
 }

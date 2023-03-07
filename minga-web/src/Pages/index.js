@@ -1,18 +1,23 @@
-import MainLayout from '../layouts/MainLayout/MainLayout'
-import IndexLayout from '../layouts/IndexLayout/IndexLayout'
-import Index from './Index/Index';
-import Hero from './Hero/Hero';
+import Hero from "./Hero/Hero";
+import IndexLayout from "../layouts/IndexLayout/IndexLayout";
+import Index from "./Index/Index";
+import NotFound from "./NotFound/NotFound";
 import MangaForm from './MangaForm/MangaForm'
 import { createBrowserRouter } from "react-router-dom";
 
 export   const router = createBrowserRouter([
     {
         path: "/",
-    element: <MangaForm />,
+    element: <IndexLayout />,
     children: [
-
-        {path: '/mangaform', element: <MangaForm />}
+    { path: "/", element: <Index /> },
+    { path: "/hero", element: <Hero /> },
+    { path: "/*", element: <NotFound /> }
 ]
+   },
+    {
+        path: "/mangas",
+        element: <MangaForm />
 
     }
 ])

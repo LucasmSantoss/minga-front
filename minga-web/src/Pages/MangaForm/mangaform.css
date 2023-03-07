@@ -1,5 +1,4 @@
 .manga-content{
-    /* width: 65.11vw; */
     margin-top: 6rem;
     display: flex;
     flex-direction: column;
@@ -29,13 +28,13 @@
     border-radius: 50px;
 }
 
-.author-form{
+.manga-form{
     display: flex;
     flex-direction: column;
     gap: 5.364vh;
 }
 
-.author-input{
+.manga-input{
     background-color: transparent;
     outline: none;
     border: none;
@@ -72,4 +71,7 @@ fieldset{
     letter-spacing: 0.05em;
     text-decoration: none;
     margin: 0 auto;
-}
+} 
+
+
+
