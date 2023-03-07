@@ -8,6 +8,7 @@ import Swal from 'sweetalert2';
 
 export default function CreateManga() {
     const [categorias, setCategorias] = useState([])
+    const [categoria, setCategoria ] = useState(null)
     let title = useRef();
     let category = useRef();
     let description = useRef();
@@ -16,18 +17,20 @@ export default function CreateManga() {
 
     async function handleSubmit(e) {
         e.preventDefault();
+        const filteredCategory = categorias.find((category) => (category.name == categoria))
         let manga = {
             title: title.current.value,
             description: description.current.value,
             cover_photo: coverPhoto.current.value,
-            category_id: "63fe8112f09373806fd89fe5"
+            category_id: filteredCategory._id
         };
+        
         const url = 'http://localhost:8080/api/manga'
         try {
             await axios.post(url, manga)
             formulario.current.reset()
             Swal.fire({
-                position: 'top-end',
+                position: 'center',
                 icon: 'success',
                 title: "Manga created successfully",
                 showConfirmButton: false,
@@ -55,15 +58,16 @@ export default function CreateManga() {
                 </section>
                 <form ref={formulario} className='manga-form' onSubmit={handleSubmit}>
                     <input className='manga-input' type='text' placeholder='Insert title' ref={title} />
-                    <select className='manga-input' id='selectMove' ref={category} onClick={renderCategory}>
-                        <option value=''> Insert category</option>
-                        {categorias.map(categoria => <option key={categoria.name} value={categoria.name}>{categoria.name}</option>)}
+                    <select className="manga-input" id="selectMove" ref={category} onClick={renderCategory} onChange={(e) => setCategoria(e.target.value)}>
+                    <option value=""> Insert category</option>
+                        {categorias.map((categoria) => (
+                    <option key={categoria.name} value={categoria.name}>{categoria.name}</option>))}
                     </select>
                     <input className='manga-input' type='text' placeholder='Insert description' ref={description} />
                     <input className='manga-input' type='text' placeholder='Insert cover photo' ref={coverPhoto} />
                     <input className='send' type="submit" value="Send" />
                 </form>
-                </div>
+            </div>
         </div>
     )
 }
