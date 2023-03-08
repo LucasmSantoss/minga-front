@@ -1,7 +1,7 @@
 import React from 'react';
 import './sectionMain.css';
 
-function SectionMain(props) {
+function SectionMain() {
     return (
         <section className='section-main'>
 				<div >

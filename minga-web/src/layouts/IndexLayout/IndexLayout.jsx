@@ -1,10 +1,13 @@
 import React from 'react';
-import Index  from '../../components/Index/Index'
 
-function IndexLayout(props) {
+import { Outlet } from 'react-router-dom'
+import Header from '../../components/Header/Header';
+
+function IndexLayout() {
     return (
         <div>
-            <Index/>
+            <Header/>
+            <Outlet />
         </div>
     );
 }
