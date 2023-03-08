@@ -1,10 +1,11 @@
 import ChapterForm from "./ChapterForm/ChapterForm.jsx"
-import Index from "./Index/Index.jsx"
+import Index from "../components/Index/Index.jsx"
 import NotFound from "./NotFound/NotFound.jsx"
 import Hero from "./Hero/Hero.jsx"
 import Register from "./Register/Register.jsx"
 import IndexLayout from "../../src/layouts/IndexLayout/IndexLayout.jsx"
 import MainLayout from "../layouts/MainLayout/MainLayout.jsx"
+import MangaForm from './MangaForm/MangaForm.jsx'
 
 
 import { createBrowserRouter } from "react-router-dom"
@@ -25,5 +26,9 @@ export const router = createBrowserRouter([
 
     {path: "/*", element: <NotFound/>},
 
-    
+    {
+        path: "/mangas",
+        element: <MangaForm />
+
+    }
 ])

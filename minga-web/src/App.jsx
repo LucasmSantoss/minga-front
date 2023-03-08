@@ -5,20 +5,20 @@ import { useEffect } from 'react';
 import axios from 'axios';
 
 
-function App() {
 
-		useEffect(() => {
-		  let url = `http://localhost:8080/auth/token`
-		  let token = localStorage.getItem('token')
-		  if (token) {
-		  let headers = {headers:{'Authorization':`Bearer ${token}`}}
-		  axios.post(url,null,headers)
-		  }
-		 },[])
-
+export default function App() {
+    useEffect(() => {
+        let url = `http://localhost:8080/api/token`
+        let token = localStorage.getItem('token')
+        if (token) {
+        let headers = {headers:{'Authorization':`Bearer ${token}`}}
+        axios.post(url,null,headers)
+        }
+       },[])
+ 
 	return (
-		<RouterProvider router={router}/>
+		<div className="App">
+      <RouterProvider router={router} />
+    </div>										
 	)
 }
-
-export default App

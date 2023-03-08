@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .nav_logo{
     font-weight: bold;
     font-size: 20px;
@@ -255,4 +256,12 @@ background: #fff;
         margin-top: -8px;
         margin-left: 75%;
     }
+=======
+.ham-menu{
+    cursor: pointer;
+}
+.hamburguer-menu{
+    width: 3.563rem;
+    height: 5.371875vh;
+>>>>>>> 84316ea3a8cf5058dbf6a3a6777d3e29b71287fa
 }
