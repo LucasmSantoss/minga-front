@@ -1,56 +1,79 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import { useRef } from 'react'
+import { useParams } from "react-router-dom"
 import "./newchapter.css";
 import Swal from 'sweetalert2';
 import axios from "axios";
 
+
 export default function NewChapter() {
- const titleRef = useRef();
- const orderRef = useRef();
- const pagesRef = useRef();
+    let dataForm = useRef()
+    let { manga_id } = useParams()
+    
+    async function handleSubmit(e) {
+      e.preventDefault();
 
- const handleSubmit = async (event) => {
-  event.preventDefault();
+      let formInputs = []
 
-  let data = {
-    [titleRef.current.name]: titleRef.current.value,
-    [orderRef.current.name]: orderRef.current.value,
-    [pagesRef.current.name]: pagesRef.current.value
-  
-}
+      Object.values(dataForm.current).forEach((e) => {
+          if (e.name) {
+            formInputs.push(e.value)
+          }
+      })
 
-let url = 'http://localhost:8080/api/chapters'
-{
+      let data = {
+          title: formInputs[0],
+          order: formInputs[1],
+          pages: formInputs[2].split(','),
+          manga_id,  
+      }
+
+      let url = 'http://localhost:8080/api/chapters'
+      let token = localStorage.getItem('token')
+      let headers = { headers: { "Authorization": `Bearer ${token}`}}
+    {
   try {
     await axios.post(
       url,
-      data
+      data,
+      headers
     )
     Swal.fire(
       'Good job! The creation of a new chapter was successfully carried out',
       'You clicked the button!',
       'success'
     )
-    event.target.reset()
+    dataForm.current.reset()
   } catch(error) {
-    console.log(error)
+    if (error.response.data === "Unauthorized"){
     Swal.fire({
       icon: 'error',
       title: 'Oops...',
-      text: 'Something went wrong, try again!',
+      text: 'You need to Login',
     })
-  }
-}
- }
-
+     } else {
+      if (typeof error.response.message === "string") {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          })
+      } else {
+        error.response.data.message.forEach(err => error(err))
+      }
+     } 
+  console.log(error)
+  }}
+ 
+    }
 
   return (
     <div id='ContainCharter'>
      
-            <form className='form-chapter' onSubmit={handleSubmit}>
+            <form className='form-chapter' ref={dataForm} onSubmit={handleSubmit}>
                 
-                <input type="text" name='title' id='title' placeholder='Insert title' ref={titleRef} required/>        
-                <input type="number" name='order' id='order' placeholder='Insert order' ref={orderRef} />
-                <input type="url" name='pages' id='pages' placeholder='Insert pages' ref={pagesRef} required/>
+                <input type="text" name='title' id='title' placeholder='Insert title' required/>        
+                <input type="text" name='order' id='order' placeholder='Insert order' />
+                <input type="text" name='pages' id='pages' placeholder='Insert pages' required/>
               <div>
                  <button className='submitbtn'>Send</button>
               </div>

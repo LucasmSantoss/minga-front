@@ -27,7 +27,7 @@ return (
         <Anchor to="/register"> Register </Anchor>
         <a  href="#">Log in</a>
         <a  href="#">Log out</a>
-        <Anchor to="/chapters">Create Chapter</Anchor>
+        <Anchor to="/chapther-form/:manga_id">Create Chapter</Anchor>
     </div>
     <div className={`nav_toggle  ${isOpen && "open"}`} onClick={()=> setIsOpen(!isOpen)}>
       <span></span>
