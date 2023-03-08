@@ -33,7 +33,7 @@ export default function Form() {
             mail: res.data.user.mail,
             photo: res.data.user.photo,
           }))
-          setInterval(() => window.location.href='/', 1000)
+          setTimeout(() => window.location.href='/', 1000)
         })
         Swal.fire({
           title: 'Loggin success',
