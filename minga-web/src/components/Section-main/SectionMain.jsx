@@ -4,16 +4,16 @@ import './sectionMain.css';
 function SectionMain() {
     return (
         <section className='section-main'>
-				<div >
+			<div >
 				<h1 className='title'>Your favorite comic book store ✨ </h1>
-				</div>
-				<div >
+			</div>
+			<div >
 				<h3 className='subTitle' >Explore our catalog to live the adventure of your life</h3>
-				</div>
-				<div >
+			</div>
+			<div >
 				<button className='button'><p className='p-button'>Let's go!</p></button>
-				</div>
-			</section>
+			</div>
+		</section>
     );
 }
 
