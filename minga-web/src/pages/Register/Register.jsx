@@ -1,10 +1,12 @@
 import React from 'react';
-import Form from '../Form/Form'
+import Form from '../../components/Form/Form'
+
 import './register.css'
 
-function Register(props) {
+function Register() {
     return (
         <div>
+		
             <div className='conteiner'>
 			<div className='conteiner-form'>
 			<Form/>

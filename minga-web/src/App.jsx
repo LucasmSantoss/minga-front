@@ -1,16 +1,20 @@
-import './App.css';
-import IndexLayout from './layouts/IndexLayout/IndexLayout';
-// import Footer from './components/Footer/Footer';
+import { router } from '../src/pages/index'
+import { RouterProvider } from 'react-router-dom'
+import { useEffect } from 'react';
+import axios from 'axios';
 
-function App() {
 
-	return (
-		<div>
-			<IndexLayout/>
-			{/* <Footer/> */}
-		</div>
-		
-	)
+export default function App() {
+    useEffect(() => {
+        let url = `http://localhost:8080/api/token`
+        let token = localStorage.getItem('token')
+        if (token) {
+        let headers = {headers:{'Authorization':`Bearer ${token}`}}
+        axios.post(url,null,headers)
+        }
+       },[])
+ return (
+    
+ <RouterProvider router={ router} />
+ )
 }
-
-export default App
