@@ -1,3 +1,4 @@
+
 import './App.css';
 import {router} from "./pages/index.js";
 import { RouterProvider } from 'react-router-dom';
@@ -15,7 +16,6 @@ export default function App() {
         axios.post(url,null,headers)
         }
        },[])
- 
 	return (
 		<div className="App">
       <RouterProvider router={router} />
