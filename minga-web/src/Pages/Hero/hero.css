@@ -1,0 +1,18 @@
+.fondo {
+    background-image: url(../../../public/imgs/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 17%;
+    width: 100%;
+    margin-top: -80px;
+    height: 60vh;
+    object-fit: cover;
+  }
+
+  @media (max-width: 750px){
+  .fondo {
+    background-image: url(../../../public/imgs/fondo.png);
+    min-height: 100vh;
+    margin-bottom: 200px;
+  }
+}
