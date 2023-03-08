@@ -29,7 +29,7 @@ export   const router = createBrowserRouter([
     children: [
         { path: '/register' , element: <FormAuthor state='register'/> },
         { path: '/signin' , element: <FormAuthor state='login'/> },
-        
+
     ]
 }
 ])
