@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import NavBar from '../../components/NavBar/NavBar'
+
 import { useRef } from 'react';
 import '../MangaForm/mangaform.css';
 import axios from 'axios';

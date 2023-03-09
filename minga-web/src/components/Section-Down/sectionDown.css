@@ -109,14 +109,11 @@
         margin: auto;
         flex-direction: column;
         align-content: center;
-<<<<<<< HEAD
         gap: 1rem;
         margin-left: 15rem;
         margin-bottom: 50px;
         
-=======
         margin-bottom: 20px;
->>>>>>> 84316ea3a8cf5058dbf6a3a6777d3e29b71287fa
         
     }
     .rectangle{

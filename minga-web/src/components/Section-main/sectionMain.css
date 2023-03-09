@@ -6,7 +6,7 @@
     padding: 0px;
     gap: 16px;
     color: #ffffff;
-    margin-top: 2rem;
+    
     padding-bottom: 4rem;
   }
   
@@ -91,19 +91,5 @@
     .button {
        margin-top: 30px;
     }
-<<<<<<< HEAD
   }
  
-=======
-    .section-main {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 0px;
-      gap: 16px;
-      color: #ffffff;
-      margin-top: 5rem;
-  }
-  }
->>>>>>> 84316ea3a8cf5058dbf6a3a6777d3e29b71287fa

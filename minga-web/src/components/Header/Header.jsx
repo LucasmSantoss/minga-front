@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../NavBar/NavBar'
+import Navbar from '../Navbar/NavBar'
 import './header.css'
 import Image from '../Image/Image'
 import logo from '../../images/logo.png'
@@ -15,7 +15,7 @@ export default function Header() {
   
   return (
     <header>
-        <NavBar onClick={handleRender}/>
+        <Navbar onClick={handleRender}/>
         { render ? <OpenHamNav handleRender={handleRender} /> : "" }
         <Image className='logo' src={logo} alt='logo'/>
     </header>

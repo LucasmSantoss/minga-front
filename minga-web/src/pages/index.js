@@ -1,5 +1,5 @@
 import ChapterForm from "./ChapterForm/ChapterForm.jsx"
-import Index from "../components/Index/Index.jsx"
+import Index from "./Index/Index.jsx"
 import NotFound from "./NotFound/NotFound.jsx"
 import Hero from "./Hero/Hero.jsx"
 import Register from "./Register/Register.jsx"
@@ -17,7 +17,7 @@ export const router = createBrowserRouter([
       element: <IndexLayout/>,
       children: [
         {path: "/", element: <Index/>},
-        {path: "/hero", element: <Hero/>
+        {path: "/hero", element: <Hero/>},
         { path: "/signup", element: <Register /> },
         { path: "/signin", element: <FormLogin/> },
         { path: "/*", element: <NotFound /> },
