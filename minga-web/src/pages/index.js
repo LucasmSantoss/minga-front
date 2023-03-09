@@ -28,16 +28,13 @@ export const router = createBrowserRouter([
       children: [
         {path: "/chapther-form/:manga_id", element: <ChapterForm/>},
         { path: '/register' , element: <FormAuthor state='register'/> },
-        { path: '/signin' , element: <FormAuthor state='login'/> }
-    ]    },
 
-    {path: "/*", element: <NotFound/>},
+        { path: '/signin' , element: <FormAuthor state='login'/> },
 
-    {
-        path: "/mangas",
-        element: <MangaForm />
+    ]
+}
+])
 
-    }
 
 
 
