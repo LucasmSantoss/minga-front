@@ -1,0 +1,68 @@
+input{
+    width: 30%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #424242;
+}
+.ContainCharter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -14vh;
+}
+.form-chapter{
+        width: 100%;
+        height: 40rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+}
+.formchapter input{
+    width: 30%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #424242;
+}
+.submitbtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 55px;
+    gap: 10px;
+    margin-top: 118px;
+    width: 280px;
+    height: 68px;
+    left: 75px;
+    top: 551px;
+    background: #4338CA;
+    border-radius: 50000px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+@media (min-width: 320px) and (max-width: 767px){
+
+
+    .form-chapter input{
+        width: 55%;
+
+    }
+
+    .ContainCharter{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: -24vh;
+    }
+}

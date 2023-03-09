@@ -9,8 +9,13 @@ export default function Form() {
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
+<<<<<<< HEAD
+  const confirmPasswordRef = useRef();
+  
+=======
   const photo = useRef();
 
+>>>>>>> 84316ea3a8cf5058dbf6a3a6777d3e29b71287fa
   const handleSubmit = async (event) => {
     event.preventDefault();
     

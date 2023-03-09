@@ -8,12 +8,13 @@
     
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-    gap: 4rem;
+    gap: 5rem;
     width: 100%;
     height: 100%;
     background: linear-gradient(87.46deg, #4338ca 0%, #5e52f3 100%);
     border-radius: 6px;
     align-items: center;
+    justify-content: start;
   }
   
   .deku {
@@ -104,11 +105,18 @@
     .description-bnh{
         
         width: 100%;
-        text-align: center;
+        text-align: start;
         margin: auto;
         flex-direction: column;
         align-content: center;
+<<<<<<< HEAD
+        gap: 1rem;
+        margin-left: 15rem;
+        margin-bottom: 50px;
+        
+=======
         margin-bottom: 20px;
+>>>>>>> 84316ea3a8cf5058dbf6a3a6777d3e29b71287fa
         
     }
     .rectangle{
