@@ -1,0 +1,91 @@
+.divprincipal{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EBEBEB;
+
+}
+.sectionUp{
+    width: 100%;
+    height: 644px;
+    padding-top: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url(/public/imgs/fondo-mangas.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.h1Mangas{
+    width: 230px;
+    height: 61px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 95.19%;
+    margin-bottom: 90px;
+/* identical to box height, or 61px */
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+.Search{
+    width: 900px;
+    height: 57px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.imgsearch{
+    width: 30px;
+    height: 30px;
+
+
+/* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.inputSearch{
+    width: 800px;
+    height: 23px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 95.19%;
+/* identical to box height, or 23px */
+
+    display: flex;
+    align-items: center;
+
+/* parrafo */
+
+    color: #999999;
+
+
+/* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.sectionDown{
+    background-color: white;
+    width: 1348px;
+    height: 897px;
+    border-radius: 16px;
+    margin-left: 46px;
+}

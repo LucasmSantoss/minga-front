@@ -8,6 +8,8 @@ import MainLayout from "../layouts/MainLayout/MainLayout.jsx"
 import MangaForm from './MangaForm/MangaForm.jsx'
 import FormAuthor from "./FormAuthor/FormAuthor";
 import FormLogin from "./FormLogin/FormLogin";
+import Page from "./Page/Page"
+import Mangas from "./Mangas/Mangas.jsx"
 
 
 import { createBrowserRouter } from "react-router-dom"
@@ -20,19 +22,23 @@ export const router = createBrowserRouter([
         {path: "/hero", element: <Hero/>},
         { path: "/signup", element: <Register /> },
         { path: "/signin", element: <FormLogin/> },
-        { path: "/*", element: <NotFound /> },
-        { path: '/mangas' , element: <MangaForm/> }
+        
+        
     ]   },
     { path: "/",
       element: <MainLayout/>,
       children: [
-        {path: "/chapther-form/:manga_id", element: <ChapterForm/>},
+       
         { path: '/register' , element: <FormAuthor state='register'/> },
-
         { path: '/signin' , element: <FormAuthor state='login'/> },
+        { path: '/mangas' , element: <MangaForm/> },
+        {path: "/chapther-form/:manga_id", element: <ChapterForm/>},
+        {path: "/api/chapters/:id", element: <Page/>},
+        {path: "/mangas/:page", element: <Mangas/>}
 
     ]
-}
+    },
+    { path: "/*", element: <NotFound /> },
 ])
 
 
