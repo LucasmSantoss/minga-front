@@ -35,9 +35,7 @@ export default function ChapterDetails() {
      if( index <= 0){
         navigate(`/mangas`)
     }
-    
-    
-   
+       
   }
 
 
@@ -50,7 +48,7 @@ export default function ChapterDetails() {
     if (index + 1 === chapter?.pages?.length) {
       return navigate(`/api/chapters/${id}/0`);
     }
-    return navigate(`/api/chapters/${id}/${index + 1}`);
+
   }
 
   return (
