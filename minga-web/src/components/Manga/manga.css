@@ -1,0 +1,152 @@
+.fondo-manga {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../public/imgs/fondo-manga.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 40%;
+  }
+  .fondo-manga h1 {
+    width: 230px;
+    height: 61px;
+    margin-bottom: 3rem;
+    margin-top: 8rem;
+  
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 95.19%;
+    color: #FFFFFF;
+  }
+  
+  .div-input input {
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 25px;
+  gap: 10px;
+  padding: 15px 15px 15px 35px;
+  
+  width: 900px;
+  height: 57px;
+  
+  
+  /* bkg */
+  
+  background: #EBEBEB;
+  border-radius: 80px;
+  
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 95.19%;
+  color: #999999;
+  /* identical to box height, or 23px */
+  
+  display: flex;
+  align-items: center;
+  }
+  .container-categories {
+    width: 90%;
+    min-height: 30vh;
+    margin-left: 4rem;
+    margin-top: -3rem;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+  }
+  .img {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    bottom: 2.8rem; left: 0.3rem;
+  }
+  .div-buttons {
+    height: 5rem;
+    padding-left: 8rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+  .div-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 3rem;
+  }
+  
+  @media (max-width: 500px) {
+    .img-category img{
+      width: 5rem;
+      height: 5rem;
+    }
+    .img-category {
+      display: flex;
+      justify-content: space-around;
+    }
+    .fondo-manga {
+      height: 30vh;
+      background-position: 35% 30%;
+    }
+    .fondo-manga h1 {
+      width: 144px;
+      height: 38px;
+      margin-bottom: 0rem;
+      margin-top: 6rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      font-size: 35px;
+      line-height: 95.19%;
+    }
+    .div-input input {
+      padding: 20px;
+      gap: 10px;
+      width: 270px;
+      height: 10px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 95.19%;
+    }
+    .img {
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-right: 3rem;
+      color: #4338CA;
+      position: relative;
+      bottom: 2.1rem; left: 0.3rem;
+    }
+    .container-categories {
+      width: 100%;
+      border-radius: 70px 70px 0px 0px;
+      margin-top: -4rem;
+      margin-left: 0rem;
+    }
+    .todos {
+      display: none;
+    }
+    .shonen, .seinen, .shojo, .kodomo {
+      padding: 12px;
+      gap: 10px;
+      width: 70px;
+      height: 35px;
+    }
+    .div-buttons {
+      width: 100%;
+      height: 3rem;
+      padding-left: 1rem;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .div-cards {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 3rem;
+      padding: 3rem;
+    }
+  }

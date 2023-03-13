@@ -1,7 +1,7 @@
 import React from 'react';
 import  './sectionDown.css';
 
-function SectionDown(props) {
+function SectionDown() {
     return (
         <section className='section-down'>
 				<div className='rectangle'>

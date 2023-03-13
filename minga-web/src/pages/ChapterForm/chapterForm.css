@@ -1,0 +1,21 @@
+.divchapter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.h2chapter{
+    width: 207px;
+    height: 42px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: #000000;
+}
+.divh2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 178px;
+}
