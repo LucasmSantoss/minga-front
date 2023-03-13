@@ -9,14 +9,15 @@ export default function ChapterDetails() {
   let { id, page } = useParams();
   let url = `http://localhost:8080/api/chapters/${id}`;
   let [chapter, setChapter] = useState([]);
-  let [index, setIndex] = useState(Number(page));
-
+  let [index, setIndex] = useState();
+  let chapter1 = `/api/chapters/640b47f58761b91204604935/19`
+  let chapter2 = `/api/chapters/640b47f58761b91204604937/0`
   useEffect(() => {
     axios
       .get(url)
       .then((res) => {
         setChapter(res.data.chapter);
-        console.log(res.data.chapter);
+       
         setIndex(Number(page));
       })
       .catch((error) => console.log(error));
@@ -25,15 +26,26 @@ export default function ChapterDetails() {
   function handlePrev() {
     setIndex(index - 1);
     navigate(`/api/chapters/${id}/${index - 1}`);
-    if( index <= 0){
-        navigate(`/mangas/`)
+
+     
+    //   if(`/api/chapters/640b47f58761b91204604937/-1`){
+    //     return navigate(chapter1)
+    //  }
+     
+     if( index <= 0){
+        navigate(`/mangas`)
     }
+    
+    
+   
   }
+
 
   function handleNext() {
     if (index + 1 > chapter?.pages?.length - 1) {
-      return navigate(`/api/chapters/640b47f58761b91204604937/0`);
+      return navigate(chapter2);
     }
+   
     setIndex(index + 1);
     if (index + 1 === chapter?.pages?.length) {
       return navigate(`/api/chapters/${id}/0`);
@@ -48,11 +60,11 @@ export default function ChapterDetails() {
           <img src="../../../imgs/prev.png" alt="prevarrow" />
         </div>
         <div className="img-text">
-          <div className="text-capitulo">
-            <h5>
-              Capítulo {chapter.order} - {chapter.title} - {chapter.page}
-            </h5>
-          </div>
+        <div className="text-capitulo">
+  <h5>
+    Cap {chapter.order} - {chapter.title} - Page {index}
+  </h5>
+</div>
           <div className="capitulo-img">
             <img src={chapter.pages?.[index]} alt="comicimage" />
           </div>
