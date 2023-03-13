@@ -1,5 +1,5 @@
 .container-page{
-    margin-top: 60px;
+    margin-top: 20px;
     display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(20px, auto));
     width: 100%;
@@ -78,7 +78,6 @@
 
 
 
-/* Burbuja */
  
 .page{
     width: 100%;
@@ -153,18 +152,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 700px) {
-
     
 .prev {
     height: 100%;
@@ -201,14 +189,10 @@
     padding: 0px 0px;
 }
 
-.capitulo-img img {
-    width: 20rem;
-    height: 60vh;
-   
-}
+
 
 .container-page{
-    margin-top: 60px;
+  width: 100%;
     gap: 0;
 }
 
@@ -224,4 +208,7 @@
  
  
 }
+
+
+
 

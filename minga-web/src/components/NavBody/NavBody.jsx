@@ -39,7 +39,7 @@ export default function NavBody({handleRender}) {
             { token ? "" : <Anchor to='/signin' onClick={handleRender}>Login</Anchor> }
             <Anchor to='/mangas'>Mangas</Anchor>
             <Anchor to='/chapther-form/:manga_id'>Chapter</Anchor>
-            <Anchor to='api/chapters/:id/:page'>Page</Anchor>
+          
         </div>
     )
 }
