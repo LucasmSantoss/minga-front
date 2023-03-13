@@ -24,7 +24,8 @@ export const router = createBrowserRouter([
         { path: "/*", element: <NotFound /> },
         { path: '/mangas' , element: <MangaForm/> },
         {path: "/chapther-form/:manga_id", element: <ChapterForm/>},
-        {path: "/api/chapters/:id", element: <Page/>}
+        {path: "api/chapters/:id/:page", element: <Page/>}
+        
     ]   },
     { path: "/",
       element: <MainLayout/>,
@@ -32,7 +33,7 @@ export const router = createBrowserRouter([
        
         { path: '/register' , element: <FormAuthor state='register'/> },
         { path: '/signin' , element: <FormAuthor state='login'/> },
-
+       
     ]
 }
 ])
