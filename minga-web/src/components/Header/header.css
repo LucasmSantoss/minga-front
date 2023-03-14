@@ -17,13 +17,13 @@ header{
 @media (max-width: 1023px) {
     header{
         
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
     position: absolute;
     width: 87.361vw;
-    margin-left: 40px;
+    margin-left: 1rem;
     }
     
     

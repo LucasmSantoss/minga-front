@@ -1,0 +1,118 @@
+@media (max-width: 424px){
+.mangasTypes{
+    display: flex;
+    gap: 10px;
+
+}
+.types1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    width: 70px;
+    height: 35px;
+    background: #FFE0DF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 50px;
+}
+.types1 p{
+    width: 46px;
+    height: 11px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 95.19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EF8481;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.types2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    width: 70px;
+    height: 35px;
+    background: #FFDFC8;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 50px;
+}
+.types2 p{
+    width: 46px;
+    height: 11px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 95.19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FC9C57;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.types3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    width: 70px;
+    height: 35px;
+    background: #D1FBF0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 50px;
+}
+.types3 p{
+    width: 46px;
+    height: 11px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 95.19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00BA88;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.types4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    width: 70px;
+    height: 35px;
+    background: #E0DBFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 50px;
+}
+.types4 p{
+    width: 46px;
+    height: 11px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 95.19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8883F0;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+}

@@ -1,5 +1,4 @@
 footer{
-    width: 100vw;
     max-height: 30vh;
     margin-bottom: 9.49vh;
     display: flex;
@@ -27,9 +26,7 @@ footer .img-container img{
 }
 
 @media (max-width:720px) {
-    footer{
-    margin-top: -600px;
-    }
+
 .suscribe fieldset {
   background: #ffffff;
   border: 1px solid #22222279;
