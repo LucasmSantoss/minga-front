@@ -54,8 +54,8 @@ export default function SeccionBtn({ info }) {
             <p>No Chapter found</p>
           }
           <div className='div-chapter'>
-            {pagination !== 1 && <Anchor className='btn-chapter' to={'/mangas/' + info._id + '/' + (pagination - 1)}><button className='btn-chapter' onClick={() => setPagination(pagination - 1)}>prev</button></Anchor>}
-            {chapters.length === 4 && <Anchor className='btn-chapter' to={'/mangas/' + info._id + '/' + (pagination + 1)}><button className='btn-chapter' onClick={() => setPagination(pagination + 1)}>next</button></Anchor>}
+            {pagination !== 1 && <Anchor className='btn-chapter' to={'/manga/' + info._id + '/' + (pagination - 1)}><button className='btn-chapter' onClick={() => setPagination(pagination - 1)}>prev</button></Anchor>}
+            {chapters.length === 4 && <Anchor className='btn-chapter' to={'/manga/' + info._id + '/' + (pagination + 1)}><button className='btn-chapter' onClick={() => setPagination(pagination + 1)}>next</button></Anchor>}
           </div>
         </section>
       }
