@@ -21,7 +21,7 @@ const captureChapter = createAsyncThunk(
     'captureChapter',
     async ({ manga_id, page, }) => {
         try {
-            let response = await axios.get("http://localhost:8080/chapters?manga_id=" + manga_id + "&page=" + page)
+            let response = await axios.get("http://localhost:8080/api/chapters?manga_id=" + manga_id + "&page=" + page)
             return { chapter: response.data.chapter }
         } catch (error) {
             return { chapter: [] }

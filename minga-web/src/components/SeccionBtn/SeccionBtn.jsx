@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './seccionBtn.css';
 import { Link as Anchor } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import comment from '../../images/comment.png'
 import actions from '../../store/Detail/actions';
 
 const { captureChapter } = actions;
@@ -37,7 +38,7 @@ export default function SeccionBtn({ info }) {
                 <div className='order-chapter'>
                   <p className='p-chapter'>Chapter #{chapter.order}</p>
                   <div className='coment-chapter'>
-                    <button className="puntitos">. . .</button>
+                    <img src={comment} alt="comment" />
                     <p>169</p>
                   </div>
                 </div>
