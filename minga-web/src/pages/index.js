@@ -8,7 +8,7 @@ import MainLayout from "../layouts/MainLayout/MainLayout.jsx"
 import MangaForm from './MangaForm/MangaForm.jsx'
 import FormAuthor from "./FormAuthor/FormAuthor";
 import FormLogin from "./FormLogin/FormLogin";
-import DetailManga from './DetailManga/DetailManga'
+import Manga from './Manga/Manga'
 
 
 
@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
         { path: "/*", element: <NotFound /> },
         { path: '/mangas' , element: <MangaForm/> },
         {path: "/chapther-form/:manga_id", element: <ChapterForm/>},
-        { path: "/manga/:id/:page", element: <DetailManga />}
+        { path: "/manga/:id/:page", element: <Manga />}
         
     ]   },
     { path: "/",
