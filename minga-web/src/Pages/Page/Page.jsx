@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
@@ -5,64 +6,59 @@ import axios from "axios";
 import "./page.css";
 
 export default function ChapterDetails() {
-  let navigate = useNavigate();
-  let { id, page } = useParams();
-  let url = `http://localhost:8080/api/chapters/${id}`;
-  let [chapter, setChapter] = useState([]);
-  let [index, setIndex] = useState();
-  let chapter1 = `/api/chapters/640b47f58761b91204604935/19`
-  let chapter2 = `/api/chapters/640b47f58761b91204604937/0`
-  useEffect(() => {
-    axios
-      .get(url)
-      .then((res) => {
-        setChapter(res.data.chapter);
-       
-        setIndex(Number(page));
-      })
-      .catch((error) => console.log(error));
-  }, [id, page]);
+  let navigate = useNavigate()
+  let { id, page } = useParams()
+  let url = `http://localhost:8080/api/chapters/`
+  let [chapter, setChapter] = useState({})
+  let [index, setIndex] = useState(Number(page))
+  let [next, setNext] = useState('')
+  let [prev, setPrev] = useState('')
 
+  useEffect(() => {
+      axios.get(url + id).then(res => {
+          setChapter(res.data.chapter);
+          console.log(res.data)
+          setIndex(Number(page))
+          setNext(res.data.next)
+          setPrev(res.data.prev);
+      }).catch(error => console.log(error));
+  }, []);
+
+  
+   
   function handlePrev() {
     setIndex(index - 1);
     navigate(`/api/chapters/${id}/${index - 1}`);
 
-     
-    //   if(`/api/chapters/640b47f58761b91204604937/-1`){
-    //     return navigate(chapter1)
-    //  }
-     
-     if( index <= 0){
-        navigate(`/mangas`)
+    if ((index <= 0) && (chapter.order === 1)) {
+        navigate('/mangas/:page');
+    }else if (index <= 0){
+        navigate(`/api/chapters/${prev}/0`)
+        window.location.reload(true)
     }
-       
-  }
+}
 
 
-  function handleNext() {
-    if (index + 1 > chapter?.pages?.length - 1) {
-      return navigate(chapter2);
+function handleNext() {
+    setIndex(index + 1)
+    navigate(`/api/chapters/${id}/${index + 1}`)
+    if (index >= chapter.pages.length - 1) {
+        navigate(`/api/chapters/${next}/0`)
+        window.location.reload(true)
     }
-   
-    setIndex(index + 1);
-    if (index + 1 === chapter?.pages?.length) {
-      return navigate(`/api/chapters/${id}/0`);
-    }
-
-  }
-
-  return (
+}
+    return (
     <div className="page">
       <div className="container-page">
         <div className="prev" onClick={handlePrev}>
           <img src="../../../imgs/prev.png" alt="prevarrow" />
         </div>
         <div className="img-text">
-        <div className="text-capitulo">
-  <h5>
-    Cap {chapter.order} - {chapter.title} - Page {index}
-  </h5>
-</div>
+          <div className="text-capitulo">
+            <h5>
+              Cap {chapter.order} - {chapter.title} - Page {index}
+            </h5>
+          </div>
           <div className="capitulo-img">
             <img src={chapter.pages?.[index]} alt="comicimage" />
           </div>
