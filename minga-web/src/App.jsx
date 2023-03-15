@@ -4,6 +4,8 @@ import {router} from "./pages/index.js";
 import { RouterProvider } from 'react-router-dom';
 import { useEffect } from 'react';
 import axios from 'axios';
+import { Provider } from 'react-redux';
+import {store} from "./store/store.js"
 
 
 
@@ -17,8 +19,8 @@ export default function App() {
         }
        },[])
 	return (
-		<div className="App">
-      <RouterProvider router={router} />
-    </div>										
+		<Provider store={store}>
+            <RouterProvider router={router} />
+    	</Provider>								
 	)
 }

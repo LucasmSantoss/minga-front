@@ -4,6 +4,7 @@ import MangaUp from '../../components/MangaUp/MangaUp'
 import MangasCategory from '../../components/MangasCategory/MangasCategory'
 import MangasTypes from '../../components/MangasTypes/MangasTypes'
 import MangasCards from '../../components/MangasCards/MangasCards'
+import MangasBottom from "../../components/MangasBottom/MangasBottom"
 
 export default function Mangas() {
   return (
@@ -14,6 +15,7 @@ export default function Mangas() {
                <MangasCategory/>
                <MangasTypes/>
                <MangasCards/>
+               <MangasBottom/>
         </section>
     </div>
   )
