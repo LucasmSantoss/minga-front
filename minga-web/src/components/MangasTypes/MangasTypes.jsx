@@ -12,15 +12,15 @@ let order = 1
 
 export default function MangasTypes() {
     const [categories, setCategories] = useState(false)
-    const { captureCheck} = categoriesActions
+    const { captureCheck } = categoriesActions
     const dispatch = useDispatch()
 
     let checkedCategories = useSelector(store => store.categories.categories)
-
-    let url = "http://localhost:8080/api/category"
+    console.log(useSelector(store=>store.categories))
+    let urlcategories = "http://localhost:8080/api/category"
     
     useEffect(() => {
-      axios.get(url).then(e => setCategories(e.data.data))
+      axios.get(urlcategories).then(e => setCategories(e.data.data))
     }, [])
 
     function handleCheck(e){
@@ -54,8 +54,11 @@ export default function MangasTypes() {
                 categories ? categories.map((category,i) => {
                   let checkclass = checkedCategories.includes(category._id) ? "checked" : ""
                   return <div className={"category-"+category.name+" "+ checkclass} key={i} onClick={handleCheck} >{category.name}</div>
+                  
                 }) : ""
+              
               }
+              
               </div>
                   
                 

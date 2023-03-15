@@ -1,10 +1,10 @@
 import { createReducer } from "@reduxjs/toolkit";
 import categoriesActions from "./actions";
 
-const { captureCheck} = categoriesActions
+const { captureCheck } = categoriesActions
 
 const initialState = {
-    categories: ""
+    categories: []
 }
 
 const categoriesReducer = createReducer(

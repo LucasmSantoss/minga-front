@@ -13,7 +13,7 @@ export default function MangasCards() {
   let page = useParams().page
   let mangas = useSelector(store => store.mangas.mangas)
   let categories = useSelector(store => store.categories.categories)
-  
+  console.log(mangas)
   const { readMangas } = mangasActions
   const dispatch = useDispatch()
 
@@ -21,7 +21,7 @@ export default function MangasCards() {
   let headers = { headers: { "Authorization": `Bearer ${token}`}}
 
   useEffect(() =>{
-    dispatch(readMangas({page: page, inputText: text, categories, headers}))
+    dispatch(readMangas({page: page, inputText: text, categories: categories,order: order, headers}))
   }, [page, text, categories, order])
   return (
     <div className='mangas-cards'>
