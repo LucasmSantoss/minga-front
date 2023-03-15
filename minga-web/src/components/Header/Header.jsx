@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from '../Navbar/NavBar'
+import Navbar from '../Navbar/NavBar.jsx'
 import './header.css'
-import Image from '../Image/Image'
+import Image from '../Image/Image.jsx'
 import logo from '../../images/logo.png'
 import { useState } from 'react'
-import OpenHamNav from '../OpenHamNav/OpenHamNav'
+import OpenHamNav from '../OpenHamNav/OpenHamNav.jsx'
 
 export default function Header() {
   const [render, setRender] = useState(false)
