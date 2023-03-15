@@ -58,7 +58,7 @@ export default function NewChapter() {
           title: 'Oops...',
           })
       } else {
-        error.response.data.message.forEach(err => error(err))
+       
       }
      } 
   console.log(error)
