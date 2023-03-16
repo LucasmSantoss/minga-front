@@ -19,7 +19,7 @@ let captureManga = createAsyncThunk(
 )
 const captureChapter = createAsyncThunk(
     'captureChapter',
-    async ({ manga_id, page, }) => {
+    async ({ manga_id, page }) => {
         try {
             let response = await axios.get("http://localhost:8080/api/chapters?manga_id=" + manga_id + "&page=" + page)
             return { chapter: response.data.chapter }
@@ -29,13 +29,6 @@ const captureChapter = createAsyncThunk(
     }
 )
 
-const delete_chapter = createAsyncThunk(
-    'delete_chapter',
-    async () => {
-     return null
-    }
-
-)
-const actions = { captureChapter, captureManga ,delete_chapter}
+const actions = { captureChapter, captureManga}
 
 export default actions  

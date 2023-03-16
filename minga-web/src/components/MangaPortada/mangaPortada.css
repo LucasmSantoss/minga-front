@@ -1,21 +1,31 @@
 .img-title{
     width: 100%;
     height: auto;
-    margin-top:  7rem; 
+    margin-top:  6rem; 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     justify-items: center;
 }
 .img-manga{
 width: 50%;
-height: auto;
+height: 30rem;
+object-fit: cover;
 }
-.title{
-    width: 50%;
+.title-port{
+    width: 60%;
     height: 20vh;
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
+    text-align: center;
+    margin: 2rem;
     font-size: 2rem;
     color: #2a2a2a;
 }
+
+@media (min-width:320px) and (max-width:767px) { 
+    .img-manga {
+        width: 70%;
+        height: 15rem;
+    }
+}
+

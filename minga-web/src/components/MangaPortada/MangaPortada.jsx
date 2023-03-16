@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './mangaPortada.css'
+import './mangaportada.css'
 
 
 export default function MangaPortada({info}) {
@@ -8,7 +8,7 @@ export default function MangaPortada({info}) {
   return (
     <div className="img-title">
       <img className="img-manga" src={info.cover_photo} alt={info.title} />
-      <p className="title">{info.title}</p>
+      <p className="title-port">{info.title}</p>
     </div>
   );
 } 

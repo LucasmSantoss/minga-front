@@ -1,6 +1,7 @@
 .estadisticas{
     width: 100%;
-    margin: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -21,7 +22,6 @@
 }
 .est-num{
     width: auto;
-    font-family: "Montserrat", sans-serif;
     font-size: 1vw;
     color: #2a2a2a;
     text-align: center;
@@ -29,4 +29,10 @@
 
 .num{
     font-size: 1rem;
+}
+@media (max-width: 750px) {
+    .cont-estadisticas{
+        width: 70%;
+        height: 10vh;
+    }
 }

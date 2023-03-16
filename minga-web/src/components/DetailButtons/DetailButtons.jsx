@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './seccionBtn.css'
+import './detailbuttons.css'
 import { Link as Anchor, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import comment from '../../images/comment.png'
@@ -30,12 +30,14 @@ export default function SeccionBtn({ info }) {
   }
 
   useEffect(() => {
+    setCapitulo(!check)
+  }, [])
+
+  useEffect(() => {
     dispatch(captureChapter({ manga_id: info._id, page: pagination }));
   }, [pagination, capitulo]);
 
-  useEffect(() => {
-    setCapitulo(!check)
-  }, [])
+  
 
   return (
     <>
