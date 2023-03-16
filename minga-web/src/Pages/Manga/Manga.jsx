@@ -16,20 +16,19 @@ export default function Manga() {
     const dispatch = useDispatch()
     let _id = useParams()
     let manga = useSelector(store => store.mangas.manga)
-    // console.log(manga)
-    // console.log(useSelector(store => store))
+   
     useEffect(() => {
         dispatch(captureManga({ manga_id: _id.id}))   
     }, [])
-// console.log(manga)
+
     return (
 
         <div className="contenedor">
            { (manga.length!= 0) && <MangaPortada info={manga}/>}
-           { manga.length!= 0?<InfoCatYcompany info={manga}/>:null}
+           { (manga.length!= 0) && <InfoCatYcompany info={manga}/>}
            <BotonReacciones />
             <InfoRectangulo />
-          {manga.length!=0?<DetailButtons  info={manga}/> : null}
+          { (manga.length!=0) && <DetailButtons  info={manga}/>}
         </div>
 
     )
