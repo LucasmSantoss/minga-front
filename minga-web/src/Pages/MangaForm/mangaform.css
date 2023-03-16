@@ -1,17 +1,18 @@
 .manga-content{
-    margin-top: 6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 6.54vh;
+    gap: 6rem;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
 }
 
 .new-author{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5.04vh;
+    gap: 5rem;
 }
 
 .new-author h2{
@@ -31,7 +32,11 @@
 .manga-form{
     display: flex;
     flex-direction: column;
-    gap: 5.364vh;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 5rem;
+    
 }
 
 .manga-input{
@@ -40,10 +45,11 @@
     border: none;
     border-bottom: 1px solid #424242;;
     height: 2.467vh;
+    width: 30rem;
 }
 #selectMove {
     border: 0;
-    width: 70vw;
+    width: 30rem;
     color: gray;
     font-size: 0.9rem;
     background-color: transparent;

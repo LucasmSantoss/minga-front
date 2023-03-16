@@ -1,7 +1,7 @@
 import React from 'react';
 
-import SectionMain from '../../components/Section-main/SectionMain.jsx';
-import SectionDown from '../../components/Section-Down/SectionDown.jsx';
+import SectionMain from '../../components/Section-main/SectionMain';
+import SectionDown from '../../components/Section-Down/SectionDown';
 import './hero.css'
 
 

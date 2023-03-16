@@ -7,9 +7,9 @@ import { Outlet } from 'react-router-dom'
 function MainLayout() {
     return (
         <div>
-            <Header/>
-            <Outlet />
-            <Footer/>
+            <Header className="header"/>
+            <Outlet className="outlet"/>
+            <Footer className="footer"/>
         </div>
     );
 }
