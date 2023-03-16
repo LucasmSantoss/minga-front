@@ -3,22 +3,20 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
-    border-radius: 50000px;
+    border-radius: 40px;
     border: none;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
     width: 280px;
     margin: 0 auto;
     margin-bottom: 20px;
-
-
 }
 
 
 .manga-btn {
     width: 80px;
     height: 30px;
-    background: #EBEBEB;
-    border-radius: 50000px;
+    background: transparent;
+    border-radius: 40px;
     border: none;
     display: flex;
     justify-content: center;
@@ -38,10 +36,17 @@
     margin: 0px;
     width: 200px;
 }
-
-.description-manga p {
-    text-align: center;
+.seccionTexto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.description-manga  {
+    width: 80%;
+    text-align: justify;
     margin-bottom: 10px;
+    margin: 1rem;
 }
 
 .sectionChapter {
@@ -54,11 +59,21 @@
 }
 
 .selecChapter {
-    width: 15%;
-    height: 6%;
+    width: 10%;
+    height: 7rem;
     border-radius: 8px;
+    object-fit: cover;
 }
-
+.puntitos{
+    width: 20%;
+    height: 2vh;
+    background-color: rgb(52, 50, 50);
+    background: #c1c1c1ad;
+    border-radius: 40px;
+    color: black;
+    font-family: 'Times New Roman';
+    font-size: 1rem;
+}
 .order-chapter {
     display: flex;
     flex-direction: column;
@@ -84,26 +99,54 @@
     width: 151px;
     height: 74px;
     background: linear-gradient(87.46deg, #4338CA 0%, #5E52F3 100%);
-    border-radius: 50000px;
+    border-radius: 40px;
     border: none;
     color: #FFFFFF;
-    font-family: 'Montserrat';
+    text-decoration: none;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
 
 }
+.div-chapter{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 10px;
+   
+}
+.btn-chapter{
+    width: 70px;
+    height: 30px;
+    background: linear-gradient(87.46deg, #4338CA 0%, #5E52F3 100%);
+    border-radius: 40px;
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    text-decoration: none;
 
-@media (min-width:320px) and (max-width:768px) { 
+}
+
+@media (min-width:320px) and (max-width:767px) { 
     .selecChapter {
         width: 20%;
+    }
+    .selecChapter {
+        width: 20%;
+        height: 4rem;
+        border-radius: 5px;
+        object-fit: cover;
     }
     .p-chapter{
         font-size: 16px;
     }
     .btn-read {
-        width: 120px;
-        height: 60px;   
+        width: 115px;
+        height: 55px;   
         font-weight: 500;
         font-size: 20px;
     }
@@ -114,5 +157,14 @@
         align-items: center;
         gap: 15px;
         font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023){
+    .selecChapter {
+        width: 20%;
+        height: 2rem;
+        border-radius: 5px;
+        object-fit: cover;
     }
 }
