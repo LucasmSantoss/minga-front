@@ -1,84 +1,78 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
 
-const Page = () => {
-  const { id, page } = useParams(); // obtener los parámetros de la ruta
-  const [chapter, setChapter] = useState(null); // estado para almacenar el capítulo
-  const [currentPage, setCurrentPage] = useState(parseInt(page)); // estado para almacenar la página actual
+import React from "react";
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import axios from "axios";
+import "./page.css";
+
+export default function ChapterDetails() {
+  let navigate = useNavigate()
+  let { id, page } = useParams()
+  let url = `http://localhost:8080/api/chapters/`
+  let [chapter, setChapter] = useState({})
+  let [index, setIndex] = useState(Number(page))
+  let [next, setNext] = useState('')
+  let [prev, setPrev] = useState('')
 
   useEffect(() => {
-    // obtener el capítulo por su ID usando axios
-    const fetchChapter = async () => {
-      try {
-        const response = await axios.get(`http://localhost:8080/api/chapters/${id}`);
-        console.log(response)
-        setChapter(response.data);
-        console.log(response.data)
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchChapter();
-  }, [id]);
+      axios.get(url + id).then(res => {
+          setChapter(res.data.chapter);
+          console.log(res.data)
+          setIndex(Number(page))
+          setNext(res.data.next)
+          setPrev(res.data.prev);
+      }).catch(error => console.log(error));
+  }, []);
 
-  const goToPage = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
+  
+   
+  function handlePrev() {
+    setIndex(index - 1);
+    navigate(`/api/chapters/${id}/${index - 1}`);
 
-  const goBack = () => {
-    // retroceder a la página anterior
-    if (currentPage > 1) {
-      goToPage(currentPage - 1);
-    } else {
-      // volver a la página de detalle del capítulo si estamos en la primera página
-      window.location.href = `/chapters/${id}`;
+    if ((index <= 0) && (chapter.order === 1)) {
+        navigate('/mangas/:page');
+    }else if (index <= 0){
+        navigate(`/api/chapters/${prev}/0`)
+        window.location.reload(true)
     }
-  };
+}
 
-  const goNext = () => {
-    // avanzar a la página siguiente
-    if (currentPage < chapter.pages.length) {
-      goToPage(currentPage + 1);
-    } else {
-      // avanzar a la página del capítulo que sigue si estamos en la última página
-      window.location.href = `/chapters/${parseInt(id) + 1}/1`;
+
+function handleNext() {
+    setIndex(index + 1)
+    navigate(`/api/chapters/${id}/${index + 1}`)
+    if (index >= chapter.pages.length - 1) {
+        navigate(`/api/chapters/${next}/0`)
+        window.location.reload(true)
     }
-  };
-
-  if (!chapter) {
-    return <div>Cargando...</div>;
-  }
-
-  const pageData = chapter.pages[currentPage - 1];
-
-  return (
-    <div>
-      <div>
-        {currentPage > 1 && (
-          <img
-            src={pageData.image}
-            alt={`Página ${currentPage}`}
-            style={{ width: "50%", cursor: "pointer" }}
-            onClick={goBack}
-          />
-        )}
-        {currentPage < chapter.pages.length && (
-          <img
-            src={pageData.image}
-            alt={`Página ${currentPage}`}
-            style={{ width: "50%", cursor: "pointer" }}
-            onClick={goNext}
-          />
-        )}
+}
+    return (
+    <div className="page">
+      <div className="container-page">
+        <div className="prev" onClick={handlePrev}>
+          <img src="../../../imgs/prev.png" alt="prevarrow" />
+        </div>
+        <div className="img-text">
+          <div className="text-capitulo">
+            <h5>
+              Cap {chapter.order} - {chapter.title} - Page {index}
+            </h5>
+          </div>
+          <div className="capitulo-img">
+            <img src={chapter.pages?.[index]} alt="comicimage" />
+          </div>
+        </div>
+        <div className="next" onClick={handleNext}>
+          <img src="../../../imgs/next.png" alt="nextarrow" />
+        </div>
       </div>
-      <div>
-        <p>{pageData.text}</p>
+      <div className="coment-number">
+        <div className="coment">
+          <p>...</p>
+        </div>
+        <h6>24</h6>
       </div>
     </div>
   );
-};
-
-export default Page;
-
-
+}

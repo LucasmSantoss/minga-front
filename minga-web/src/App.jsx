@@ -1,6 +1,6 @@
 
 import './App.css';
-import {router} from "./pages/index.js";
+import {router} from "./Pages/index.js";
 import { RouterProvider } from 'react-router-dom';
 import { useEffect } from 'react';
 import axios from 'axios';
