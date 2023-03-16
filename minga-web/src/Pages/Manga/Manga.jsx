@@ -16,9 +16,9 @@ export default function Manga() {
     const dispatch = useDispatch()
     let _id = useParams()
     let manga = useSelector(store => store.mangas.manga)
-   
+
     useEffect(() => {
-        dispatch(captureManga({ manga_id: _id.id}))   
+        dispatch(captureManga({ manga_id: _id.id}))
     }, [])
 
     return (

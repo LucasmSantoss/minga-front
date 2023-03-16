@@ -57,14 +57,12 @@ export default function NewChapter() {
           icon: 'error',
           title: 'Oops...',
           })
-      } else {
-  
       }
      } 
   console.log(error)
   }}
  
-    }
+}  
 
   return (
     <div id='ContainCharter'>
