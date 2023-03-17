@@ -15,10 +15,10 @@ export default function NavBody({handleRender}) {
             Swal.fire({
                 title: 'Logout Succefull',
                 showClass: {
-                  popup: 'animate__animated animate__fadeInDown'
+                  popup: 'animateanimated animatefadeInDown'
                 },
                 hideClass: {
-                  popup: 'animate__animated animate__fadeOutUp'
+                  popup: 'animateanimated animatefadeOutUp'
                 }
               })
             localStorage.setItem('token', "")
@@ -26,8 +26,8 @@ export default function NavBody({handleRender}) {
             handleRender()
           }catch(error){
             console.log(error)
-            
-        }      
+
+        }
     }
 
     return (
@@ -37,10 +37,11 @@ export default function NavBody({handleRender}) {
             { token ? <Anchor onClick={handleLogout}>Logout</Anchor>: "" }
             { token ? "" : <Anchor to='/register' onClick={handleRender}>Register</Anchor> }
             { token ? "" : <Anchor to='/signin' onClick={handleRender}>Login</Anchor> }
-            <Anchor to='/mangas/1'>Mangas</Anchor>
-            <Anchor to="/mangas">New Manga</Anchor>
             <Anchor to='/chapther-form/:manga_id'>Chapter</Anchor>
             <Anchor to='/api/chapters/:id'>Page</Anchor>
+            <Anchor to='/mangas/1'>Mangas</Anchor>
+            <Anchor to="/mangas">New Manga</Anchor>
+          
         </div>
     )
 }

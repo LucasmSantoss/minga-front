@@ -19,7 +19,7 @@ export default function Form() {
         [passwordRef.current.name]: passwordRef.current.value,
     }
     
-    let url = 'http://localhost:8080/api/signin'
+    let url = 'http://localhost:8080/api/signin/  '
     
     try {
         await axios.post(

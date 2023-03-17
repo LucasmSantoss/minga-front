@@ -51,7 +51,7 @@ export default function CreateManga() {
 
     return (
         <div>
-        <div className='manga-content'>
+            <div className='manga-content'>
                 <section >
                     <h2 className='title'>New Manga</h2>
                 </section>

@@ -1,0 +1,51 @@
+.category-company{
+    width: 80%;
+    height: auto;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+}
+.category {
+    width: 10vw;
+    background: pink;
+    border-radius: 40px;
+    border: solid 1px red;
+    font-size: 80%;
+    color: red;
+}
+.company{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-size: 1rem;
+    color: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.shonen {
+    padding: 12px;
+    gap: 10px;
+
+
+    width: 65px;
+    height: 35px;
+   
+
+    /* parrafo */
+
+    background: #FFE0DF;
+    border: #FFE0DF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 50px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 95.19%;
+
+    color: #EF8481;
+}
