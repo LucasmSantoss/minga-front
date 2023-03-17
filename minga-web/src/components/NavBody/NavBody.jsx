@@ -42,8 +42,8 @@ export default function NavBody({handleRender}) {
             <Anchor to='/api/chapters/:id'>Page</Anchor>
             
             <Anchor to='/mangas/1'>Mangas</Anchor>
-            <Anchor to="/mangas">New Manga</Anchor>
-            <Anchor to='/chapther-form/:manga_id'>Chapter</Anchor>
+           
+          
           
         </div>
     )
