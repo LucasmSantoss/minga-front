@@ -12,9 +12,11 @@ export default function MangasCards() {
   let order = useSelector(store => store.order.order)
   let page = useParams().page
   let mangas = useSelector(store => store.mangas.mangas)
+  
   let categories = useSelector(store => store.categories.categories)
   console.log(mangas)
   const { readMangas } = mangasActions
+  
   const dispatch = useDispatch()
 
   let token = localStorage.getItem("token")
@@ -22,10 +24,11 @@ export default function MangasCards() {
 
   useEffect(() =>{
     dispatch(readMangas({page: page, inputText: text, categories: categories,order: order, headers}))
-  }, [page, text, categories, order])
+  }, [page , text, categories , order])
+  console.log(mangas)
   return (
     <div className='mangas-cards'>
-    {
+   { mangas ?   
         mangas.length ? mangas.map((manga, i) => {
             let card = <Anchor className='card-anchor' to={'/manga/'+manga._id+"/1"} key={i}>
                 <section className='card'>
@@ -43,7 +46,7 @@ export default function MangasCards() {
             </Anchor>
             return card
         }) : <h2>Mangas not found</h2>
-    }
+    : " "}
 </div>
   )
 }

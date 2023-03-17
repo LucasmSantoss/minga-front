@@ -37,14 +37,10 @@ export default function NavBody({handleRender}) {
             { token ? <Anchor onClick={handleLogout}>Logout</Anchor>: "" }
             { token ? "" : <Anchor to='/register' onClick={handleRender}>Register</Anchor> }
             { token ? "" : <Anchor to='/signin' onClick={handleRender}>Login</Anchor> }
-            <Anchor to='/mangas'>Mangas</Anchor>
+            <Anchor to='/mangas'>New Mangas</Anchor>
             <Anchor to='/chapther-form/:manga_id'>Chapter</Anchor>
-            <Anchor to='/api/chapters/:id'>Page</Anchor>
-            
             <Anchor to='/mangas/1'>Mangas</Anchor>
-           
-          
-          
+
         </div>
     )
 }
