@@ -6,7 +6,6 @@ export default function FormProfile() {
         <>
             <div className='editProfile'>
                 <form className='formEdit'>
-                    <img id='imgProfile' src="./default-profile.png" alt="profile" />
                     <input name="name" className="inputAuthorForm" type="text" placeholder="Name" required />
                     <input name="last_name" className="inputAuthorForm" type="text" placeholder="Last Name" required />
                     <input name="city_country" className="inputAuthorForm" type="text" placeholder="City, Country" required />

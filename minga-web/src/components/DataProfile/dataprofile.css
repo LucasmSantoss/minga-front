@@ -1,10 +1,11 @@
 .profile {
+    height: 80%;
+    width: 40%;
     display: flex;
     flex-direction: column;
-    height: 80%;
-    width: 50%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    border: 3px red;
 }
 
 #profile-img {
@@ -20,6 +21,9 @@
     font-size: 16px;
     line-height: 3rem;
     color: #9d9d9d;
+}
+.data-author p {
+    margin-left: 7.3rem;
 }
 
 #icon1 {
