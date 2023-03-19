@@ -8,12 +8,12 @@ import mangasReducer from "./Mangas/reducer"
 
 export const store = configureStore({
     reducer: {
-        mangas: mangaReducer,
+        mangas: mangasReducer,
         checked: captureState,
         categories: categoriesReducer, 
         order: sortReducer,
         text: textReducer,
-        manga: mangasReducer
+        manga: mangaReducer
     }
 })
 

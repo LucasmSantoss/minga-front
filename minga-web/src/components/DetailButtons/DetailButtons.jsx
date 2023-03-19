@@ -9,13 +9,14 @@ import action from '../../store/Capture/actions'
 const { captureChapter } = actions;
 const {captureState} = action
 
-export default function SeccionBtn({ info }) {
+export default function DetailButtons({ info }) {
   const page = Number(useParams().page)
   const dispatch = useDispatch()
   const [pagination, setPagination] = useState(page)
   const [capitulo, setCapitulo] = useState(true)
 
-  let chapters = useSelector(store => store.mangas.chapter)
+  let chapters = useSelector(store => store.manga.chapter)
+  console.log(chapters)
 
   let check = useSelector(store => store.checked.checked)
 
@@ -35,10 +36,7 @@ export default function SeccionBtn({ info }) {
 
   useEffect(() => {
     dispatch(captureChapter({ manga_id: info._id, page: pagination }));
-  }, [pagination, capitulo]);
-
-  
-
+  }, [pagination, capitulo]); 
   return (
     <>
       <div className='details-btns'>
@@ -53,9 +51,9 @@ export default function SeccionBtn({ info }) {
         :
         <section className='card-chapter'>
           {chapters?.length > 0 ?
-            chapters.map(chapter => (
-              <div key={chapter._id} className='sectionChapter'>
-                <img className='selecChapter' src={chapter.manga_id.cover_photo} alt={chapter.title} />
+            chapters.map((chapter, i) => (
+              <div key={i} className='sectionChapter'>
+                <img className='selecChapter' src={chapter.cover_photo} alt={chapter.title} />
                 <div className='order-chapter'>
                   <p className='p-chapter'>Chapter #{chapter.order}</p>
                   <div className='coment-chapter'>
@@ -64,8 +62,8 @@ export default function SeccionBtn({ info }) {
                   </div>
                 </div>
 
-                <Anchor className='btn-read' to={'/chapters/' + chapter._id}>
-                  <button className='btn-read'>Read</button>
+                <Anchor className='btn-read' to={chapters && chapters.length > 0 ? '/api/chapters/' + chapter._id+'/0' : '#'}>
+                <button className='btn-read'>Read</button>
                 </Anchor>
 
 

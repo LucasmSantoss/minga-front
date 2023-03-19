@@ -9,8 +9,10 @@ import MangasBottom from "../../components/MangasBottom/MangasBottom"
 export default function Mangas() {
   return (
     <div className='divprincipal'>
-        <MangaUp/>
-        <section className='sectionDown'>    
+        <section className='sectionUp'>
+          <MangaUp/>
+        </section>
+        <section className='sectionDown'>
               <h2 className='h2Explore'><b>Explore</b></h2>
                <MangasCategory/>
                <MangasTypes/>
