@@ -1,0 +1,108 @@
+.editProfile {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.formEdit{
+    width: 52%;
+    height: 90%;
+    margin: 0;
+}
+#imgProfile{
+    visibility: hidden;
+} 
+.inputAuthorForm {
+    width: 80%;
+    height: 2.5rem;
+    border-bottom: 1px solid black;
+}
+.btndelete{
+    padding: 20px 55px;
+    gap: 10px;
+    
+    width: 280px;
+    height: 68px;
+    
+    /* red background */
+    
+    background: #FBDDDC;
+    border-radius: 50000px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+
+    /* red font */
+
+    color: #EE8380;
+
+}
+
+.btnsave{
+    padding: 20px 55px;
+    gap: 10px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+    width: 280px;
+    height: 68px;
+
+    background: #34D399;
+    border-radius: 50000px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+@media  (max-width: 748px){
+    .editProfile {
+        width: 80%;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #imgProfile{
+        visibility: hidden;
+        width: 5rem;
+    } 
+    .btnsave{
+        padding: 5px 35px;
+        gap: 7px;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        width: 235px;
+        height: 40px;
+    
+    }
+    .btndelete {
+        padding: 5px 35px;
+        gap: 7px;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        width: 235px;
+        height: 40px;
+        
+    }
+    .inputAuthorForm {
+        width: 15rem;
+        height: 2.5rem;
+    }
+    .formEdit{
+        width: 100%;
+        height: 90%;
+        margin: 0;
+    }
+}
