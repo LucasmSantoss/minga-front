@@ -11,7 +11,7 @@ import FormLogin from "./FormLogin/FormLogin";
 import Page from "./Page/Page"
 import Mangas from "./Mangas/Mangas.jsx"
 import Manga from './Manga/Manga'
-
+import MyMangas from "./MyMangas/MyMangas";
 
 
 import { createBrowserRouter } from "react-router-dom"
@@ -39,7 +39,7 @@ export const router = createBrowserRouter([
         { path: '/signin' , element: <FormAuthor state='login'/> },
         { path: '/mangas' , element: <MangaForm/> },
         {path: "/chapther-form/:manga_id", element: <ChapterForm/>},
-        // {path: "/api/chapters/:id/:page", element: <Page/>},
+        { path: '/mymangas/:page', element: <MyMangas /> },
         {path: "/mangas/:page", element: <Mangas/>}
 
     ]
