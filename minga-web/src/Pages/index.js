@@ -29,6 +29,7 @@ export const router = createBrowserRouter([
         { path: '/mangas' , element: <MangaForm/> },
         {path: "/chapther-form/:manga_id", element: <ChapterForm/>},
         {path: "/api/chapters/:id/:page", element: <Page/>},
+        { path: "/profile", element: <AuthorProfile /> },
         { path: "/manga/:id/:page", element: <Manga />}
         
     ]   },
@@ -41,7 +42,7 @@ export const router = createBrowserRouter([
         { path: '/mangas' , element: <MangaForm/> },
         {path: "/chapther-form/:manga_id", element: <ChapterForm/>},
         // {path: "/api/chapters/:id/:page", element: <Page/>},
-        { path: "/profile", element: <AuthorProfile /> },
+        
         {path: "/mangas/:page", element: <Mangas/>}
 
     ]

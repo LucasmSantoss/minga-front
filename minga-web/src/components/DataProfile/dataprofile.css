@@ -5,7 +5,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 3px red;
 }
 
 #profile-img {
@@ -29,4 +28,28 @@
 #icon1 {
     height: 1rem;
     width: 1rem;
+}
+
+@media  (max-width: 748px){
+    .profile {
+        height: 50%;
+        width: 100%;
+    }
+    .profile h2 {
+        font-size: 25px;
+    }
+    #profile-img {
+        width: 5rem;
+        height: 5rem;
+    }
+    .data-author {
+        width: 100%;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 15px;
+        color: #9d9d9d;
+    }
+    .data-author p {
+        margin-left: 4.5rem;
+    }
 }

@@ -31,7 +31,6 @@
     font-weight: 700;
     font-size: 64px;
     line-height: 75px;
-    /* identical to box height */
 
     text-align: center;
 }
@@ -48,7 +47,6 @@
     border-radius: 16px;
     margin-bottom: 3rem;
 }
-
 
 .profile {
     display: flex;
@@ -99,9 +97,9 @@
         width: 95%;
         min-height: 40vh;
         position: static;
-        margin-top: 0;
-        z-index: 100;
+        margin-top: 4rem;
         border-radius: 1rem;
         margin-bottom: 3rem;
     }
-}
+
+} 
