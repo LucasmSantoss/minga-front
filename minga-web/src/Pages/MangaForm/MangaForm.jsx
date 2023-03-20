@@ -53,7 +53,7 @@ export default function CreateManga() {
         <div>
             <div className='manga-content'>
                 <section >
-                    <h2 className='title'>New Manga</h2>
+                    <h2 className='title-newmanga'>New Manga</h2>
                 </section>
                 <form ref={formulario} className='manga-form' onSubmit={handleSubmit}>
                     <input className='manga-input' type='text' placeholder='Insert title' ref={title} />

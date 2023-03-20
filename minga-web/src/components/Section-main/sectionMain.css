@@ -74,14 +74,12 @@
   @media (max-width: 750px) {
     .section-main     {
       width: 100%;
-      margin-top: 90px;
     }
     .title   {
       width: 90%;
       text-align: center;
       font-size: 35px;
       margin: 1rem;
-      margin-top: 10rem;
     }
     .subTitle  {
       width: 90%;
