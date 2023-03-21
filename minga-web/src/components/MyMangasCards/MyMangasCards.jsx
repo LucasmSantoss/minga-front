@@ -61,7 +61,7 @@ export default function MyMangasCards() {
                                         <span className={'span-'+manga.category_id.name}>{manga.category_id.name}</span>
                                     </div>
                                     <div className='actions-btns'>
-                                        <Anchor className='myMangas-card-anchor' to={'/api/chapters/' + manga._id + "/1"}>Read</Anchor>
+                                        <Anchor className='myMangas-card-anchor' to={'/manga/' + manga._id + "/1" }>View</Anchor>
                                         <Anchor id={manga._id} className='myMangas-card-anchor editBtn' onClick={handleEdit}>Edit</Anchor>
                                         <Anchor id={manga._id} className='myMangas-card-anchor deleteBtn' onClick={handleDelete}>Delete</Anchor>
                                     </div>
