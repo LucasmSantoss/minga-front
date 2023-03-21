@@ -46,7 +46,6 @@ export default function EditModal() {
 
     const url = 'http://localhost:8080/api/manga/'+editId
 
-    // const { open } = AlertActions
 
     try {
       await axios.put(url, manga, headers)
