@@ -23,7 +23,7 @@ export default function MangasTypes() {
     useEffect(() => {
       axios.get(urlcategories).then(e => setCategories(e.data.data))
     }, [])
-    console.log(urlcategories)
+    
     function handleCheck(e){
       
       categories.forEach( category => {

@@ -1,7 +1,7 @@
 .mangas .mangas-displayed .mangas-cards .edit-modal{
     position: fixed;
-    top: 10vh;
-    width: 500px;
+    top: 5vh;
+    width: 600px;
     height: 500px;
     background-color: #E0DBFF;
     display: flex;
@@ -34,6 +34,11 @@
     display: flex;
     flex-direction: column;
     gap: 5.364vh;
+    width: 100%;
+}
+
+.manga-input{
+    width: 100%;
 }
 
 .mangas .mangas-displayed .mangas-cards .edit-modal .manga-form .manga-input{
@@ -75,5 +80,16 @@ border-radius: 6px;
 @media (max-width: 768px){
     .mangas .mangas-displayed .mangas-cards .edit-modal{
         width: 80%;
+    }
+   
+}
+
+@media (max-width: 500px){
+    .mangas .mangas-displayed .mangas-cards .edit-modal{
+        width: 90%;
+    }
+
+    .manga-input{
+        width: 100%;
     }
 }

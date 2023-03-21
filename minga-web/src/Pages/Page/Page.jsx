@@ -42,7 +42,7 @@ export default function ChapterDetails() {
 function handleNext() {
     setIndex(index + 1)
     navigate(`/api/chapters/${id}/${index + 1}`)
-    if (index >= chapter.pages.length - 1) {
+    if (index >= chapter?.pages?.length - 1) {
         navigate(`/api/chapters/${next}/0`)
         window.location.reload(true)
     }
@@ -60,7 +60,7 @@ function handleNext() {
             </h5>
           </div>
           <div className="capitulo-img">
-            <img src={chapter.pages?.[index]} alt="comicimage" />
+            <img src={chapter?.pages?.[index]} alt="comicimage" />
           </div>
         </div>
         <div className="next" onClick={handleNext}>

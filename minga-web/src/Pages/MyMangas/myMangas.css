@@ -2,6 +2,14 @@
     min-height: 100vh;
 }
 
+.divprincipal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+  }
+
 .mangas .myMangas-title{
     display: flex;
     flex-direction: column;
@@ -16,6 +24,20 @@
     background-blend-mode: darken;
 }
 
+.sectionDown{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    width: 95%;
+    min-height: 50vh;
+    position: static;
+    margin-top: -55px;
+    border-radius: 1rem;
+    gap: 36px;
+    padding: 45px 12.5vw;
+}
+
 .mangas .myMangas-title>h2{
     color: #FFFFFF;
     font-weight: 700;
@@ -24,7 +46,8 @@
     text-align: center;
 }
 
-.myMangas .mangas-displayed{
+
+.myMangas {
     display: flex;
     flex-direction: column;
     gap: 36px;
