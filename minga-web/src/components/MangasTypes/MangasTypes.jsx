@@ -19,10 +19,11 @@ export default function MangasTypes() {
     console.log(useSelector(store=>store.categories))
     let urlcategories = "http://localhost:8080/api/category"
     
+    
     useEffect(() => {
       axios.get(urlcategories).then(e => setCategories(e.data.data))
     }, [])
-
+    console.log(urlcategories)
     function handleCheck(e){
       
       categories.forEach( category => {

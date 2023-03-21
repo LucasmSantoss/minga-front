@@ -33,7 +33,7 @@ export default function MyMangasCards() {
 
     useEffect(() => {
         dispatch(read_myMangas({ page: page, categories: categories, order: order, headers }))
-    }, [page, categories, order, headers, editModalState, deleteModalState])
+    }, [page, categories, order, editModalState, deleteModalState])
 
     function handleEdit(e){
         dispatch(renderModal({state: true, id: e.target.id}))

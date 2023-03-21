@@ -19,8 +19,8 @@ export default function MangasType() {
 
     let checkedCategories = useSelector(store => store.categories.categories)
 
-    let categoriesUrl = "http://localhost:8080/categories"
-
+    let categoriesUrl = "http://localhost:8080/api/category"
+    console.log(checkedCategories)
     useEffect(() => {
         axios.get(categoriesUrl).then(e => setCategories(e.data.categories))
     },[])

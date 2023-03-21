@@ -24,6 +24,11 @@
     line-height: 95.19%;
 }
 
+.card-img img {
+    height: 100px;
+    width: 140px;
+}
+
 .mangas .mangas-displayed .mangas-cards .card .card-text .text .actions-btns .editBtn{
     background-color: #E0DBFF;
     color: #8883F0;

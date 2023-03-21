@@ -1,7 +1,7 @@
 import React from 'react'
 import './myMangas.css'
 import H2 from '../../components/H2/H2'
-import MangasCategory from '../../components/MangasCategory/MangasCategory'
+// import MangasCategory from '../../components/MangasCategory/MangasCategory'
 import MangasTypes from '../../components/MangasTypes/MangasTypes'
 import MyMangasCards from '../../components/MyMangasCards/MyMangasCards'
 import MyMangasBtns from '../../components/MyMangasBtns/MyMangasBtns'
@@ -24,7 +24,7 @@ export default function MyMangas() {
 
       <section className='mangas-displayed'>
         <H2 text='Explore' />
-        <MangasCategory />
+        {/* <MangasCategory /> */}
         <MangasTypes />
         <MyMangasCards />
         <MyMangasBtns />

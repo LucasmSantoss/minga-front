@@ -44,7 +44,7 @@ export default function EditModal() {
       cover_photo: coverPhoto.current.value
     };
 
-    const url = 'http://localhost:8080/api/mangas/'+editId
+    const url = 'http://localhost:8080/api/manga/'+editId
 
     // const { open } = AlertActions
 
@@ -63,7 +63,7 @@ export default function EditModal() {
           //   text: error.response.data.message
           // }
           // dispatch(open(dataAlert))
-          toast.error(error.response.data.message)
+          // toast.error(error.response.data.message)
         } else {
           error.response.data.message.forEach(err => toast.error(err))
         }
@@ -79,15 +79,17 @@ export default function EditModal() {
   }
 
   async function renderCategory() {
-    await axios.get('http://localhost:8080/api/categories').then((response) => { setCategorias(response.data.categories) })
+    await axios.get("http://localhost:8080/api/category").then((response ) => {  console.log(response.data.data),setCategorias(response.data.data) })
+   
   }
+
 
   function handleClose() {
     dispatch(renderModal({ state: false }))
   }
 
   useEffect(() => {
-    axios.get('http://localhost:8080/api/mangas/' + editId, headers).then(response => setMangaToEdit(response.data.manga))
+    axios.get('http://localhost:8080/api/manga/' + editId, headers).then(response => setMangaToEdit(response.data.manga))
   }, [editId])
 
   return (
