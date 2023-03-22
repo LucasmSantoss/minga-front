@@ -1,6 +1,6 @@
 .mangasTypes{
     display: flex;
-    justify-content: start;
+    justify-content: center;
     gap: 1rem;
 }
 .mangasTypes .category-shonen,
@@ -45,3 +45,5 @@
 .checked{
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 1) !important;
 }
+
+/* @media (min-width: ) */
