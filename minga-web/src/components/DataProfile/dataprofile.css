@@ -10,7 +10,7 @@
 #profile-img {
     width: 10rem;
     height: 10rem;
-    border-radius: 50px;
+    border-radius: 100px;
 }
 
 .data-author {
@@ -29,10 +29,14 @@
     height: 1rem;
     width: 1rem;
 }
+.name {
+    font-size: 40px;
+    color: black;
+}
 
 @media  (max-width: 748px){
     .profile {
-        height: 50%;
+        height: 65%;
         width: 100%;
     }
     .profile h2 {
@@ -41,6 +45,7 @@
     #profile-img {
         width: 5rem;
         height: 5rem;
+        border-radius: 100px; 
     }
     .data-author {
         width: 100%;
