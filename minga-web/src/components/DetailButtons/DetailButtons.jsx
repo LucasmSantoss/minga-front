@@ -62,7 +62,7 @@ export default function DetailButtons({ info }) {
                   </div>
                 </div>
 
-                <Anchor className='btn-read' to={chapters && chapters.length > 0 ? '/api/chapters/' + chapter._id+'/0' : '#'}>
+                <Anchor className='btn-read' to={chapters && chapters.length > 0 ? '/api/chapters/' + chapter._id + '/0' : '#'}>
                 <button className='btn-read'>Read</button>
                 </Anchor>
 
