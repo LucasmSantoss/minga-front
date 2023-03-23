@@ -5,9 +5,11 @@ import categoriesReducer from "./Categories/reducer"
 import textReducer from './Search/reducer'
 import sortReducer from "./Sort/reducer"
 import mangasReducer from "./Mangas/reducer"
+import alertReducer from './Alert/reducer'
+import chaptersReducer from "./Chapters/reducer"
 import authorReducer from './Author/reducer'
 
-export const store = configureStore({
+const store = configureStore({
     reducer: {
         mangas: mangasReducer,
         checked: captureState,
@@ -15,7 +17,11 @@ export const store = configureStore({
         order: sortReducer,
         text: textReducer,
         manga: mangaReducer,
+        alert: alertReducer,
+        chapters: chaptersReducer
         author: authorReducer
     }
 })
+
+export default store
 

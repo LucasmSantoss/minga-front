@@ -1,6 +1,5 @@
-
 import React from 'react';
-import './mangaportada.css'
+import './mangaPortada.css'
 
 
 export default function MangaPortada({info}) {

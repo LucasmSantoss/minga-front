@@ -6,7 +6,7 @@ export default function Manga() {
   return (
     <div>
 			<div className='fondo-manga'>
-				<Header />
+				
 				<h1>Mangas</h1>
 				<div className='div-input'>
 					<input type="search" placeholder="Find your manga here"/>

@@ -10,8 +10,8 @@ export default function MangasBottom() {
 
     return (
         <div className='page-btns'>
-            {page == 1 ? "" : <Anchor className='prev' to={'/mangas/' + (page - 1)} >Prev</Anchor>}
-            { mangas?.length == 6 || mangas?.length == 10 ? <Anchor className='next' to={'/mangas/' + (page + 1)} >Next</Anchor> : "" }
+            {page == 1 ? "" : <Anchor className='prevManga' to={'/mangas/' + (page - 1)} >Prev</Anchor>}
+            { mangas?.length == 6 || mangas?.length == 10 ? <Anchor className='nextManga' to={'/mangas/' + (page + 1)} >Next</Anchor> : "" }
         </div>
     )
 }
