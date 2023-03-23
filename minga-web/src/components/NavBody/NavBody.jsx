@@ -1,10 +1,18 @@
 import React from 'react'
 import './navBody.css'
 import { Link as Anchor } from 'react-router-dom'
+import authorAction from "../../store/Author/actions";
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+
+
+const { read_author } = authorAction;
 
 export default function NavBody({handleRender}) {
+  const dispatch = useDispatch();
+  const [isOpen, setIsOpen] = useState(true);
     let token = localStorage.getItem('token')
     let headers = {headers:{'Authorization':`Bearer ${token}`}}
     let url = 'http://localhost:8080/api/signout'
@@ -29,6 +37,12 @@ export default function NavBody({handleRender}) {
 
         }
     }
+    let author = useSelector((store) => store.author.author);
+    useEffect(() => {
+      if (author) {
+        dispatch(read_author());
+      }
+    }, [isOpen]);
 
     return (
         <div className='navBody'>
@@ -39,6 +53,7 @@ export default function NavBody({handleRender}) {
             { token ? "" : <Anchor to='/signin' onClick={handleRender}>Login</Anchor> }
             <Anchor to='/mangas'>New Mangas</Anchor>
             <Anchor to='/chapther-form/:manga_id'>Chapter</Anchor>
+            {token && author? <Anchor to='/profile'>Author-Profile</Anchor> : ''}
             <Anchor to='/mangas/1'>Mangas</Anchor>
 
         </div>
