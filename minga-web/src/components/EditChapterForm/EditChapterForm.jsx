@@ -8,6 +8,9 @@ import AlertDelete from '../AlertDelete/AlertDelete.jsx';
 import AlertEdit from '../AlertEdit/AlertEdit.jsx';
 import mangasActions from '../../store/Mangas/actions';
 import chaptersActions from "../../store/Chapters/actions"
+import mangasActions from '../../store/Mangas/actions';
+import chaptersActions from "../../store/Chapters/actions"
+
 
 const { read_manga } = mangasActions;
 const { get_chapter, read_chapters } = chaptersActions
@@ -25,6 +28,7 @@ export default function EditChapterForm() {
         dispatch(read_chapters({ id: manga_id, limit: 0}))
         dispatch(read_manga({ id: manga_id}))
     }, []);
+
     let chapters = useSelector(store => store.chapters.chapters)
     console.log(chapters)                                                               
     let manga = useSelector(store => store.mangas.manga.title)
@@ -40,6 +44,7 @@ export default function EditChapterForm() {
     let select = useRef()
     let dataToEdit = useRef()
     let formChapter = useRef()
+
 
     async function handleEdit(event) {
         event.preventDefault()
@@ -71,6 +76,7 @@ export default function EditChapterForm() {
         let url = 'http://localhost:8080/api/chapters/' + chapter_id;
         let token = localStorage.getItem('token');
         let headers = { headers: { 'Authorization': `Bearer ${token}` } };
+
         try {
             if (data === '') {
                 throw new Error("data")
@@ -100,13 +106,13 @@ export default function EditChapterForm() {
             } else {
                 Swal.fire(error.response.data)
             }
-        } 
         setShowAlertEdit(false)
     }
     async function handleNoEdit(event) {
         event.preventDefault()
         setShowAlertEdit(false)
-    }
+        }
+    
 
 
 
@@ -157,6 +163,7 @@ export default function EditChapterForm() {
             <div className='edit-chapter-inputs'>
                 <h4>{manga}</h4>
                 <div className='input-edit-chapter'>
+
                     <select className='select-chapter' defaultValue='select' ref={chapterSelected} onChange={handleChangeChapter}>
 
                         <option value='select'>Select chapter</option>
@@ -183,6 +190,7 @@ export default function EditChapterForm() {
                 </div>
             </div>
             <div className='edit-chapter-btns'>
+
                 <input type='submit' className='form-edit-chapter-btn' value='Edit' onClick={handleEdit}/>
                 {showAlertEdit && <AlertEdit onYes={handleSubmit} onNo={handleNoEdit} text="Are you sure you want to edit?"/>}
                 <input type='button' className='delete-btn' value='Delete' onClick={handleDelete} />
