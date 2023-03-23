@@ -15,15 +15,15 @@ export default function MangasCards() {
   
   let categories = useSelector(store => store.categories.categories)
   console.log(mangas)
-  const { readMangas } = mangasActions
+  const { read_mangas } = mangasActions
   
   const dispatch = useDispatch()
 
   let token = localStorage.getItem("token")
-  let headers = { headers: { "Authorization": `Bearer ${token}`}}
+  let headers = { headers: { "Authorization": `Bearer ${token}` }}
 
   useEffect(() =>{
-    dispatch(readMangas({page: page, inputText: text, categories: categories,order: order, headers}))
+    dispatch(read_mangas({page: page, inputText: text, categories: categories,order: order, headers}))
   }, [page , text, categories , order])
   console.log(mangas)
   return (

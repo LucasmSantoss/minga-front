@@ -23,9 +23,10 @@ const read_manga = createAsyncThunk(
         let url = 'http://localhost:8080/api/manga/' + id;
         try {
             let response = await axios.get(url, headers)
+            console.log(response)
             return {
                 manga: response.data.manga
-            }
+            } 
         } catch (error) {
             return {
                 manga: {}

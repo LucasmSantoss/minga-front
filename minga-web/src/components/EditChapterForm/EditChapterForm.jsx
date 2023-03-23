@@ -5,11 +5,10 @@ import { useParams } from 'react-router-dom';
 import './editChapterForm.css';
 import { useDispatch, useSelector } from 'react-redux';
 import AlertDelete from '../AlertDelete/AlertDelete.jsx';
+import AlertEdit from '../AlertEdit/AlertEdit.jsx';
 import mangasActions from '../../store/Mangas/actions';
 import chaptersActions from "../../store/Chapters/actions"
-import alertActions from '../../store/Alert/actions';
 
-const { open } = alertActions
 const { read_manga } = mangasActions;
 const { get_chapter, read_chapters } = chaptersActions
 
@@ -17,6 +16,7 @@ export default function EditChapterForm() {
     const { manga_id } = useParams()
     const [chapter_id, setChapter_id] = useState();
     const [showAlertDelete, setShowAlertDelete] = useState(false)
+    const [showAlertEdit, setShowAlertEdit] = useState(false)
     const [isChapterSelected, setIsChapterSelected] = useState(false)
     
     
@@ -25,16 +25,15 @@ export default function EditChapterForm() {
         dispatch(read_chapters({ id: manga_id, limit: 0}))
         dispatch(read_manga({ id: manga_id}))
     }, []);
-    let chapters = useSelector(store => store.mangas.chapters)
-    console.log("Checkpoint 1")
+    let chapters = useSelector(store => store.chapters.chapters)
     console.log(chapters)                                                               
     let manga = useSelector(store => store.mangas.manga.title)
-    console.log(manga)
-    let chapterSelected = useRef(null)
-    function handleChangeChapter(event) {
-        chapterSelected = event.target.value
-        setChapter_id(chapterSelected.current)
-        dispatch(get_chapter({ id: chapterSelected.current }))
+    
+    let chapterSelected = useRef()
+    function handleChangeChapter() {
+        console.log([chapterSelected.current])
+        setChapter_id(chapterSelected.current.value)
+        dispatch(get_chapter({ id: chapterSelected.current.value }))
         setIsChapterSelected(true)
     }
 
@@ -42,8 +41,14 @@ export default function EditChapterForm() {
     let dataToEdit = useRef()
     let formChapter = useRef()
 
-    async function handleSubmit(event) {
+    async function handleEdit(event) {
         event.preventDefault()
+        setShowAlertEdit(true)
+    }
+    
+    async function handleSubmit(event){
+        event.preventDefault()
+
         let dataInput = dataToEdit.current.value
         let dataSelected = select.current.value
         let data = {}
@@ -66,7 +71,6 @@ export default function EditChapterForm() {
         let url = 'http://localhost:8080/api/chapters/' + chapter_id;
         let token = localStorage.getItem('token');
         let headers = { headers: { 'Authorization': `Bearer ${token}` } };
-
         try {
             if (data === '') {
                 throw new Error("data")
@@ -80,26 +84,28 @@ export default function EditChapterForm() {
                 )
 
                 dispatch(get_chapter({ id: chapterSelected.current.value }))
-                let dataAlert = {
-                    icon: "success",
-                    text: "Your changes has been saved"
-                }
-                dispatch(open(dataAlert))
                 dispatch(read_chapters({ id: manga_id, limit: 0 }))
-                console.log(chapters)
             }
         } catch (error) {
-            if(typeof error === 'object'){
-                Swal.fire(error.message)
+            if(error.message === 'data'){
+                Swal.fire("You must select a data field to edit")
+            }else if (error.message === 'chapter') {
+                Swal.fire("You must select a chapter to edit")
             }
-            if (typeof error.response.data.message === 'string') {
+            if (typeof error.response.data.message === "string"){
                 Swal.fire(error.response.data.message)
-            } else if (Array.isArray(error.response.data.message)) {
+            }
+             else if (Array.isArray(error.response.data.message)){
                 error.response.data.message.forEach(err => Swal.fire(err))
             } else {
                 Swal.fire(error.response.data)
             }
-        }
+        } 
+        setShowAlertEdit(false)
+    }
+    async function handleNoEdit(event) {
+        event.preventDefault()
+        setShowAlertEdit(false)
     }
 
 
@@ -151,10 +157,11 @@ export default function EditChapterForm() {
             <div className='edit-chapter-inputs'>
                 <h4>{manga}</h4>
                 <div className='input-edit-chapter'>
-                    <select className='select-chapter' defaultValue='select' onChange={handleChangeChapter}>
+                    <select className='select-chapter' defaultValue='select' ref={chapterSelected} onChange={handleChangeChapter}>
+
                         <option value='select'>Select chapter</option>
                         {chapters?.map((chapter) => (
-                            <option id={chapter._id} key={chapter.title} value={chapter._id} ref={chapterSelected}> {chapter.order}</option>
+                            <option id={chapter._id} key={chapter.title} value={chapter._id}> {chapter.order}</option>
                             ))}
                             
                     </select>
@@ -176,7 +183,8 @@ export default function EditChapterForm() {
                 </div>
             </div>
             <div className='edit-chapter-btns'>
-                <input type='submit' className='form-edit-chapter-btn' value='Edit' />
+                <input type='submit' className='form-edit-chapter-btn' value='Edit' onClick={handleEdit}/>
+                {showAlertEdit && <AlertEdit onYes={handleSubmit} onNo={handleNoEdit} text="Are you sure you want to edit?"/>}
                 <input type='button' className='delete-btn' value='Delete' onClick={handleDelete} />
                 {showAlertDelete && <AlertDelete onYes={handleYes} onNo={handleNo} text='Are you sure you want to delete?' />}
             </div>

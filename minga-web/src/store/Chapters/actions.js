@@ -29,8 +29,6 @@ const read_chapters = createAsyncThunk(
         }
     }
 )
-console.log("checkpoint 3")
-console.log(read_chapters)
 
 const get_chapter = createAsyncThunk(
     'get_chapter',
