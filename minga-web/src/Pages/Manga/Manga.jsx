@@ -21,14 +21,14 @@ export default function Manga() {
         dispatch(captureManga({ manga_id: _id.id}))
     }, [])
 
-    return (
+    return(
 
         <div className="contenedor">
-           { (manga.length!= 0) && <MangaPortada info={manga}/>}
-           { (manga.length!= 0) && <InfoCatYcompany info={manga}/>}
+           {(manga.length!= 0) && <MangaPortada info={manga}/>}
+           {(manga.length!= 0) && <InfoCatYcompany info={manga}/>}
            <BotonReacciones />
             <InfoRectangulo />
-          { (manga.length!=0) && <DetailButtons  info={manga}/>}
+          {(manga.length!=0) && <DetailButtons  info={manga}/>}
         </div>
 
     )

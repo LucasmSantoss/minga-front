@@ -25,7 +25,8 @@ const read_manga = createAsyncThunk(
             let response = await axios.get(url, headers)
             return {
                 manga: response.data.manga
-            }
+            } 
+
         } catch (error) {
             return {
                 manga: {}
