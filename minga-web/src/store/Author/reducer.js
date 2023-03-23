@@ -1,32 +1,31 @@
 import { createReducer } from "@reduxjs/toolkit";
-import mangasActions from './actions'
+import AuthorActions from "./actions.js";
 
-const {read_mangas, read_manga} = mangasActions
+const {read_author,update_author} = AuthorActions
 
 const initialState ={
-    mangas: [],
-    manga: {}
+    author: [],
 }
 
 const reducer = createReducer(
     initialState,
-    (builder) => builder
+    (builder)=> builder
     .addCase(
-        read_mangas.fulfilled,
+        read_author.fulfilled,
         (state,actions)=>{
-            let newState = {
+            let newState ={
                 ...state,
-                mangas: actions.payload.mangas
+                author: actions.payload.author
             }
             return newState
         }
     )
     .addCase(
-        read_manga.fulfilled,
+        update_author.fulfilled,
         (state,actions)=>{
-            let newState = {
+            let newState ={
                 ...state,
-                manga: actions.payload.manga
+                author: actions.payload.author
             }
             return newState
         }

@@ -4,7 +4,7 @@ import { RouterProvider } from 'react-router-dom';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { Provider } from 'react-redux';
-import {store} from "./store/store.js"
+import store from "./store/store.js"
 
 
 

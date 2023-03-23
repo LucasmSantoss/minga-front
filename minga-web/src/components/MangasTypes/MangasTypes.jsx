@@ -60,8 +60,6 @@ export default function MangasTypes() {
               
               }
               
-              </div>
-                  
-                
+              </div>   
   )
 }

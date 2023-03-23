@@ -11,7 +11,12 @@ import FormLogin from "./FormLogin/FormLogin";
 import Page from "./Page/Page"
 import Mangas from "./Mangas/Mangas.jsx"
 import Manga from './Manga/Manga'
+
 import MyMangas from "./MyMangas/MyMangas";
+
+import EditChapter from "./EditChapter/EditChapter.jsx"
+import AuthorProfile from "./AuthorProfile/AuthorProfile.jsx"
+
 
 
 import { createBrowserRouter } from "react-router-dom"
@@ -25,27 +30,25 @@ export const router = createBrowserRouter([
         { path: "/signup", element: <Register /> },
         { path: "/signin", element: <FormLogin/> },
         { path: "/*", element: <NotFound /> },
-        { path: '/mangas' , element: <MangaForm/> },
-        {path: "/chapther-form/:manga_id", element: <ChapterForm/>},
-        { path: "/manga/:id/:page", element: <Manga />},
-        
-        
+
+
     ]   },
+
+    ]},
+
     { path: "/",
       element: <MainLayout/>,
       children: [
-       
-        { path: '/register' , element: <FormAuthor state='register'/> },
         { path: '/signin' , element: <FormAuthor state='login'/> },
         { path: '/mangas' , element: <MangaForm/> },
-        {path: "/chapther-form/:manga_id", element: <ChapterForm/>},
         { path: '/mymangas/:page', element: <MyMangas /> },
-        {path: "/api/chapters/:id/:page", element: <Page/>},
-        {path: "/mangas/:page", element: <Mangas/>}
-
-    ]
-    },
-    { path: "/*", element: <NotFound /> },
+        { path: "/chapther-form/:manga_id", element: <ChapterForm/>},
+        { path: "/api/chapters/:id/:page", element: <Page/>},
+        { path: "/manga/:id/:page", element: <Manga/>},
+        { path: "/edit/:manga_id", element: <EditChapter/>,
+        {path: "/mangas/:page", element: <Mangas/>},
+        { path: "/profile", element: <AuthorProfile /> },
+    ]},
 ])
 
 

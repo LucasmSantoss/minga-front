@@ -9,8 +9,12 @@ import myMangasReducer from './MyMangas/reducer'
 import alertReducer from './Alert/reducer'
 import modalReducer from './RenderEditModal/reducer'
 import modalDeleteReducer from './RenderDeleteModal/reducer'
+import alertReducer from './Alert/reducer'
+import chaptersReducer from "./Chapters/reducer"
+import authorReducer from './Author/reducer'
 
-export const store = configureStore({
+
+const store = configureStore({
     reducer: {
         alert: alertReducer,
         mangas: mangasReducer,
@@ -21,7 +25,13 @@ export const store = configureStore({
         manga: mangaReducer,
         myMangas: myMangasReducer,
         modalState: modalReducer,
-        modalDeleteState: modalDeleteReducer
+        modalDeleteState: modalDeleteReducer,
+        alert: alertReducer,
+        chapters: chaptersReducer,
+        author: authorReducer
+
     }
 })
+
+export default store
 

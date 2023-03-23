@@ -20,7 +20,7 @@ input{
         justify-content: center;
         gap: 28px;
 }
-.formchapter input{
+.form-chapter input{
     width: 30%;
     background-color: transparent;
     border: none;
