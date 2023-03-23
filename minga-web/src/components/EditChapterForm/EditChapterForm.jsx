@@ -8,8 +8,7 @@ import AlertDelete from '../AlertDelete/AlertDelete.jsx';
 import AlertEdit from '../AlertEdit/AlertEdit.jsx';
 import mangasActions from '../../store/Mangas/actions';
 import chaptersActions from "../../store/Chapters/actions"
-import mangasActions from '../../store/Mangas/actions';
-import chaptersActions from "../../store/Chapters/actions"
+
 
 
 const { read_manga } = mangasActions;

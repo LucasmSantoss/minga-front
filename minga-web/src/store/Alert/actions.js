@@ -14,23 +14,9 @@ const open = createAction(
     }
 )
 
-const close = createAction(
-    'close',
-    ({ icon, text }) => {
-        return {
-            payload: {
-                icon,
-                text,
-                visible: false
-            }
-        }
-    }
-)
 
-let open = createAction(
-    'open',
-    ({ icon,text })=> { return { payload: { icon, text, visible: true } }}
-)
+
+
 
 let close = createAction(
     'close',

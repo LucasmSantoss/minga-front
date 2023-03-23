@@ -34,7 +34,7 @@ export const router = createBrowserRouter([
 
     ]   },
 
-    ]},
+
 
     { path: "/",
       element: <MainLayout/>,
@@ -45,7 +45,7 @@ export const router = createBrowserRouter([
         { path: "/chapther-form/:manga_id", element: <ChapterForm/>},
         { path: "/api/chapters/:id/:page", element: <Page/>},
         { path: "/manga/:id/:page", element: <Manga/>},
-        { path: "/edit/:manga_id", element: <EditChapter/>,
+        { path: "/edit/:manga_id", element: <EditChapter/>},
         {path: "/mangas/:page", element: <Mangas/>},
         { path: "/profile", element: <AuthorProfile /> },
     ]},
