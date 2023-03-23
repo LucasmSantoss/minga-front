@@ -7,6 +7,7 @@ import sortReducer from "./Sort/reducer"
 import mangasReducer from "./Mangas/reducer"
 import alertReducer from './Alert/reducer'
 import chaptersReducer from "./Chapters/reducer"
+import authorReducer from './Author/reducer'
 
 const store = configureStore({
     reducer: {
@@ -18,6 +19,7 @@ const store = configureStore({
         manga: mangaReducer,
         alert: alertReducer,
         chapters: chaptersReducer
+        author: authorReducer
     }
 })
 
