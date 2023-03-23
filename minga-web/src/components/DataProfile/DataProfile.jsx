@@ -5,7 +5,7 @@ import location from '../../images/location-marker.png'
 import date from '../../images/cake.png'
 
 
-export default function Profile() {
+export default function DataProfile() {
     let author = useSelector(store => store?.author.author)
     console.log(author)
 

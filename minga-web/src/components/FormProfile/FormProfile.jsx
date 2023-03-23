@@ -11,7 +11,7 @@ const { read_author, update_author } = authorAction
 
 
 
-export default function EditProfile() {
+export default function FormProfile() {
      const navigate = useNavigate();
      const dispatch = useDispatch();
      const editForm = useRef();
@@ -35,12 +35,12 @@ export default function EditProfile() {
      setShowAlert(false);
      if (!showAlert) {
        const result = await Swal.fire({
-         title: "¿You re sure?",
+         title: "¿You are sure?",
          text: "You are about to update your data. Are you sure to continue?",
          icon: "warning",
          showCancelButton: true,
-         confirmButtonColor: "#3085d6",
-         cancelButtonColor: "#d33",
+         confirmButtonColor: "#34D399",
+         cancelButtonColor: "#EE8380",
          confirmButtonText: "Yes, update",
          cancelButtonText: "Cancel",
        });
@@ -64,7 +64,7 @@ export default function EditProfile() {
           icon: "warning",
           showCancelButton: true,
           confirmButtonColor: "#d33",
-          cancelButtonColor: "#3085d6",
+          cancelButtonColor: "#EE8380",
           confirmButtonText: "yes, delete",
           cancelButtonText: "Cancel",
         });

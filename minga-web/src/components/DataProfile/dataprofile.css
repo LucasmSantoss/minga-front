@@ -34,7 +34,7 @@
     color: black;
 }
 
-@media  (max-width: 748px){
+@media (min-width: 320px) and (max-width: 767px){
     .profile {
         height: 65%;
         width: 100%;
@@ -56,5 +56,22 @@
     }
     .data-author p {
         margin-left: 4.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .profile {
+        height: 75%;
+        width: 25rem;
+    }
+    .data-author p {
+        margin-left: 0rem;
+        text-align: center;
+    }
+    .data-author {
+        width: 100%;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 3rem;
     }
 }
