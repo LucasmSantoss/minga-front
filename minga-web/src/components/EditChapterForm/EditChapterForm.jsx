@@ -86,7 +86,7 @@ export default function EditChapterForm() {
                 dispatch(get_chapter({ id: chapterSelected.current.value }))
                 dispatch(read_chapters({ id: manga_id, limit: 0 }))
             }
-        } catch (error) {
+        }catch(error){
             if(error.message === 'data'){
                 Swal.fire("You must select a data field to edit")
             }else if (error.message === 'chapter') {
