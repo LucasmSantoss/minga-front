@@ -16,7 +16,7 @@ export default function DetailButtons({ info }) {
   const [capitulo, setCapitulo] = useState(true)
 
   let chapters = useSelector(store => store.manga.chapter)
-  console.log(chapters)
+  
 
   let check = useSelector(store => store.checked.checked)
 

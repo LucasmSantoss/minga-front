@@ -1,5 +1,32 @@
 import { createAction } from "@reduxjs/toolkit"
 
+
+const open = createAction(
+    'open',
+    ({ icon, text }) => {
+        return {
+            payload: {
+                icon,
+                text,
+                visible: true
+            }
+        }
+    }
+)
+
+const close = createAction(
+    'close',
+    ({ icon, text }) => {
+        return {
+            payload: {
+                icon,
+                text,
+                visible: false
+            }
+        }
+    }
+)
+
 let open = createAction(
     'open',
     ({ icon,text })=> { return { payload: { icon, text, visible: true } }}
@@ -11,4 +38,5 @@ let close = createAction(
 )
 
 const alertActions = { open,close }
+
 export default alertActions

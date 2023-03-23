@@ -1,37 +1,37 @@
-import { createReducer } from "@reduxjs/toolkit"
-import alertActions from "./actions"
+import { createReducer } from "@reduxjs/toolkit";
+import alertActions from "./actions";
 
-const { open,close } = alertActions
+const { open, close } = alertActions
 
 const initialState = {
-    visible: false,
-    icon: 'warning',
-    text: ''
+    icon: "success",
+    text: "",
+    visible: false
 }
 
-let alertReducer = createReducer(
+const alertReducer = createReducer(
     initialState,
     (builder) => builder
         .addCase(
             open,
-            (state,action) => {
-                let newState = {
+            (state, action) => {
+                let newState = { 
                     ...state,
-                    visible: action.payload.visible,
                     icon: action.payload.icon,
-                    text: action.payload.text
+                    text: action.payload.text,
+                    visible: action.payload.visible
                 }
                 return newState
             }
         )
         .addCase(
             close,
-            (state,action) => {
-                let newState = {
+            (state, action) => {
+                const newState = { 
                     ...state,
-                    visible: action.payload.visible,
                     icon: action.payload.icon,
-                    text: action.payload.text
+                    text: action.payload.text,
+                    visible: action.payload.visible
                 }
                 return newState
             }

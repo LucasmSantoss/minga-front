@@ -3,7 +3,8 @@
     display: flex;
     justify-content: center;
     gap: 0.8rem;
-    
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .cat1{
     background: url(/public/imgs/imagen\ 16.png) rgba(0, 0, 0, 0.5);;

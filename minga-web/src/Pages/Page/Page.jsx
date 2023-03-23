@@ -13,7 +13,8 @@ export default function ChapterDetails() {
   let [index, setIndex] = useState(Number(page))
   let [next, setNext] = useState('')
   let [prev, setPrev] = useState('')
-
+  console.log(id)
+  console.log(page)
   useEffect(() => {
       axios.get(url + id).then(res => {
           setChapter(res.data.chapter);
@@ -22,9 +23,9 @@ export default function ChapterDetails() {
           setNext(res.data.next)
           setPrev(res.data.prev);
       }).catch(error => console.log(error));
-  }, []);
+  }, [  id, page]);
 
-  
+  console.log("hola")
    
   function handlePrev() {
     setIndex(index - 1);
@@ -42,7 +43,7 @@ export default function ChapterDetails() {
 function handleNext() {
     setIndex(index + 1)
     navigate(`/api/chapters/${id}/${index + 1}`)
-    if (index >= chapter.pages.length - 1) {
+    if (index >= chapter?.pages?.length - 1) {
         navigate(`/api/chapters/${next}/0`)
         window.location.reload(true)
     }
@@ -56,11 +57,11 @@ function handleNext() {
         <div className="img-text">
           <div className="text-capitulo">
             <h5>
-              Cap {chapter.order} - {chapter.title} - Page {index}
+              Cap {chapter?.order} - {chapter?.title} - Page {index}
             </h5>
           </div>
           <div className="capitulo-img">
-            <img src={chapter.pages?.[index]} alt="comicimage" />
+            <img src={chapter?.pages?.[index]} alt="comicimage" />
           </div>
         </div>
         <div className="next" onClick={handleNext}>

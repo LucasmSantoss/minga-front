@@ -48,6 +48,7 @@ export default function NavBody({handleRender}) {
         <div className='navBody'>
             <Anchor to='/'>Home</Anchor>
             { token ? <Anchor to='/signup'>New Author</Anchor> : "" }
+            { token ? <Anchor to='/mymangas/1' >My Mangas</Anchor>: "" }
             { token ? <Anchor onClick={handleLogout}>Logout</Anchor>: "" }
             { token ? "" : <Anchor to='/register' onClick={handleRender}>Register</Anchor> }
             { token ? "" : <Anchor to='/signin' onClick={handleRender}>Login</Anchor> }
