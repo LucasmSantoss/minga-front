@@ -10,7 +10,6 @@ import mangasActions from '../../store/Mangas/actions';
 import chaptersActions from "../../store/Chapters/actions"
 
 
-
 const { read_manga } = mangasActions;
 const { get_chapter, read_chapters } = chaptersActions
 
@@ -107,6 +106,7 @@ export default function EditChapterForm() {
             }
         setShowAlertEdit(false)
     }
+}
     async function handleNoEdit(event) {
         event.preventDefault()
         setShowAlertEdit(false)
@@ -198,5 +198,4 @@ export default function EditChapterForm() {
 
         </form>
     )
-}
 }
