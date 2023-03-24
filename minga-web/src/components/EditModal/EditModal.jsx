@@ -69,8 +69,10 @@ export default function EditModal() {
   }
 
   async function renderCategory() {
-    await axios.get("http://localhost:8080/api/category").then((response ) => {  console.log(response.data.data),setCategorias(response.data.data) })
-   
+    await axios.get("http://localhost:8080/api/category").then((response) =>{
+      console.log(response.data.data)
+      setCategorias(response.data.data)
+     })
   }
 
 
