@@ -25,10 +25,8 @@ const store = configureStore({
         myMangas: myMangasReducer,
         modalState: modalReducer,
         modalDeleteState: modalDeleteReducer,
-      
         chapters: chaptersReducer,
         author: authorReducer
-
     }
 })
 

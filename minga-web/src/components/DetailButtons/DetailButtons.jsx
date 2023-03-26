@@ -3,7 +3,7 @@ import './detailbuttons.css'
 import { Link as Anchor, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import comment from '../../images/comment.png'
-import actions from '../../store/Detail/actions'
+import actions from '../../store/Detail/actions.js'
 import action from '../../store/Capture/actions'
 
 const { captureChapter } = actions;
@@ -16,7 +16,7 @@ export default function DetailButtons({ info }) {
   const [capitulo, setCapitulo] = useState(true)
 
   let chapters = useSelector(store => store.manga.chapter)
-  
+  console.log(chapters)
 
   let check = useSelector(store => store.checked.checked)
 
@@ -51,7 +51,7 @@ export default function DetailButtons({ info }) {
         :
         <section className='card-chapter'>
           {chapters?.length > 0 ?
-            chapters.map((chapter, i) => (
+            chapters?.map((chapter, i) => (
               <div key={i} className='sectionChapter'>
                 <img className='selecChapter' src={chapter.cover_photo} alt={chapter.title} />
                 <div className='order-chapter'>
@@ -62,7 +62,7 @@ export default function DetailButtons({ info }) {
                   </div>
                 </div>
 
-                <Anchor className='btn-read' to={chapters && chapters.length > 0 ? '/api/chapters/' + chapter._id + '/0' : '#'}>
+                <Anchor className='btn-read' to={`/api/chapters/${chapter._id}/1` }>
                 <button className='btn-read'>Read</button>
                 </Anchor>
 

@@ -30,7 +30,7 @@ export default function MangasCards() {
     <div className='mangas-cards'>
    { mangas ?   
         mangas.length ? mangas.map((manga, i) => {
-            let card = <Anchor className='card-anchor' to={'/manga/'+manga._id+"/1"} key={i}>
+            let card = <Anchor className='card-anchor' to={'/manga/'+ manga._id + "/1"} key={i}>
                 <section className='card'>
                     <div className='card-text'>
                         <div className='card-color'></div>
