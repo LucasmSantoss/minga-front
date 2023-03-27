@@ -1,0 +1,83 @@
+.manga-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+}
+
+.new-author{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+.new-author h2{
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    width: 69.0625vw;
+}
+
+.new-author img{
+    width: 88px;
+    height: 88px;
+    border-radius: 50px;
+}
+
+.manga-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 5rem;
+    
+}
+
+.manga-input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #424242;;
+    height: 2.467vh;
+    width: 30rem;
+}
+#selectMove {
+    border: 0;
+    width: 30rem;
+    color: gray;
+    font-size: 0.9rem;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+}
+.bor{
+    border: none;
+}
+fieldset{
+    border: none;
+}
+.send{
+    width: 200px;
+    height: 50px;
+    background:  #4338CA;
+    border-radius: 50000px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #EBEBEB;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    margin: 0 auto;
+} 
+
+
+

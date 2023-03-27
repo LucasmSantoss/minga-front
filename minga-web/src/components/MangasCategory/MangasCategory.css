@@ -1,0 +1,55 @@
+
+.categories{
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.cat1{
+    background: url(/public/imgs/imagen\ 16.png) rgba(0, 0, 0, 0.5);;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 16px;
+    border-radius: 8px;  
+}
+.cat2{
+    background: url(/public/imgs/imagen\ 17.png) rgba(0, 0, 0, 0.5);;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 16px;
+    border-radius: 8px;
+}
+.cat3{
+    background: url(/public/imgs/imagen\ 18.png) rgba(0, 0, 0, 0.5);;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 16px;
+    border-radius: 8px;
+}
+.sectionDown .cat1 p,
+.sectionDown .cat2 p,
+.sectionDown .cat3 p{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 95.19%;
+    color: #FFFFFF;
+}

@@ -1,48 +1,31 @@
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 40vh;
-  top: -7vh;
-  position: relative;
-  padding: 10px 13%;
+footer{
+    max-height: 30vh;
+    margin-bottom: 9.49vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
-.suscribe {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-
-  width: 100%;
-  place-content: center;
-  align-items: center;
-  background: #ffffff;
-  box-shadow: 0px 0px 20px -10px #222222;
-  border-radius: 10px;
-  width: 80%;
-  height: 100vh;
-  gap: 10%;
+footer .img-container{
+    width: 100%;
+    height: 28.027vh; 
 }
 
-.suscribe-Now {
-  background: linear-gradient(87.46deg, #4338ca 0%, #5e52f3 100%);
-  border-radius: 4px;
-  color: #ffff;
-
-  padding: 15px 34px;
-  gap: 15px;
-  border: none;
+footer .img-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 50% 50%;
+    object-fit: cover;
 }
 
-.suscribe-donate {
-  background: linear-gradient(87.46deg, #4338ca 0%, #5e52f3 100%);
-  border-radius: 30px;
-  color: #ffff;
-
-  padding: 15px 34px;
-  gap: 15px;
-  border: none;
+@media (max-width:1024px) {
+    footer{
+        margin-top: -10px;
+    }
 }
+
+@media (max-width:720px) {
 
 .suscribe fieldset {
   background: #ffffff;
@@ -125,21 +108,7 @@
   width: 120px;
 }
 
-/* hr{
-  
-  border: 1px solid #222222;
-  text-align: center;
-  width: 1000%;
-}
-.hr {
- 
-  background-color: #F472B6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  align-self: center;
-} */
+
 
 @media (max-width: 1050px) {
   .footer-container {
@@ -169,4 +138,4 @@
   .footer-container {
     top: -32vh;
   }
-}
+}}

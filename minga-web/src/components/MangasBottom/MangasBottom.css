@@ -1,0 +1,29 @@
+.page-btns{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    height: 5rem;
+}
+
+.page-btns .prevManga,
+.page-btns .nextManga{
+    width: 80px;
+    height: 30px;
+    background: linear-gradient(153.39deg, #5552fa -13.9%, #1e1bec 58.69%);
+    border-radius: 50000px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #EBEBEB;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+}
+
+.page-btns .prevManga:hover,
+.page-btns .nextManga:hover{
+    transform: scale(1.1);
+}

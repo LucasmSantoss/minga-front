@@ -1,10 +1,12 @@
 import React from 'react';
-import Index  from '../../components/Index/Index'
+import { Outlet } from 'react-router-dom'
+import Header from '../../components/Header/Header.jsx';
 
-function IndexLayout(props) {
+function IndexLayout() {
     return (
         <div>
-            <Index/>
+            <Header/>
+            <Outlet />
         </div>
     );
 }

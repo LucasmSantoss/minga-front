@@ -6,23 +6,26 @@
     padding: 0px;
     gap: 16px;
     color: #ffffff;
-    margin-top: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
   }
   
   .title {
     font-family: "Roboto";
     font-style: normal;
+    color: white;
     font-weight: 700;
     font-size: 40px;
     line-height: 56px;
     display: flex;
     align-items: center;
+    padding-top: 30px;
   }
   
   .subTitle {
-    
+    width: 31rem;
     height: 56px;
-  
+
     font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
@@ -71,7 +74,6 @@
   @media (max-width: 750px) {
     .section-main     {
       width: 100%;
-      margin-top: 200px;
     }
     .title   {
       width: 90%;
@@ -89,3 +91,4 @@
        margin-top: 30px;
     }
   }
+ 

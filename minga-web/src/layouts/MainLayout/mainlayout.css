@@ -1,0 +1,9 @@
+.header{
+    max-height: 10vh;
+}
+.outlet{
+    min-height: 60vh;
+}
+.footer{
+    max-height: 30vh;
+}
