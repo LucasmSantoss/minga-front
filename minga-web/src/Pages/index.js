@@ -11,6 +11,7 @@ import FormLogin from "./FormLogin/FormLogin";
 import Page from "./Page/Page"
 import Mangas from "./Mangas/Mangas.jsx"
 import Manga from './Manga/Manga'
+import AuthorForm from "./AuthorForm/AuthorForm"
 
 import MyMangas from "./MyMangas/MyMangas";
 
@@ -30,6 +31,7 @@ export const router = createBrowserRouter([
         { path: "/signup", element: <Register /> },
         { path: "/signin", element: <FormLogin/> },
         { path: "/*", element: <NotFound /> },
+        { path: "/author-form", element: <AuthorForm /> }
 
 
     ]   },
