@@ -1,216 +1,124 @@
-.container-page{
-    margin-top: 20px;
-    display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(20px, auto));
-    width: 100%;
+
+ */
+ .mover {
     height: 100vh;
-	place-content: center;
-    gap: 3rem;
-}
-
-.capitulo-img img {
-    width: 100%;
-    height: 80vh;
-    
-}
-
-.text-capitulo {
-    background: #4338CA;
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
-    width: 100%;
-}
-
-.text-capitulo h5 {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 18px;
-    text-align: center;
-    color: #FFFFFF;
-    padding: 10px 10px;
-}
-
-
-
-.prev {
-    height: 100%;
-    width: 50%;
-    position: relative;
-    left: 20%;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-.prev img {
-    width: 2rem;
-    padding: 0.1rem;    
-    cursor: pointer;
-}
-
-.next {
-    height: 100%;
-    width: 50%;
-    position: relative;
-    right: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    cursor: pointer;
-    
-}
-
-.next img {
-    width: 2rem;
-    padding: 0.1rem;
-    cursor: pointer;
-    
-}
-
-
-.img-text{
-    width: 100%;
-    height: 100%;
-    padding: 0px 10px;
-}
-
-
-
- 
-.page{
-    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-.coment {
-    position:relative;
-    padding:15px;
-    margin:1em 0 3em;
-    width: 67px;
-    height: 29px;
-    font-size: 20px;
-    color:#000;
-    border-radius:10px;
-    background-color: #c9c9c9;
- }
-  
- 
- .coment:after {
-    content:"\00a0";
-    display:block; 
-    position:absolute;
-    bottom:-20px;
-    left:7px;
-    width:0;
-    height:0;
-    border-width:15px 15px;
-    border-style:solid;
-    border-color:#c9c9c9 transparent transparent;
- }
+    align-content: center;
+    justify-content: center;
+} 
 
-
-
-
- .coment{
-    
+.div-chapter2 {
+    background: #4338CA;
     display: flex;
     align-items: center;
-    align-content: center;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    
- }
+    margin-top: 5rem;
+    height: 3rem;
+}
 
-.coment p{
-    z-index: 200000;
-    padding: 10px 50px;
+.parrafo-chapter2 {
+    color: white;
+}
+
+.contenedor-capitulos {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+.boton-back {
+    z-index: 1;
+    width: 30%;
+    height: 100%;
+    background: transparent;
+    color: brown;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border: none;
+}
+
+.boton-next {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    background: transparent;
+    color: brown;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border: none;
+
+}
+
+.posi {
     position: absolute;
-}
-
-.coment h6{
-    z-index: 200000;
-   
-}
-
-.coment-number{
+    height: 67vh;
+    width: 30vw;
     display: flex;
-    align-items: center;
-    align-content: center;
     justify-content: center;
+}
+
+.div-chapter3 {
+    background: #dbd9d9;
+    padding: 0.6rem;
+    margin-top: 1rem;
+
+}
+
+.chapter3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.parrafo-chapter3 {
+    display: flex;
     gap: 1rem;
-    margin-top: -40px;
-}
-
-.coment-number h6{
-    margin-top: -40px;
-    font-size: 15px;
-}
-
-
-
-@media (max-width: 700px) {
-    
-.prev {
-    margin-top: 30px;
-    height: 100%;
-    width: 50%;
-    position: absolute;
-    left: 7%;
-    display: flex;
     align-items: center;
-    cursor: pointer;
+    color: black
 }
 
-.prev img {
-    display: none;
+.comment {
+    width: 2rem;
 }
 
-.next {
-    margin-top: 30px;
-    height: 100%;
-    width: 50%;
-    position: absolute;
-    right: 7%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    cursor: pointer;
+.icono-flecha {
+    font-size: 20px;
+    color: #000;
+    position: relative;
+    top: 5px;
+    left: 5px;
 }
 
-.next img {
-   display: none;
+.flecha {
+    width: 2rem
 }
 
-.img-text{
+.flecha:hover {
+    width: 3rem;
+}
+.mangaa{
+    height: 70vh;
     width: 100%;
-    height: 100%;
-    padding: 0px 0px;
 }
 
-
-
-.container-page{
-  width: 100%;
-    gap: 0;
+@media (max-width: 768px){
+    .posi{
+        width: 50vw;
+    }
 }
 
-
-.coment {
-    width: 37px;
- }
-
- .coment-number{
-    margin-top: -70px;
- }
-
- 
- 
+@media (max-width: 425px) {
+    .posi{
+        width: 65vw;
+    }
+    .boton-back{
+        width: 45%;
+    }
+    .boton-next{
+        width: 45%;
+    }
 }
-
-
-
-
