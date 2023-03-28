@@ -8,7 +8,7 @@ import "./page.css";
 export default function ChapterDetails() {
   let navigate = useNavigate()
   let { id, page } = useParams()
-  let url = `http://localhost:8080/api/chapters/`
+  let url = `https://minga-back-m-20.onrender.com/api/chapters/`
   let [chapter, setChapter] = useState({})
   let [index, setIndex] = useState(Number(page))
   let [next, setNext] = useState('')

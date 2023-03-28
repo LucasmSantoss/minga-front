@@ -25,7 +25,7 @@ export default function CreateManga() {
             category_id: filteredCategory._id
         };
         
-        const url = 'http://localhost:8080/api/manga'
+        const url = 'https://minga-back-m-20.onrender.com/api/manga'
         try {
             await axios.post(url, manga)
             formulario.current.reset()
@@ -46,7 +46,7 @@ export default function CreateManga() {
     }
 
     async function renderCategory() {
-        await axios.get('http://localhost:8080/api/manga').then((response) => { setCategorias(response.data.categories) })
+        await axios.get('https://minga-back-m-20.onrender.com/api/manga').then((response) => { setCategorias(response.data.categories) })
     }
 
     return (
