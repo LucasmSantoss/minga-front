@@ -9,9 +9,10 @@ export default function InfoCatYcompany({info}) {
         {info.category_id && <button className="shonen">{info.category_id.name}</button>}
         {info.author_id && (
           <Anchor to={"/profile"}>
-            <h3 className="company">{info.author_id}</h3>
+            <h3 className="company">{info.author_id.name}</h3>
           </Anchor>
         )}
       </div>
   );
 }
+

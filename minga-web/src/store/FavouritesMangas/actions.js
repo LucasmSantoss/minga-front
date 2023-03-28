@@ -6,7 +6,6 @@ const read_favouritesMangas = createAsyncThunk(
     async ({ page, categories, order, headers }) => {
         try{
             let response = await axios.get("http://localhost:8080/api/reactions?name=love&page="+page+"&category="+categories+"&order="+order,headers)
-            console.log(response)
             return { favouritesMangas: response.data.message }
         }catch(error){
             return { favouritesMangas: '' }

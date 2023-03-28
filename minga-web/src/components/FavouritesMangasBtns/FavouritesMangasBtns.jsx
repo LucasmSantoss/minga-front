@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux'
 export default function FavouritesMangasBtns() {
     let page = Number(useParams().page)
     let mangas = useSelector(store => store.favouritesMangas.favouritesMangas)
+    console.log(mangas)
 
     return (
         <div className='page-btns'>

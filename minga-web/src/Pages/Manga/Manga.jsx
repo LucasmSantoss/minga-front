@@ -2,8 +2,7 @@ import React,{ useEffect } from 'react'
 import './manga.css'
 import MangaPortada from '../../components/MangaPortada/MangaPortada'
 import InfoCatYcompany from '../../components/InfoCatyCompany/InfoCatYcompany'
-import BotonReacciones from '../../components/BottonReacciones/BotonReacciones'
-import InfoRectangulo from '../../components/InfoRectangulo/InfoRectangulo'
+import Reaction from '../../components/Reaction/Reaction'
 import DetailButtons from '../../components/DetailButtons/DetailButtons'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router'
@@ -26,8 +25,8 @@ export default function Manga() {
         <div className="contenedor">
            {(manga.length!= 0) && <MangaPortada info={manga}/>}
            {(manga.length!= 0) && <InfoCatYcompany info={manga}/>}
-           <BotonReacciones />
-            <InfoRectangulo />
+           <Reaction />
+          
           {(manga.length!=0) && <DetailButtons  info={manga}/>}
         </div>
 

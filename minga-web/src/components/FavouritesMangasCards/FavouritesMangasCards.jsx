@@ -13,7 +13,7 @@ import axios from 'axios'
 import toast,{ Toaster } from 'react-hot-toast'
 
 export default function FavouritesMangasCards() {
-    let mangas = useSelector(store => store?.favouritesMangas?.favouritesMangas)
+    let mangas = useSelector(store => store.favouritesMangas.favouritesMangas)
     let categories = useSelector(store => store.categories.categories)
     let order = useSelector(store => store.order.order)
     let page = useParams().page
@@ -59,7 +59,7 @@ export default function FavouritesMangasCards() {
                                         <span className={'span-'+manga.category_id.name}>{manga.category_id.name}</span>
                                     </div>
                                     <div className='actions-btns'>
-                                        <Anchor className='myMangas-card-anchor' to={'/mangas/' + manga._id + "/1"}>Read</Anchor>
+                                        <Anchor className='myMangas-card-anchor' to={'/manga/' + manga._id + "/1"}>Read</Anchor>
                                         <Anchor id={manga._id} className='myMangas-card-anchor deleteBtn' onClick={handleDelete}>Remove</Anchor>
                                     </div>
                                 </div>

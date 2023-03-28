@@ -1,6 +1,6 @@
 import React from 'react'
 import './myReactions.css'
-import MangasType from '../../components/MangasType/MangasType'
+import MangasTypes from '../../components/MangasTypes/MangasTypes'
 import FavouritesMangasCards from '../../components/FavouritesMangasCards/FavouritesMangasCards'
 import FavouritesMangasBtns from '../../components/FavouritesMangasBtns/FavouritesMangasBtns'
 import { Link as Anchor } from 'react-router-dom'
@@ -17,7 +17,7 @@ export default function MyReactions() {
         </div>
 
       <section className='mangas-displayed'>
-        <MangasType />
+        <MangasTypes />
         <FavouritesMangasCards />
         <FavouritesMangasBtns />
       </section>

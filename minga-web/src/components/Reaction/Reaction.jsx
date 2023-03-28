@@ -113,8 +113,8 @@ export default function Reaction() {
 
     let [cantChapters,setCantChapters] = useState('')
     useEffect( () => {
-        axios.get("http://localhost:8080/api/chapters/all/" + mangaId).then(res => setCantChapters(res.data.chapters.length))
-    },[])
+        axios.get("http://localhost:8080/api/chapters/" + mangaId).then(res => setCantChapters(res.data.chapters.length))
+    },[cantChapters])
 
     return (
         <>
