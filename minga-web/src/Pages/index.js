@@ -11,9 +11,7 @@ import FormLogin from "./FormLogin/FormLogin";
 import Page from "./Page/Page"
 import Mangas from "./Mangas/Mangas.jsx"
 import Manga from './Manga/Manga'
-
 import MyMangas from "./MyMangas/MyMangas";
-
 import EditChapter from "./EditChapter/EditChapter.jsx"
 import AuthorProfile from "./AuthorProfile/AuthorProfile.jsx"
 

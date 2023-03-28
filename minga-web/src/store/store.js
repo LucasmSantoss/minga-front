@@ -11,7 +11,7 @@ import modalReducer from './RenderEditModal/reducer'
 import modalDeleteReducer from './RenderDeleteModal/reducer'
 import chaptersReducer from "./Chapters/reducer"
 import authorReducer from './Author/reducer'
-
+import checkoutMercadoPagoReducer from "./CheckoutMercadoPago/reducer"
 
 const store = configureStore({
     reducer: {
@@ -25,9 +25,9 @@ const store = configureStore({
         myMangas: myMangasReducer,
         modalState: modalReducer,
         modalDeleteState: modalDeleteReducer,
-      
         chapters: chaptersReducer,
-        author: authorReducer
+        author: authorReducer,
+        checkout: checkoutMercadoPagoReducer
 
     }
 })
