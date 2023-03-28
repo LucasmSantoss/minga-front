@@ -12,11 +12,12 @@ import Page from "./Page/Page"
 import Mangas from "./Mangas/Mangas.jsx"
 import Manga from './Manga/Manga'
 import AuthorForm from "./AuthorForm/AuthorForm"
-
 import MyMangas from "./MyMangas/MyMangas";
-
 import EditChapter from "./EditChapter/EditChapter.jsx"
 import AuthorProfile from "./AuthorProfile/AuthorProfile.jsx"
+import AdminPanel from './AdminPanel/AdminPanel'
+import CompanyForm from './CompanyForm/CompanyForm'
+import NewRole from './NewRole/NewRole'
 
 
 
@@ -31,7 +32,7 @@ export const router = createBrowserRouter([
         { path: "/signup", element: <Register /> },
         { path: "/signin", element: <FormLogin/> },
         { path: "/*", element: <NotFound /> },
-        { path: "/author-form", element: <AuthorForm /> }
+        { path: "/api/authors", element: <AuthorForm /> }
 
 
     ]   },
@@ -48,8 +49,11 @@ export const router = createBrowserRouter([
         { path: "/api/chapters/:id/:page", element: <Page/>},
         { path: "/manga/:id/:page", element: <Manga/>},
         { path: "/edit/:manga_id", element: <EditChapter/>},
-        {path: "/mangas/:page", element: <Mangas/>},
+        { path: "/mangas/:page", element: <Mangas/> },
         { path: "/profile", element: <AuthorProfile /> },
+        { path: "/create-company", element: <CompanyForm /> },
+        { path: "/api/admin", element: <AdminPanel /> },
+        { path: "/api/new-role", element: <NewRole/> }
     ]},
 ])
 
