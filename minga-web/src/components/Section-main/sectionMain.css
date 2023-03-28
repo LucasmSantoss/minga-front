@@ -13,7 +13,7 @@
   .title {
     font-family: "Roboto";
     font-style: normal;
-    color: white;
+    color: black;
     font-weight: 700;
     font-size: 40px;
     line-height: 56px;
@@ -80,6 +80,7 @@
       text-align: center;
       font-size: 35px;
       margin: 1rem;
+      margin-top: 3rem;
     }
     .subTitle  {
       width: 90%;

@@ -11,7 +11,7 @@
 
   @media (max-width: 750px){
   .fondo {
-    background-image: url(../../../public/imgs/fondo.png);
+    background-image: url(../../../public/imgs/background-mobile.png);
     min-height: 100vh;
     margin-bottom: 200px;
   }
