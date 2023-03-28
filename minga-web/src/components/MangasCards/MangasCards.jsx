@@ -30,20 +30,20 @@ export default function MangasCards() {
     <div className='mangas-cards'>
    { mangas ?   
         mangas.length ? mangas.map((manga, i) => {
-            let card = <Anchor className='card-anchor' to={'/manga/'+manga._id+"/1"} key={i}>
-                <section className='card'>
+            let card =
+                <section className='card' key={i}>
                     <div className='card-text'>
-                        <div className='card-color'></div>
+                        <div className={'cardColor-'+manga.category_id.name}></div>
                         <div className='text'>
                             <h2>{manga.title}</h2>
-                            <span>{manga.category_id.name}</span>
+                            <span className={'span-'+manga.category_id.name}>{manga.category_id.name}</span>
                         </div>
+                        <Anchor className='card-anchor' to={'/manga/'+manga._id+"/1"}>Read</Anchor>
                     </div>
                     <div className='card-img'>
                         <img className='imgcard' src={manga.cover_photo} alt='manga-image' />
                     </div>
                 </section>
-            </Anchor>
             return card
         }) : <h2>Mangas not found</h2>
     : " "}
