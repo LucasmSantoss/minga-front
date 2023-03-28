@@ -13,6 +13,8 @@ import chaptersReducer from "./Chapters/reducer"
 import authorReducer from './Author/reducer'
 import reactionsReducer from './Reactions/reducer'
 import favouritesMangasReducer from './FavouritesMangas/reducer'
+import renderCommentsModal from './RenderCommentsModal/reducer'
+import getComents from './Comments/reducer'
 
 const store = configureStore({
     reducer: {
@@ -29,7 +31,9 @@ const store = configureStore({
         chapters: chaptersReducer,
         author: authorReducer,
         reactions: reactionsReducer,
-        favouritesMangas: favouritesMangasReducer
+        favouritesMangas: favouritesMangasReducer,
+        commentsModal: renderCommentsModal,
+        comments: getComents
     }
 })
 

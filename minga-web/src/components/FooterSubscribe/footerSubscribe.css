@@ -78,6 +78,7 @@ footer .subscribe-section .subscribe-container .subscribe-submit{
     footer .subscribe-section{
         height: auto;
         padding: 5px 0;
+        margin-top: -50px;
     }
 
     footer .subscribe-section .subscribe-container{

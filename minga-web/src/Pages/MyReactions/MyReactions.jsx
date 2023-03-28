@@ -15,13 +15,15 @@ export default function MyReactions() {
         <div className='favouritesMangas-title'>
             <h2>Favourites</h2>
         </div>
-
+        <div className='divprincipal'>
+        <section className='sectionDown'>
       <section className='mangas-displayed'>
         <MangasTypes />
         <FavouritesMangasCards />
         <FavouritesMangasBtns />
       </section>
-
+      </section>
+      </div>
     </div> : <div className='noLogged'><Anchor to='/auth'>Please Register or Login</Anchor></div>
       }
     </>

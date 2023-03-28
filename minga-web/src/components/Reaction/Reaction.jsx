@@ -26,7 +26,7 @@ export default function Reaction() {
 
     const {captureReactions} = actions
     let dispatch = useDispatch()
-    useEffect( () => { // TRAE LAS REACCIONES DEL MANGA
+    useEffect( () => { 
         setTimeout( () => {
             dispatch(captureReactions({mangaId,headers}))
         },500)
@@ -34,12 +34,12 @@ export default function Reaction() {
 
     let mangaReactions = useSelector(store => store.reactions.reactions)
 
-    useEffect(() => { // TRAE LAS REACCIONES DEL USUARIO AL MANGA
+    useEffect(() => { 
         let url = "http://localhost:8080/api/reactions?me=1&manga_id=" + mangaId
         axios.get(url,headers).then(res => setUserReactions(res.data.message))
     }, [])
 
-    useEffect(() => { //si tenes reacciones te las selecciona por defecto
+    useEffect(() => { 
         if (like, dislike, surprise, love) {
             userReactions.forEach(reaction => {
                 if (reaction.name === 'like') {

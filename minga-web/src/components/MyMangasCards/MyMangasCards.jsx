@@ -53,7 +53,7 @@ export default function MyMangasCards() {
                                 <div className={'card-color-'+manga.category_id.name}></div>
                                 <div className='text'>
                                     <div className='createAndEdit-icons'>
-                                        <Anchor to={'/chapter-form/' + manga._id}><Image src={plusIcon} /></Anchor>
+                                        <Anchor to={'/chapther-form/' + manga._id}><Image src={plusIcon} /></Anchor>
                                         <Anchor to={'/edit/' + manga._id}><Image src={editIcon} /></Anchor>
                                     </div>
                                     <div>
