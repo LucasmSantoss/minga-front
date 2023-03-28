@@ -13,8 +13,7 @@ export default function ChapterDetails() {
   let [index, setIndex] = useState(Number(page))
   let [next, setNext] = useState('')
   let [prev, setPrev] = useState('')
-  console.log(id)
-  console.log(page)
+  
   useEffect(() => {
       axios.get(url + id).then(res => {
           setChapter(res.data.chapter);
@@ -25,7 +24,7 @@ export default function ChapterDetails() {
       }).catch(error => console.log(error));
   }, [  id, page]);
 
-  console.log("hola")
+
    
   function handlePrev() {
     setIndex(index - 1);
