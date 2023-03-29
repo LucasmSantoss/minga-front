@@ -1,5 +1,6 @@
 import React from 'react'
 import './newRolIndex.css'
+import img1 from '../../images/logoIgna.png'
 
 
 export default function NewRoleIndex() {
@@ -7,7 +8,7 @@ export default function NewRoleIndex() {
         <>
             <div className='newrole-index'>
                 <h2>Change role to</h2>
-                <img src='./Logo.png' alt="img" />
+                <img src={img1} alt="img" />
             </div>
         </>
     )

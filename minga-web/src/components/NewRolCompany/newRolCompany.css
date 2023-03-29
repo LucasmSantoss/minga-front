@@ -50,6 +50,10 @@
     margin-left: 10px;
 }
 #img-profile{
+    width: 1.7rem;
+    height: auto;
+}
+#img-profile1 {
     width: 2rem;
     height: auto;
 }

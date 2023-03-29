@@ -9,8 +9,6 @@
     width: 90%;
     height: 100vh;
     background-image: url('../../images/Rectangle\ 8.png');
-    background-repeat: no-repeat;
-    background-size: cover;
     object-fit: cover;
 }
 
