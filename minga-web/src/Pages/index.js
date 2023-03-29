@@ -15,9 +15,9 @@ import AuthorForm from "./AuthorForm/AuthorForm"
 import MyMangas from "./MyMangas/MyMangas";
 import EditChapter from "./EditChapter/EditChapter.jsx"
 import AuthorProfile from "./AuthorProfile/AuthorProfile.jsx"
-import AdminPanel from './AdminPanel/AdminPanel'
-import CompanyForm from './CompanyForm/CompanyForm'
-import NewRole from './NewRole/NewRole'
+import AdminPanel from "./AdminPanel/AdminPanel";
+import CompanieForm from './CompanyForm/CompanyForm'
+import NewRole from "./NewRole/NewRole";
 
 
 
@@ -51,9 +51,9 @@ export const router = createBrowserRouter([
         { path: "/edit/:manga_id", element: <EditChapter/>},
         { path: "/mangas/:page", element: <Mangas/> },
         { path: "/profile", element: <AuthorProfile /> },
-        { path: "/create-company", element: <CompanyForm /> },
-        { path: "/api/admin", element: <AdminPanel /> },
-        { path: "/api/new-role", element: <NewRole/> }
+        { path: "/create-company", element: <CompanieForm/> },
+        { path: "/admin-panel", element: <AdminPanel /> },
+        { path: "/new-role", element: <NewRole/> }
     ]},
 ])
 

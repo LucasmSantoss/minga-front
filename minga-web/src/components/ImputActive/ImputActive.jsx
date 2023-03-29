@@ -11,7 +11,7 @@ const { update_active } = updateCompany;
 
 export default function InputActive({ item, author }) {
   const dispatch = useDispatch();
-  const [active, setActive] = useState(false); // input active o no active
+  const [active, setActive] = useState(false); 
 
   useEffect(() => {
     setActive(item.active)

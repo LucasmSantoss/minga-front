@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import icon3 from '../../images/Union.png';
+import icon3 from '../../images/Union.png'
 import './tableRole.css';
 import { useDispatch, useSelector } from 'react-redux';
 import authorActions from '../../store/Author/actions.js';
@@ -17,10 +17,10 @@ export default function TableRole() {
   const dispatch = useDispatch();
   const [isCompany, setIsCompany] = useState(true);
   const activeData = useSelector((store) =>
-    isCompany ? store.Company.activeCompany : store.Author.activeAuthor
+    isCompany ? store.Company.activeCompany : store.author.activeAuthor
   );
   const inactiveData = useSelector((store) =>
-    isCompany ? store.Company.inactiveCompany : store.Author.inactiveAuthor
+    isCompany ? store.Company.inactiveCompany : store.author.inactiveAuthor
   );
 
   function handleIsCompany() {
@@ -44,8 +44,7 @@ export default function TableRole() {
           (a, b) => a.active - b.active
         )
       : [];
-
-  const showAuthor = !isCompany;
+const showAuthor = !isCompany;
 
   return (
     <div>

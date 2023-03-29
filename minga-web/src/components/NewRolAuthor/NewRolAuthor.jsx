@@ -5,7 +5,7 @@ import { Link as Anchor } from 'react-router-dom'
 export default function NewRoleAuthor() {
     return (
         <>
-            <Anchor to={'/author-form'} className='text-author'>
+            <Anchor to={'/authors'} className='text-author'>
                 <div className='cont-author'>
                     <div className='profiles'>
                         <img id='img-profile' src='../Ellipse 3.png' alt='img' />

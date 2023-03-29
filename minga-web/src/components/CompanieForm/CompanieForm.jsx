@@ -1,7 +1,7 @@
 import { useRef } from "react";
-import "./companyForm.css";
+import "./companieForm.css";
 import axios from "axios";
-import swal from "sweetalert2";
+import swal from 'sweetalert2'
 
 export default function CompanyForm() {
   const name = useRef();
@@ -13,7 +13,7 @@ export default function CompanyForm() {
   async function handleSubmit(e) {
     e.preventDefault();
     let token = localStorage.getItem("token");
-    let headers = { headers: { Authorization: `Bearer ${token}` } }
+    let headers = { headers: { Authorization: `Bearer ${token}` } };
     let url = 'http://localhost:8080/api/companies'
 
     let formData = new FormData(formRef.current);
@@ -39,7 +39,7 @@ return (
     <div id="container-companyform">
       <form ref={formRef} id="company-form" onSubmit={handleSubmit}>
         <h1>New Company</h1>
-        <img src="./default-profile.png" alt="profile" />
+        {/* <img src="./default-profile.png" alt="profile" /> */}
         <input
           ref={name}
           name="name"

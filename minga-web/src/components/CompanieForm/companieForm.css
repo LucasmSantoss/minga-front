@@ -15,6 +15,7 @@
 }
 #company-form h1 {
   font-family: "Montserrat", sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -30,11 +31,12 @@
   border-bottom: 1px solid black;
 }
 #button-company {
-  background: linear-gradient(153.39deg, #f9a8d4 -13.9%, #f472b6 58.69%);
+  background: linear-gradient(153.39deg, #F97316 -13.9%, #F97316 58.69%);
   border-radius: 50000px;
   width: 60%;
   height: 3rem;
   font-family: "Montserrat";
+  font-family:Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
