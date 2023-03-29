@@ -55,7 +55,7 @@ export default function NavBody({handleRender}) {
             { token ? "" : <Anchor to='/signin' onClick={handleRender}>Login</Anchor> }
             <Anchor to='/chapther-form/:manga_id'>Chapter</Anchor>
             { token && author? <Anchor to='/profile'>Author-Profile</Anchor> : '' }
-            { token ? <Anchor to='/admin-panel'>Admin Panel</Anchor> : "" }
+            { token ? <Anchor to='/admin/prueba'>Admin Panel</Anchor> : "" }
             <Anchor to='/mangas/1'>Mangas</Anchor>
             <Anchor to="/mangas">New Manga</Anchor>
             { token ? <Anchor onClick={handleLogout}>Logout</Anchor>: "" }

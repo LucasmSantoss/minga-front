@@ -10,7 +10,7 @@
     border-radius: 15px;
 }
 .newrole .cont-author:hover {
-    border: 3px solid rgb(245, 118, 184);
+    border: 3px solid #4338CA;
     cursor: pointer;
 }
 .newrole .cont-author .selec-author {
@@ -20,7 +20,7 @@
 }
 .newrole .cont-author .selec-author h3 {
     width: 200px;
-    color: rgb(245, 118, 184);
+    color: #4338CA;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -33,7 +33,7 @@
 }
 .newrole .cont-author .selec-author p {
     width: 400px;
-    color: rgb(245, 118, 184);
+    color: #4338CA;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 300;
@@ -73,7 +73,7 @@
     }
     .newrole .cont-author .selec-author p {
         width: 300px;
-        color: rgb(245, 118, 184);
+        color: #4338CA;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 300;
@@ -102,7 +102,7 @@
     }
     .newrole .cont-author .selec-author p {
         width: 200px;
-        color: rgb(245, 118, 184);
+        color: #4338CA;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 300;

@@ -23,7 +23,7 @@ const read_all_authors = createAsyncThunk("read_all_authors", async () => {
   try {
     let token = localStorage.getItem('token')
     let headers = { headers: { 'Authorization': `Bearer ${token}` } }
-    let res = await axios.get("https://localhost:8080/api/authors/admin", headers);
+    let res = await axios.get("http://localhost:8080/api/authors/admin/prueba", headers);
     return { active_authors: res.data.authorActive, inactive_authors: res.data.authorInactive };
   } catch (error) {
     console.log(error)
@@ -58,7 +58,7 @@ const update_active_author = createAsyncThunk(
     let token = localStorage.getItem('token')
     let headers = { headers: { 'Authorization': `Bearer ${token}` } }
     try {
-      let response = await axios.put(`https://localhost:8080/api/authors/admin/${_id}`, { active: active }, headers);
+      let response = await axios.put(`http://localhost:8080/api/authors/admin/${_id}`, { active: active }, headers);
       return {
         author: response.data.author,
         success: true

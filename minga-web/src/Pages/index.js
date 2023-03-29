@@ -52,7 +52,7 @@ export const router = createBrowserRouter([
         { path: "/mangas/:page", element: <Mangas/> },
         { path: "/profile", element: <AuthorProfile /> },
         { path: "/create-company", element: <CompanieForm/> },
-        { path: "/admin-panel", element: <AdminPanel /> },
+        { path: "/admin/prueba", element: <AdminPanel /> },
         { path: "/new-role", element: <NewRole/> }
     ]},
 ])

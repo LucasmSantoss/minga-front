@@ -7,7 +7,7 @@
     margin-top: 2rem;
 }
 table{
-    border: 2px solid #F9A8D4 ;
+    border: 2px solid #4338CA ;
     width: 100%;
     text-decoration: dashed;
 }
@@ -38,7 +38,7 @@ table{
      display: flex;
      justify-content: center;
      align-items: center;
-     background: linear-gradient(153.39deg, #F9A8D4 -13.9%, #F472B6 58.69%);
+     background: linear-gradient(153.39deg, #4338CA -13.9%, #2a1fa7 58.69%);
      border: 1px solid rgba(0, 0, 0, 0.276);
      box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
      width: 100%;
@@ -49,7 +49,7 @@ table{
  }
  .btn-isCompanie {
      width:40vw;
-     height: auto;
+     height: 2.5rem;
      background: transparent;
      display: flex;
      justify-content: center;
@@ -63,7 +63,7 @@ table{
      background: #FFFFFF;
      border: 1px solid rgba(0, 0, 0, 0.276);
      margin: 0px;
-     color: #F472B6;
+     color: #4338CA;
      border-radius: 10px 10px 0 0;
      box-shadow: none;
     
