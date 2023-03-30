@@ -1,79 +1,108 @@
 
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useNavigate, useParams } from "react-router-dom";
 import "./page.css";
+import comment from '../../images/icon_comment 1.png'
+import flecha from '../../images/flecha-correcta.png'
+import flecha_izquierda from '../../images/flecha-izquierda.png'
+import Comment from "../../components/Comment/Comment";
+import { useDispatch, useSelector } from 'react-redux'
+import modalActions from '../../store/RenderCommentsModal/actions'
+import commentsActions from '../../store/Comments/actions'
+import { Link as Anchor } from "react-router-dom";
 
-export default function ChapterDetails() {
-  let navigate = useNavigate()
-  let { id, page } = useParams()
-  let url = `http://localhost:8080/api/chapters/`
-  let [chapter, setChapter] = useState({})
-  let [index, setIndex] = useState(Number(page))
-  let [next, setNext] = useState('')
-  let [prev, setPrev] = useState('')
-  console.log(id)
-  console.log(page)
+export default function Page() {
+  const [chapter, setChapters] = useState({});
+  const [next, setNext] = useState('');
+  const { id, page } = useParams();
+  const url = 'http://localhost:8080/api/chapters/';
+  const navigate = useNavigate();
+
+  let dispatch = useDispatch()
+  let modalState = useSelector(store => store.commentsModal.state)
+ 
+  const { renderModal } = modalActions
+
+  let [index, setIndex] = useState(Number(page));
+
+  let comments = useSelector(store => store.comments.comments)
   useEffect(() => {
-      axios.get(url + id).then(res => {
-          setChapter(res.data.chapter);
-          console.log(res.data)
-          setIndex(Number(page))
-          setNext(res.data.next)
-          setPrev(res.data.prev);
-      }).catch(error => console.log(error));
-  }, [  id, page]);
+    axios
+      .get(`${url}${id}`)
+      .then((response) => {
+        setChapters(response.data.chapter);
+        setNext(response.data.next)
+      })
 
-  console.log("hola")
-   
-  function handlePrev() {
+      .catch((error) => console.error(error));
+  }, [comments]);
+
+
+  let handlePrev = () => {
     setIndex(index - 1);
     navigate(`/api/chapters/${id}/${index - 1}`);
-
-    if ((index <= 0) && (chapter.order === 1)) {
-        navigate('/mangas/:page');
-    }else if (index <= 0){
-        navigate(`/api/chapters/${prev}/0`)
-        window.location.reload(true)
+    if (index <= 0) {
+      navigate(`/manga/${chapter.manga_id}/1`);
     }
-}
+  };
 
-
-function handleNext() {
-    setIndex(index + 1)
-    navigate(`/api/chapters/${id}/${index + 1}`)
-    if (index >= chapter?.pages?.length - 1) {
-        navigate(`/api/chapters/${next}/0`)
-        window.location.reload(true)
+  let handleNext = () => {
+    setIndex(index + 1);
+    navigate(`/api/chapters/${id}/${index + 1}`);
+    if (index >= chapter.pages.length - 1) {
+      navigate(`/api/chapters/${next}/${0}`);
     }
-}
-    return (
-    <div className="page">
-      <div className="container-page">
-        <div className="prev" onClick={handlePrev}>
-          <img src="../../../imgs/prev.png" alt="prevarrow" />
-        </div>
-        <div className="img-text">
-          <div className="text-capitulo">
-            <h5>
-              Cap {chapter?.order} - {chapter?.title} - Page {index}
-            </h5>
+  };
+
+  function handleRender() {
+    dispatch(renderModal({ state: true }))
+  }
+
+  let token = localStorage.getItem('token')
+  let headers = { headers: { 'Authorization': `Bearer ${token}` } }
+  const { getComments } = commentsActions
+  useEffect(() => { // me actualiza toda la cantidad de comentarios
+    let url = 'http://localhost:8080/api/comments?chapter_id=' + id
+    setTimeout(() => {
+      axios.get(url, headers).then(res => dispatch(getComments({ comments: res.data.comments })))
+    }, 100)
+  }, [])
+
+  return (
+    <>
+      {
+        token ? <div className="mover">
+          <div className="div-chapter2">
+            <div className="chapter2">
+              <p className="parrafo-chapter2"> Cap N° {chapter.order} - {chapter.title} - Page {index} </p>
+            </div>
           </div>
-          <div className="capitulo-img">
-            <img src={chapter?.pages?.[index]} alt="comicimage" />
+          <div className="contenedor-capitulos">
+            <button className="boton-back" onClick={handlePrev}>
+              <img className="flecha" src={flecha_izquierda} alt="" />
+            </button>
+
+            <div className="posi">
+              <img className="mangaa" src={chapter?.pages?.[index]} alt="" />
+            </div>
+
+            <button className="boton-next" onClick={handleNext}>
+              <img className="flecha" src={flecha} alt="" />
+            </button>
           </div>
-        </div>
-        <div className="next" onClick={handleNext}>
-          <img src="../../../imgs/next.png" alt="nextarrow" />
-        </div>
-      </div>
-      <div className="coment-number">
-        <div className="coment">
-          <p>...</p>
-        </div>
-        <h6>24</h6>
-      </div>
-    </div>
+          <div className="div-chapter3">
+            <div className="chapter3">
+              <p className="parrafo-chapter3">
+                <img className="comment" src={comment} alt="" onClick={handleRender} /> {/* ESTA ABRE EL MODAL*/}
+              </p>
+              <p>{comments.length}</p>
+              {modalState ? <Comment /> : ""}
+            </div>
+          </div>
+        </div> : <div className='noLogged'><Anchor to='/auth'>Please Register or Login</Anchor></div>
+      }
+    </>
   );
 }
