@@ -12,6 +12,7 @@ import Page from "./Page/Page"
 import Mangas from "./Mangas/Mangas.jsx"
 import Manga from './Manga/Manga'
 import MyMangas from "./MyMangas/MyMangas";
+import MyReactions from "./MyReactions/MyReactions";
 import EditChapter from "./EditChapter/EditChapter.jsx"
 import AuthorProfile from "./AuthorProfile/AuthorProfile.jsx"
 
@@ -44,6 +45,7 @@ export const router = createBrowserRouter([
         { path: "/api/chapters/:id/:page", element: <Page/>},
         { path: "/manga/:id/:page", element: <Manga/>},
         { path: "/edit/:manga_id", element: <EditChapter/>},
+        { path: '/myreactions/:page', element: <MyReactions /> },
         {path: "/mangas/:page", element: <Mangas/>},
         { path: "/profile", element: <AuthorProfile /> },
     ]},

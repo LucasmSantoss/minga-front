@@ -1,14 +1,15 @@
 
-
 import React from 'react'
 import './formAuthor.css'
 import { useState } from 'react'
 import Register from '../Register/Register'
 import FormLogin from '../FormLogin/FormLogin'
 import { useEffect } from 'react'
+import { Link as Anchor } from 'react-router-dom'
 
 export default function Auth1({state}) {
   const [render, setRender] = useState(false)
+  let token = localStorage.getItem('token')
 
   useEffect(() => {
     setRender(state)
@@ -27,10 +28,14 @@ export default function Auth1({state}) {
   }
 
   return (
-    <div className='auth'>
-      { !render ? <Register renderFormLogin={renderFormLogin} /> : "" }
-      { render === 'register' ? <Register renderFormLogin={renderFormLogin}/> : "" }
-      { render === 'login' ? <FormLogin renderRegister={renderRegister} /> : "" }
-    </div>
+    <>
+      {
+        token ? <div className='noLogged'><Anchor to='/'>Already Logged in</Anchor></div> : <div className='auth'>
+          {!render ? <Register renderLogin={renderFormLogin} /> : ""}
+          {render === 'register' ? <Register renderLogin={renderFormLogin} /> : ""}
+          {render === 'login' ? <FormLogin renderRegister={renderRegister} /> : ""}
+        </div>
+      }
+    </>
   )
 }

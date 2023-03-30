@@ -30,8 +30,10 @@ export default function MangasCards() {
     <div className='mangas-cards'>
    { mangas ?   
         mangas.length ? mangas.map((manga, i) => {
+
             let card =
                 <section className='card' key={i}>
+
                     <div className='card-text'>
                         <div className={'cardColor-'+manga.category_id.name}></div>
                         <div className='text'>
