@@ -107,7 +107,7 @@ export default function EditChapterForm() {
         }
         setShowAlertEdit(false)
     }
-}
+
     async function handleNoEdit(event) {
         event.preventDefault()
         setShowAlertEdit(false)
@@ -199,7 +199,5 @@ export default function EditChapterForm() {
 
         </form>
     )
-}
-
 }
 
