@@ -11,8 +11,16 @@ import modalReducer from './RenderEditModal/reducer'
 import modalDeleteReducer from './RenderDeleteModal/reducer'
 import chaptersReducer from "./Chapters/reducer"
 import authorReducer from './Author/reducer'
+<<<<<<< HEAD
 import companyReducer from './Company/reducer'
 
+=======
+import checkoutMercadoPagoReducer from "./CheckoutMercadoPago/reducer"
+import reactionsReducer from './Reactions/reducer'
+import favouritesMangasReducer from './FavouritesMangas/reducer'
+import renderCommentsModal from './RenderCommentsModal/reducer'
+import getComents from './Comments/reducer'
+>>>>>>> 9e5e0274f1cdcfbd46ff3edf48490baaa3ccd9f8
 
 const store = configureStore({
     reducer: {
@@ -28,8 +36,16 @@ const store = configureStore({
         modalDeleteState: modalDeleteReducer,
         chapters: chaptersReducer,
         author: authorReducer,
+<<<<<<< HEAD
         Company: companyReducer
 
+=======
+        checkout: checkoutMercadoPagoReducer
+        reactions: reactionsReducer,
+        favouritesMangas: favouritesMangasReducer,
+        commentsModal: renderCommentsModal,
+        comments: getComents
+>>>>>>> 9e5e0274f1cdcfbd46ff3edf48490baaa3ccd9f8
     }
 })
 

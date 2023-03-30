@@ -17,7 +17,7 @@ export default function MangasTypes() {
 
     let checkedCategories = useSelector(store => store.categories.categories)
     console.log(useSelector(store=>store.categories))
-    let urlcategories = "http://localhost:8080/api/category"
+    let urlcategories = "https://minga-back-m-20.onrender.com/api/category"
     
     
     useEffect(() => {

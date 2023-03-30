@@ -44,7 +44,7 @@ export default function EditModal() {
       cover_photo: coverPhoto.current.value
     };
 
-    const url = 'http://localhost:8080/api/manga/'+editId
+    const url = 'https://minga-back-m-20.onrender.com/api/manga/'+editId
 
 
     try {
@@ -69,8 +69,15 @@ export default function EditModal() {
   }
 
   async function renderCategory() {
+<<<<<<< HEAD
     await axios.get('http://localhost:8080/api/category').then((response ) => {  console.log(response.data.data),setCategorias(response.data.data) })
    
+=======
+    await axios.get("https://minga-back-m-20.onrender.com/api/category").then((response) =>{
+      console.log(response.data.data)
+      setCategorias(response.data.data)
+     })
+>>>>>>> 9e5e0274f1cdcfbd46ff3edf48490baaa3ccd9f8
   }
 
 
@@ -79,7 +86,7 @@ export default function EditModal() {
   }
 
   useEffect(() => {
-    axios.get('http://localhost:8080/api/manga/' + editId, headers).then(response => setMangaToEdit(response.data.manga))
+    axios.get('https://minga-back-m-20.onrender.com/api/manga/' + editId, headers).then(response => setMangaToEdit(response.data.manga))
   }, [editId])
 
   return (

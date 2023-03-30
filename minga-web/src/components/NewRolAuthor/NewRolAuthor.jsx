@@ -1,7 +1,7 @@
 import React from 'react'
 import './newRolAuthor.css'
 import { Link as Anchor } from 'react-router-dom'
-import img1 from '../../images/companyImg.png'
+import img1 from '../../images/Ellipse 3.png'
 import img2 from '../../images/Ellipse 4.png'
 import img3 from '../../images/Ellipse 5.png'
 

@@ -19,21 +19,23 @@ export default function Form() {
         [passwordRef.current.name]: passwordRef.current.value,
     }
     
-    let url = 'http://localhost:8080/api/signin/  '
+    let url = 'http://localhost:8080/api/signin/'
     
+
+    let admin
     try {
-        await axios.post(
-            url,    /* URL del endpoint para crear una categoria */
-            data    /* objeto necesario para crear una categoria (tal cual lo armo en postman) */
-        )
+      await axios.post(url, data)
         .then(res => {
+          res.data.user.is_admin ? (admin=true) : (admin=false)
           localStorage.setItem('token', res.data.token)
           localStorage.setItem('user', JSON.stringify({
+            id: res.data.user._id,
             name: res.data.user.name,
             mail: res.data.user.mail,
             photo: res.data.user.photo,
+            admin
           }))
-          setTimeout(() => window.location.href='/', 1000)
+          setInterval(() => window.location.href = '/', 1000)
         })
         Swal.fire({
           title: 'Loggin success',

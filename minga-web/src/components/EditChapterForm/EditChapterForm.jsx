@@ -71,7 +71,7 @@ export default function EditChapterForm() {
             data = ''
         }
 
-        let url = 'http://localhost:8080/api/chapters/' + chapter_id;
+        let url = 'https://minga-back-m-20.onrender.com/api/chapters/' + chapter_id;
         let token = localStorage.getItem('token');
         let headers = { headers: { 'Authorization': `Bearer ${token}` } };
 
@@ -104,6 +104,7 @@ export default function EditChapterForm() {
             } else {
                 Swal.fire(error.response.data)
             }
+        }
         setShowAlertEdit(false)
     }
 }
@@ -124,7 +125,7 @@ export default function EditChapterForm() {
     async function handleYes(event) {
         event.preventDefault();
 
-        let url = 'http://localhost:8080/api/chapters/' + chapter_id;
+        let url = 'https://minga-back-m-20.onrender.com/api/chapters/' + chapter_id;
         let token = localStorage.getItem('token');
         let headers = { headers: { 'Authorization': `Bearer ${token}` } };
 
@@ -199,3 +200,6 @@ export default function EditChapterForm() {
         </form>
     )
 }
+
+}
+

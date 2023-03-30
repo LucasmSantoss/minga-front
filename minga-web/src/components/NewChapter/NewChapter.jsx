@@ -28,7 +28,7 @@ export default function NewChapter() {
           manga_id,  
       }
 
-      let url = 'http://localhost:8080/api/chapters'
+      let url = 'https://minga-back-m-20.onrender.com/api/chapters'
       let token = localStorage.getItem('token')
       let headers = { headers: { "Authorization": `Bearer ${token}`}}
     {

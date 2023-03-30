@@ -18,6 +18,7 @@ export default function CreateManga() {
     async function handleSubmit(e) {
         e.preventDefault();
         const filteredCategory = categorias.find((category) => (category.name == categoria))
+        console.log(filteredCategory)
         let manga = {
             title: title.current.value,
             description: description.current.value,
@@ -25,7 +26,7 @@ export default function CreateManga() {
             category_id: filteredCategory._id
         };
         
-        const url = 'http://localhost:8080/api/manga'
+        const url = 'https://minga-back-m-20.onrender.com/api/manga'
         try {
             await axios.post(url, manga)
             formulario.current.reset()
@@ -46,14 +47,14 @@ export default function CreateManga() {
     }
 
     async function renderCategory() {
-        await axios.get('http://localhost:8080/api/manga').then((response) => { setCategorias(response.data.categories) })
+        await axios.get('https://minga-back-m-20.onrender.com/api/manga').then((response) => { setCategorias(response.data.categories) })
     }
 
     return (
         <div>
             <div className='manga-content'>
                 <section >
-                    <h2 className='title-newmanga'>New Manga</h2>
+                    <h2 className='title-manga'>New Manga</h2>
                 </section>
                 <form ref={formulario} className='manga-form' onSubmit={handleSubmit}>
                     <input className='manga-input' type='text' placeholder='Insert title' ref={title} />

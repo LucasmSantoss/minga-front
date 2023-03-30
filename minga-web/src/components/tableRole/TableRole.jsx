@@ -4,7 +4,6 @@ import './tableRole.css';
 import { useDispatch, useSelector } from 'react-redux';
 import authorActions from '../../store/Author/actions.js';
 import companyActions from '../../store/Company/actions.js';
-//import InputActive from '../ImputActive/ImputActive';
 import captureActions from '../../store/Capture/actions.js';
 import Company from '../../components/CompanyTable/CompanyTable';
 import Author from '../../components/AuthorTable/AuthorTable';

@@ -11,8 +11,13 @@ import FormLogin from "./FormLogin/FormLogin";
 import Page from "./Page/Page"
 import Mangas from "./Mangas/Mangas.jsx"
 import Manga from './Manga/Manga'
+<<<<<<< HEAD
 import AuthorForm from "./AuthorForm/AuthorForm"
 import MyMangas from "./MyMangas/MyMangas";
+=======
+import MyMangas from "./MyMangas/MyMangas";
+import MyReactions from "./MyReactions/MyReactions";
+>>>>>>> 9e5e0274f1cdcfbd46ff3edf48490baaa3ccd9f8
 import EditChapter from "./EditChapter/EditChapter.jsx"
 import AuthorProfile from "./AuthorProfile/AuthorProfile.jsx"
 import AdminPanel from "./AdminPanel/AdminPanel";
@@ -49,7 +54,12 @@ export const router = createBrowserRouter([
         { path: "/api/chapters/:id/:page", element: <Page/>},
         { path: "/manga/:id/:page", element: <Manga/>},
         { path: "/edit/:manga_id", element: <EditChapter/>},
+<<<<<<< HEAD
         { path: "/mangas/:page", element: <Mangas/> },
+=======
+        { path: '/myreactions/:page', element: <MyReactions /> },
+        {path: "/mangas/:page", element: <Mangas/>},
+>>>>>>> 9e5e0274f1cdcfbd46ff3edf48490baaa3ccd9f8
         { path: "/profile", element: <AuthorProfile /> },
         { path: "/create-company", element: <CompanieForm/> },
         { path: "/admin/prueba", element: <AdminPanel /> },

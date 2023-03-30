@@ -10,7 +10,7 @@ import store from "./store/store.js"
 
 export default function App() {
     useEffect(() => {
-        let url = `http://localhost:8080/api/token`
+        let url = `https://minga-back-m-20.onrender.com/api/token`
         let token = localStorage.getItem('token')
         if (token) {
         let headers = {headers:{'Authorization':`Bearer ${token}`}}

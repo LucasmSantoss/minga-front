@@ -8,6 +8,18 @@
 }
 .mangas-cards .card-anchor{
     text-decoration: none;
+    background: rgb(47, 18, 211);
+    width: 92px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 50px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 95.19%;
 }
 .mangas-cards .card-anchor:hover{
     transform: scale(1.1);
@@ -30,11 +42,23 @@
     height: 100%;
     gap: 15px;
 }
-.mangas-cards .card-text .card-color{
+.mangas-cards .card-text .cardColor-shonen{
     height: 71.34%;
-    background: #FC9C57;
+    border: 3px solid #EF8481;
+}
+.mangas-cards .card-text .cardColor-comic{
+    height: 71.34%;
+    border: 3px solid #8883F0;
+}
+.mangas-cards .card-text .cardColor-shojo{
+    height: 71.34%;
+    border: 3px solid #00BA88;
+}
+.mangas-cards .card-text .cardColor-seinen{
+    height: 71.34%;
     border: 3px solid #FC9C57;
 }
+
 .mangas-cards .card .card-text .text{
     height: 100%;
     display: flex;
@@ -70,6 +94,18 @@
     border-radius: 40% 10px 10px 40%;
     object-position: 50%;
     object-fit: cover;
+}
+.mangas-cards .card .card-text .text .span-shonen{
+    color: #EF8481;
+}
+.mangas-cards .card .card-text .text .span-comic{
+    color: #8883F0;
+}
+.mangas-cards .card .card-text .text .span-shojo{
+    color: #00BA88;
+}
+.mangas-cards .card .card-text .text .span-seinen{
+    color: #FC9C57;
 }
 
 @media (max-width: 500px){

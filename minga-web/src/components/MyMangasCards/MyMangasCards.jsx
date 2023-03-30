@@ -53,7 +53,7 @@ export default function MyMangasCards() {
                                 <div className={'card-color-'+manga.category_id.name}></div>
                                 <div className='text'>
                                     <div className='createAndEdit-icons'>
-                                        <Anchor to={'/chapter-form/' + manga._id}><Image src={plusIcon} /></Anchor>
+                                        <Anchor to={'/chapther-form/' + manga._id}><Image src={plusIcon} /></Anchor>
                                         <Anchor to={'/edit/' + manga._id}><Image src={editIcon} /></Anchor>
                                     </div>
                                     <div>
@@ -61,7 +61,7 @@ export default function MyMangasCards() {
                                         <span className={'span-'+manga.category_id.name}>{manga.category_id.name}</span>
                                     </div>
                                     <div className='actions-btns'>
-                                        <Anchor className='myMangas-card-anchor' to={'/edit/' + manga._id }>View</Anchor>
+                                        <Anchor className='myMangas-card-anchor' to={'/manga/' + manga._id + '/1' }>View</Anchor>
                                         <Anchor id={manga._id} className='myMangas-card-anchor editBtn' onClick={handleEdit}>Edit</Anchor>
                                         <Anchor id={manga._id} className='myMangas-card-anchor deleteBtn' onClick={handleDelete}>Delete</Anchor>
                                     </div>
