@@ -8,10 +8,10 @@ const read_chapters = createAsyncThunk(
         let headers = { headers: { 'Authorization': `Bearer ${token}` } }
         let url = ''
         if (page) {
-            url = 'https://minga-back-m-20.onrender.com/api/chapters?manga_id=' + id + '&page=' + page;
+            url = 'https://minga-grupoblanco.onrender.com/api/chapters?manga_id=' + id + '&page=' + page;
         }
         if (limit === 0) {
-            url = 'https://minga-back-m-20.onrender.com/api/chapters?manga_id=' + id + '&limit=' + limit;
+            url = 'https://minga-grupoblanco.onrender.com/api/chapters?manga_id=' + id + '&limit=' + limit;
         }
 
         try {
@@ -37,7 +37,7 @@ const get_chapter = createAsyncThunk(
 
             let token = localStorage.getItem('token')
             let headers = { headers: { 'Authorization': `Bearer ${token}` } }
-            let url = 'https://minga-back-m-20.onrender.com/api/chapters/' + id;
+            let url = 'https://minga-grupoblanco.onrender.com/api/chapters/' + id;
             try {
                 let response = await axios.get(url, headers)
                 return {

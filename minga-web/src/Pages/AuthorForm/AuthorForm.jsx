@@ -29,7 +29,7 @@ export default function AuthorForm() {
         [urlProfile.current.name]: urlProfile.current.value,
         active:true
       };
-      let url = "http://localhost:8080/api/authors";
+      let url = "https://minga-grupoblanco.onrender.com/api/authors";
       try {
         await axios.post(url, data, headers);
         formRef.current.reset();

@@ -17,7 +17,7 @@ export default function NavBody({ handleRender }) {
 
     let token = localStorage.getItem('token')
     let headers = { headers: { 'Authorization': `Bearer ${token}` } }
-    let url = 'http://localhost:8080/api/signout'
+    let url = 'https://minga-grupoblanco.onrender.com/api/signout'
     let user = JSON.parse(localStorage.getItem('user'))
 
 

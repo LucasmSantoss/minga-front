@@ -22,7 +22,7 @@ export default function Form() {
     }
     
     
-    let url = 'https://minga-back-m-20.onrender.com/api/signup'
+    let url = 'https://minga-grupoblanco.onrender.com/api/signup'
     console.log(data)
 
     if (data.name.length < 3) {

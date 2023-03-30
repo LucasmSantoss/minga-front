@@ -24,7 +24,7 @@ export default function NavHeader({handleRender}) {
     let photo = user.photo
 
     useEffect(() => {
-        let url = `https://minga-back-m-20.onrender.com/api/token`
+        let url = `https://minga-grupoblanco.onrender.com/api/token`
         if (token) {
             let headers = {headers:{'Authorization':`Bearer ${token}`}}
             axios.post(url,null,headers)

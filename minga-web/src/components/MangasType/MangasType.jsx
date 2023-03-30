@@ -19,7 +19,7 @@ export default function MangasType() {
 
     let checkedCategories = useSelector(store => store.categories.categories)
 
-    let categoriesUrl = "https://minga-back-m-20.onrender.com/api/category"
+    let categoriesUrl = "https://minga-grupoblanco.onrender.com/api/category"
     console.log(checkedCategories)
     useEffect(() => {
         axios.get(categoriesUrl).then(e => setCategories(e.data.categories))
