@@ -1,14 +1,13 @@
-import { createAction } from "@reduxjs/toolkit"
 
+import { createAction } from "@reduxjs/toolkit";
 
 let captureState = createAction(
     'captureState',
-    ({ buttonState, page }) => {
+    ({ buttonState}) => {
         return {
             payload: { 
                 checked: buttonState,
              }
-
         }
     }
 )

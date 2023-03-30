@@ -47,14 +47,13 @@ export default function NavBody({handleRender}) {
     return (
         <div className='navBody'>
             <Anchor to='/'>Home</Anchor>
-            { token ? <Anchor to='/signup'>New Author</Anchor> : "" }
+            { token ? <Anchor to='/new-role'>New Rol</Anchor> : "" }
             { token ? <Anchor to='/mymangas/1' >My Mangas</Anchor>: "" }
-           
             { token ? "" : <Anchor to='/signup' onClick={handleRender}>Register</Anchor> }
             { token ? "" : <Anchor to='/signin' onClick={handleRender}>Login</Anchor> }
             <Anchor to='/chapther-form/:manga_id'>Chapter</Anchor>
-   
-            {token && author? <Anchor to='/profile'>Author-Profile</Anchor> : ''}
+            { token && author? <Anchor to='/profile'>Author-Profile</Anchor> : '' }
+            { token ? <Anchor to='/admin/prueba'>Admin Panel</Anchor> : "" }
             <Anchor to='/mangas/1'>Mangas</Anchor>
             <Anchor to="/mangas">New Manga</Anchor>
             { token ? <Anchor onClick={handleLogout}>Logout</Anchor>: "" }
@@ -62,3 +61,4 @@ export default function NavBody({handleRender}) {
         </div>
     )
 }
+

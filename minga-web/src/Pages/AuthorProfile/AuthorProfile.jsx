@@ -7,7 +7,7 @@ export default function AuthorProfile() {
     return (
         <>
             <div className='contenedor'>
-                <div id='profileBackground'>
+                <div id='profile-Background'>
                     <h1>Profile</h1>
                 </div>
                 <div className='sectionProfile'>
