@@ -13,6 +13,7 @@ import modalActions from '../../store/RenderCommentsModal/actions'
 import commentsActions from '../../store/Comments/actions'
 import { Link as Anchor } from "react-router-dom";
 
+
 export default function Page() {
   const [chapter, setChapters] = useState({});
   const [next, setNext] = useState('');
@@ -28,6 +29,7 @@ export default function Page() {
   let [index, setIndex] = useState(Number(page));
 
   let comments = useSelector(store => store.comments.comments)
+
   useEffect(() => {
     axios
       .get(`${url}${id}`)

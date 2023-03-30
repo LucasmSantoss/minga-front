@@ -18,7 +18,7 @@ export default function DeleteModal() {
 
     let token = localStorage.getItem('token')
     let headers = { headers: { 'Authorization': `Bearer ${token}` } }
-    const url = 'http://localhost:8080/api/manga/' + deleteId
+    const url = 'https://minga-back-m-20.onrender.com/api/manga/' + deleteId
 
     async function handleDelete() {
         try {

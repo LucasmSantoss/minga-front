@@ -22,7 +22,7 @@ export default function Form() {
     }
     
     
-    let url = 'http://localhost:8080/api/signup'
+    let url = 'https://minga-back-m-20.onrender.com/api/signup'
     console.log(data)
 
     if (data.name.length < 3) {

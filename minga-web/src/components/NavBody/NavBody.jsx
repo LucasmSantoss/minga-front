@@ -20,6 +20,7 @@ export default function NavBody({ handleRender }) {
     let url = 'http://localhost:8080/api/signout'
     let user = JSON.parse(localStorage.getItem('user'))
 
+
     async function handleLogout() {
         try {
             await axios.post(url, "", headers)
