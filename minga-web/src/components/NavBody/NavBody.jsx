@@ -62,10 +62,11 @@ export default function NavBody({ handleRender }) {
             {token && author?.active ? <Anchor to='/mymangas/1' >My Mangas</Anchor> : ""}
             {token && author?.active ? <Anchor to='/mangas'>New Manga</Anchor> : ""}
             {token ? <Anchor to='/new-role'>New Role</Anchor> : ""}
-            {token && user.admin ? <Anchor to='/admin'>Admin Panel</Anchor> : ''}
+            {token && user.admin ? <Anchor to='/admin/prueba'>Admin Panel</Anchor> : ''}
             {token ? "" : <Anchor to='/signup' onClick={handleRender}>Register</Anchor>}
             {token ? "" : <Anchor to='/signin' onClick={handleRender}>Login</Anchor>}
             {token ? <Anchor to='/' onClick={handleLogout}>Logout</Anchor> : ""}
         </div>
     )
 }
+

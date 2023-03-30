@@ -11,6 +11,7 @@ import modalReducer from './RenderEditModal/reducer'
 import modalDeleteReducer from './RenderDeleteModal/reducer'
 import chaptersReducer from "./Chapters/reducer"
 import authorReducer from './Author/reducer'
+import companyReducer from './Company/reducer'
 import checkoutMercadoPagoReducer from "./CheckoutMercadoPago/reducer"
 import reactionsReducer from './Reactions/reducer'
 import favouritesMangasReducer from './FavouritesMangas/reducer'
@@ -31,7 +32,8 @@ const store = configureStore({
         modalDeleteState: modalDeleteReducer,
         chapters: chaptersReducer,
         author: authorReducer,
-        checkout: checkoutMercadoPagoReducer
+        Company: companyReducer,
+        checkout: checkoutMercadoPagoReducer,
         reactions: reactionsReducer,
         favouritesMangas: favouritesMangasReducer,
         commentsModal: renderCommentsModal,

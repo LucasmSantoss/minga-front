@@ -11,7 +11,7 @@
     flex-direction: column;
 }
 
-#profileBackground {
+#profile-Background {
     width: 100%;
     height: 55vh;
     background-image: url(../../images/Rectangle_606.png);

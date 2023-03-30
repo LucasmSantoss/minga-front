@@ -11,10 +11,14 @@ import FormLogin from "./FormLogin/FormLogin";
 import Page from "./Page/Page"
 import Mangas from "./Mangas/Mangas.jsx"
 import Manga from './Manga/Manga'
+import AuthorForm from "./AuthorForm/AuthorForm"
 import MyMangas from "./MyMangas/MyMangas";
 import MyReactions from "./MyReactions/MyReactions";
 import EditChapter from "./EditChapter/EditChapter.jsx"
 import AuthorProfile from "./AuthorProfile/AuthorProfile.jsx"
+import AdminPanel from "./AdminPanel/AdminPanel";
+import CompanieForm from './CompanyForm/CompanyForm'
+import NewRole from "./NewRole/NewRole";
 
 
 
@@ -29,6 +33,7 @@ export const router = createBrowserRouter([
         { path: "/signup", element: <Register /> },
         { path: "/signin", element: <FormLogin/> },
         { path: "/*", element: <NotFound /> },
+        { path: "/api/authors", element: <AuthorForm /> }
 
 
     ]   },
@@ -48,6 +53,9 @@ export const router = createBrowserRouter([
         { path: '/myreactions/:page', element: <MyReactions /> },
         {path: "/mangas/:page", element: <Mangas/>},
         { path: "/profile", element: <AuthorProfile /> },
+        { path: "/create-company", element: <CompanieForm/> },
+        { path: "/admin/prueba", element: <AdminPanel /> },
+        { path: "/new-role", element: <NewRole/> }
     ]},
 ])
 

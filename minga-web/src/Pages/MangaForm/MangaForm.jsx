@@ -41,7 +41,7 @@ export default function CreateManga() {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: error.response.data.message[0],
+                text: error.response.data.message,
               })
         }
     }
