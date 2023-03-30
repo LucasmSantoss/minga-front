@@ -64,8 +64,8 @@
     .sectionUp{
         width: 100%;
         gap: 59px;
+        padding-top: 120px;
         padding-bottom: 0;
-        padding-top: 200px;
         height: 440px;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/public/imgs/fondo-mangas.png);
         background-size: 100vw 62.89vh;

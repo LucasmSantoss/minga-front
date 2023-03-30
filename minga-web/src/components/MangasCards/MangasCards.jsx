@@ -36,11 +36,13 @@ export default function MangasCards() {
 
                     <div className='card-text'>
                         <div className={'cardColor-'+manga.category_id.name}></div>
+                        <div className='divTextRead'>
                         <div className='text'>
                             <h2>{manga.title}</h2>
                             <span className={'span-'+manga.category_id.name}>{manga.category_id.name}</span>
                         </div>
                         <Anchor className='card-anchor' to={'/manga/'+manga._id+"/1"}>Read</Anchor>
+                        </div>
                     </div>
                     <div className='card-img'>
                         <img className='imgcard' src={manga.cover_photo} alt='manga-image' />
