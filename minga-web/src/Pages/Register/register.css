@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  min-height: 100vh
+
 }
 
 .navBar {
@@ -57,12 +57,12 @@
       
       display: flex;  
       justify-content: center;
-      margin-bottom: 400px;
+     
       
     }
     .conteiner-form {
       width: 30rem;
-      margin-top: 120px;
+    
 
     }
   }
