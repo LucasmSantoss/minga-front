@@ -5,13 +5,12 @@
       margin-left: 5%;
   }
   
-  .rectangle {
-    
+  .rectangle { 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     gap: 5rem;
     width: 100%;
-    height: 100%;
+    height: 80%;
     background: linear-gradient(87.46deg, #4338ca 0%, #5e52f3 100%);
     border-radius: 6px;
     align-items: center;
@@ -19,15 +18,15 @@
   }
   
   .deku {
-  width: 276px;
-  height: 306px;
+  width: 200px;
+  height: 200px;
   margin-top: -30px;
   margin-left: 20px;
   }
   
   .poster {
-  width: 180px;
-  height: 270px;
+  width: 140px;
+  height: 180px;
   margin-top: -70px;
   padding-left: -120px;
   }

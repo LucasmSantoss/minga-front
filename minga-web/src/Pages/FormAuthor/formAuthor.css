@@ -1,4 +1,4 @@
-.conteiner {
+/* .conteiner {
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -13,21 +13,10 @@
   margin-bottom: 120px;
 }
 
-.conteiner-img {
-  background: url(../../../public/imgs/authorImg.png);
-  width: 50%;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 1024px;
-}
-
 .conteiner-img div {
   display: flex;
   flex-direction: column;
-}
+} */
 
 .description {
   margin: auto;

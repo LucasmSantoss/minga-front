@@ -9,6 +9,10 @@
     object-fit: cover;
   }
 
+.container-hero {
+  height: 100vh;
+}
+
   @media (max-width: 750px){
   .fondo {
     background-image: url(../../../public/imgs/background-mobile.png);

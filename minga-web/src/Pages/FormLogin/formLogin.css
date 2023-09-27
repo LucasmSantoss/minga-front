@@ -1,0 +1,13 @@
+.form-lg {
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.img-form {
+    height: 100vh;
+    width: 100%;
+}

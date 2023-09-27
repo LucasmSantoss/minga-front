@@ -5,17 +5,13 @@ import './formLogin.css'
 
 function FormAuthor() {
     return (
-        <div>
-          
-            <div className='conteiner'>
-            <div className='conteiner-img'>
-			<img className="img-form" src="./imgs/loginImg.png" alt="Img-Pagina-Form" />
+        <div className='form-lg'>
+            <div>
+			<img className="img-form" src="./imgs/formImg.png" alt="Img-Pagina-Form" />
 			</div>
-			<div className='conteiner-form'>
+			<div className='form-lg'>
             <FormLg />
 			</div>	
-			
-            </div>
         </div>
     );
 }

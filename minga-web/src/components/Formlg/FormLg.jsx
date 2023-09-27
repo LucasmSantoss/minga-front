@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 import "./formLg.css";
-import Wellcome from "../Wellcome/Wellcome";
 import Image from "../Image/Image";
+import H2 from '../H2/H2'
+import ImgLogoForm from '../ImgLogoForm/ImgLogoForm'
 import axios from "axios";
 import Swal from 'sweetalert2'
 
@@ -60,10 +61,13 @@ export default function Form() {
 }
 
   return (
-    <div className="register-fondo">
-      <div className="register">
-        <Wellcome />
-        <form className="form"  onSubmit={handleSubmit}>
+      <div className="register-lg">
+      <section className='welcome-section'>
+            <ImgLogoForm src="./imgs/logoIgna.png"/>
+            <H2 text='Welcome!'/>
+            <p>Discover manga, manhua and manhwa, track your progress, have fun, read manga.</p>
+        </section>
+        <form className="formlg"  onSubmit={handleSubmit}>
           <fieldset>
             <legend>Email</legend>
             <input type="email" name="mail" id="mail" ref={emailRef}  required />
@@ -101,6 +105,5 @@ export default function Form() {
           </p>
         </form>
       </div>
-    </div>
   );
 }

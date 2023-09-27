@@ -1,5 +1,4 @@
 import React from 'react';
-
 import SectionMain from '../../components/Section-main/SectionMain';
 import SectionDown from '../../components/Section-Down/SectionDown';
 import './hero.css'
@@ -7,7 +6,7 @@ import './hero.css'
 
 function Hero() {
     return (
-        <div>
+        <div className='container-hero'>
             <div className="fondo">
 			<SectionMain/>
 			</div>
