@@ -65,6 +65,8 @@ export default function Form() {
 }
 
   return (
+    <div className='conteiner'>
+    <div className='conteiner-form'>
     <div className="register-fondo">
       <div className="register">
         <Wellcome />
@@ -135,7 +137,13 @@ export default function Form() {
           </p>
         
         </form>
+        </div>
+
       </div>
+    </div>
+    <div className='conteiner-img'>
+			<img className="img-form" src="./imgs/formImg.png" alt="Img-Pagina-Form" />
+			</div>
     </div>
   );
 }
