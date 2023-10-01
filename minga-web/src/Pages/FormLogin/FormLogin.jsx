@@ -10,8 +10,12 @@ function FormAuthor() {
 			<img className="img-form" src="./imgs/formImg.png" alt="Img-Pagina-Form" />
 			</div>
 			<div className='form-lg'>
+        <div>
+          
+       
             <FormLg />
 			</div>	
+		
         </div>
     );
 }
