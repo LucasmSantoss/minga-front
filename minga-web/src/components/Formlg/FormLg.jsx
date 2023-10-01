@@ -5,6 +5,7 @@ import H2 from '../H2/H2'
 import ImgLogoForm from '../ImgLogoForm/ImgLogoForm'
 import axios from "axios";
 import Swal from 'sweetalert2'
+import Wellcome from '../Wellcome/Wellcome.jsx'
 
 export default function Form() {
   
