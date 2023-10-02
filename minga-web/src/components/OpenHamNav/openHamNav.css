@@ -1,6 +1,6 @@
 .open-nav{
     background: linear-gradient(87.46deg, #4338CA 0%, #5E52F3 100%);
-    border-radius: 10px;
+    border-radius: 0px 10px 10px 0px;
     width: 29.861vw;
     height: 100vh;
     z-index: 100000;

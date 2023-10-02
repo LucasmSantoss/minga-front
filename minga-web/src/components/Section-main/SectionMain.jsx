@@ -1,5 +1,6 @@
 import React from 'react';
 import './sectionMain.css';
+import { Link as Anchor } from 'react-router-dom'
 
 function SectionMain() {
     return (
@@ -11,7 +12,7 @@ function SectionMain() {
 				<h3 className='subTitle' >Explore our catalog to live the adventure of your life</h3>
 			</div>
 			<div >
-				<button className='button'><p className='p-button'>Let's go!</p></button>
+			    <Anchor to='/signup' className='button'><p className='p-button'>Let's go!</p></Anchor>
 			</div>
 		</section>
     );
