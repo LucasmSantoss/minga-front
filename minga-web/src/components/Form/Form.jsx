@@ -65,7 +65,7 @@ export default function Form() {
 }
 
   return (
-    <div className='conteiner'>
+    <div className='conteiner-register'>
     <div className='conteiner-form'>
     <div className="register-fondo">
       <div className="register">

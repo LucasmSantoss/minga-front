@@ -59,9 +59,9 @@ export default function Form() {
         <img className="img-form" src="./imgs/loginImg.png" alt="Img-Pagina-Form" />
       </div>
       <div className="conteiner-form-lg">
-        <div className="register">
+        <div className="login">
           <Wellcome />
-          <form className="form" onSubmit={handleSubmit}>
+          <form className="form-lg" onSubmit={handleSubmit}>
             <fieldset>
               <legend>Email</legend>
               <input type="email" name="mail" id="mail" ref={emailRef} required />
