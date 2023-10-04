@@ -65,7 +65,6 @@ export default function Form() {
 }
 
   return (
-    <div className='conteiner-register'>
     <div className='conteiner-form'>
     <div className="register-fondo">
       <div className="register">
@@ -82,7 +81,6 @@ export default function Form() {
             <input type="email" name="mail" id="mail" ref={emailRef}  required />
             <Image src="./form-img/@.svg" />
           </fieldset>
-          
           <fieldset>
             <legend>Photo</legend>
             <input
@@ -135,13 +133,10 @@ export default function Form() {
               home page
             </a>
           </p>
-        
         </form>
         </div>
-
       </div>
-    </div>
-    <div className='conteiner-img'>
+      <div className='conteiner-img'>
 			<img className="img-form" src="./imgs/formImg.png" alt="Img-Pagina-Form" />
 			</div>
     </div>

@@ -1,312 +1,282 @@
 .login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    justify-content: center;
-    height: 93vh;
-   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+  height: 93vh;
 }
 
+.form-lg {
+  display: flex;
+  flex-direction: column;
 
-
-.form-lg{
-    display: flex;
-    flex-direction: column;
-    
-    gap: 10px;
-   
- 
-    
+  gap: 10px;
 }
 
 .form-lg fieldset {
-    width: 100%;
-    height: 40px;
-    background: #EBEBEB;
-    border: 1px solid rgba(31, 31, 31, 0.5);
-    border-radius: 10px;
-    position: relative;
-    margin: 0 auto;
+  width: 100%;
+  height: 40px;
+  background: #ebebeb;
+  border: 1px solid rgba(31, 31, 31, 0.5);
+  border-radius: 10px;
+  position: relative;
+  margin: 0 auto;
 }
 
 .form-lg fieldset legend {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 0.05em;
-    background: #4338CA;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-left: 15px;
-    padding-bottom: 3px;
-    text-align:end;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  background: #4338ca;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-left: 15px;
+  padding-bottom: 3px;
+  text-align: end;
 }
 
 .form-lg fieldset input {
-    border: none;
-    background: none;
-    width: 90%;
-    height: 22px;
-    border-radius: 10px;
-    margin-left: 1rem;
+  border: none;
+  background: none;
+  width: 90%;
+  height: 22px;
+  border-radius: 10px;
+  margin-left: 1rem;
 }
 
-
-
-.form-lg .notification-check{
-    border: none;
-    background-color: white;
-    display: flex;
-    gap: 4px;
-    align-items: center;
-    height: auto;
+.form-lg .notification-check {
+  border: none;
+  background-color: white;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  height: auto;
 }
 
-.form-lg .notification-check input{
-    width: 16px;
-    height: 16px;
-    margin: 0;
-    border: 1px solid #1F1F1F;
-    border-radius: 5px;
+.form-lg .notification-check input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border: 1px solid #1f1f1f;
+  border-radius: 5px;
 }
 
-.form-lg .notification-check label{
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 0.05em;
-    color: #1F1F1F;
+.form-lg .notification-check label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  color: #1f1f1f;
 }
 
-.form-lg .sign-up{
-    width: 384px;
-    height: 40px;
-    background: #4338CA;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
-    color: #EBEBEB;
-    letter-spacing: 0.05em;
-    box-shadow: 5px 5px rgb(244, 179, 51);
-    text-decoration: none;
-    margin: 0 auto;
-    cursor: pointer;
+.form-lg .sign-up {
+  width: 384px;
+  height: 40px;
+  background: #4338ca;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ebebeb;
+  letter-spacing: 0.05em;
+  box-shadow: 5px 5px rgb(244, 179, 51);
+  text-decoration: none;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
-.form-lg .sign-in-google{
-    width: 384px;
-    height: 40px;
-    background: #EBEBEB;
-    border: 1px solid #1F1F1F;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    gap: 2px;
-    text-decoration: none;
-    margin: 0 auto;
+.form-lg .sign-in-google {
+  width: 384px;
+  height: 40px;
+  background: #ebebeb;
+  border: 1px solid #1f1f1f;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 2px;
+  text-decoration: none;
+  margin: 0 auto;
 }
 
-
-.form-lg .sign-in-google span{
-    opacity: 0.5;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    color: #1F1F1F;
+.form-lg .sign-in-google span {
+  opacity: 0.5;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1f1f1f;
 }
 
-.form-lg>p{
-    text-align: center;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.05em;
+.form-lg > p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.05em;
 }
 
-.form-lg>p .link{
-    text-decoration: none;
-    color: #4338CA; 
-    font-weight: bold;
+.form-lg > p .link {
+  text-decoration: none;
+  color: #4338ca;
+  font-weight: bold;
 }
 
+.register-text {
+  left: 168px;
+  top: 215px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
 
-.img-register img{
+.login h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+@media (max-width: 1024px) {
+  .form-lg .sign-up {
     width: 100%;
-    height: 100vh;
+  }
 }
 
-.register-text{
-    left: 168px;
-    top: 215px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 15px;
-    display: flex;
-    align-items: center;  
-    width: 50%;
-}
+@media (max-width: 720px) {
+  .login {
+    margin-top: -14%;
+  }
 
-.login h2{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 39px;
-}
+  .form-lg fieldset {
+    width: 100%;
+  }
+  .form-lg .sign-up {
+    width: 100%;
+  }
 
-
-
-
-@media (max-width: 1024px){
-   
-
-    
-    .form-lg .sign-up{
-        width: 100%;
-    }
-    
-  
-
- }
-
-@media (max-width: 720px){
-    .login {
-        
-        margin-top: -14%;
-    }
-
-    .form-lg fieldset {
-        width: 100%;
-       
-    }
-    .form-lg .sign-up{
-        width: 100%;
-    }
-    
-    .form-lg .sign-in-google{
+  .form-lg .sign-in-google {
     width: 270px;
-}
-
+  }
 }
 
 .conteiner-login {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100vh;
+}
+
+.conteiner-form-lg {
+  display: flex;
+  width: 50%;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.conteiner-img-lg {
+  background: url(../../../public/imgs/authorImg.png);
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.conteiner-img-lg div {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  margin: auto;
+  width: 553.42px;
+  height: 106px;
+  margin-top: 50px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+
+  color: #ffffff;
+}
+
+.igna {
+  width: 100%;
+  display: flex;
+  margin-left: 190px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+}
+
+.line {
+  display: flex;
+}
+.form-conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-form-lg {
+  width: 100%;
+  height: 100vh;
+}
+
+@media (max-width: 1300px) {
+  .conteiner-login {
     width: 100%;
-    height: 100vh;
-  }
-  
-  .conteiner-form-lg {
-    display: flex;
-    width: 50%;
-    height: 100vh;
-    justify-content: space-around;
-    align-items: stretch;
-  }
-  
-  .conteiner-img-lg {
-    background: url(../../../public/imgs/authorImg.png);
-    width: 50%;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    background-size: cover;
-   
-  }
-  
-  .conteiner-img-lg div {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .description {
-    margin: auto;
-    width: 553.42px;
-    height: 106px;
-    margin-top: 50px;
-  
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 36px;
-  
-    color: #ffffff;
-  }
-  
-  .igna {
-    width: 100%;
-    display: flex;
-    margin-left: 190px;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 20px;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-  
-    letter-spacing: 0.02em;
-  
-    color: #ffffff;
-  }
-  
-  .line {
-    display: flex;
-  }
-  .form-conteiner {
     display: flex;
     justify-content: center;
-    align-items: center;
   }
-  
-  .img-form {
+
+  .conteiner-form-lg {
+    display: grid;
+    justify-content: end;
+  }
+}
+
+@media (max-width: 900px) {
+  .conteiner-img-lg {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .conteiner-login {
     width: 100%;
-    height: 100vh;
+
+    display: flex;
+    justify-content: center;
   }
-  
-  @media (max-width: 1300px) {
-    .conteiner-login {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-    
-    .conteiner-form-lg {
-      display: grid;
-      justify-content: end;
-    }
+  .conteiner-form-lg {
+    width: 30rem;
   }
-  
-  @media (max-width: 900px) {
-    .conteiner-img-lg {
-      display: none;
-    }
-  }
-  
-  
-  @media (max-width: 720px) {
-    .conteiner-login {
-      width: 100%;
-  
-      display: flex;
-      justify-content: center;
-    }
-    .conteiner-form-lg {
-      width: 30rem;
-    }
-  }
-  
+}

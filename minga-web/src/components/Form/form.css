@@ -12,7 +12,7 @@
 .form{
     display: flex;
     flex-direction: column;
-}b
+}
 
 input {
     background: transparent;
@@ -121,7 +121,7 @@ input {
     color: #1F1F1F;
 }
 
-.form>p{
+.form > p{
     text-align: center;
     font-weight: 500;
     font-size: 14px;
@@ -129,7 +129,7 @@ input {
     letter-spacing: 0.05em;
 }
 
-.form>p .link{
+.form > p .link{
     text-decoration: none;
     color: #4338CA; 
     font-weight: bold;
@@ -140,13 +140,10 @@ input {
 .register-fondo{
     display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-
     width: 100%;
-   
 }
 
 .img-register img{
-    
     height: 100vh;
 }
 .register{
@@ -164,8 +161,7 @@ input {
     line-height: 15px;
     display: flex;
     align-items: center;
-    
-   width: 50%;
+    width: 50%;
 }
 
 .register h2{
@@ -247,7 +243,7 @@ swal2-title {
   
   .conteiner-form {
     display: flex;
-    width: 50%;
+    width: 100%;
     justify-content: center;
     align-items: center;
    
@@ -255,6 +251,7 @@ swal2-title {
   
   .conteiner-img {
     width: 50%;
+    height: 100vh;
   }
   
   .form-conteiner {
@@ -264,8 +261,7 @@ swal2-title {
   }
   
   .img-form {
-    width: 100%;
-  
+   
   }
   
   
@@ -277,9 +273,7 @@ swal2-title {
         justify-content: center;
         
       }
-      
-      
-      
+
     }
     
     @media (max-width:720px) {

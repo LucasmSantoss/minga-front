@@ -56,7 +56,7 @@ export default function Form() {
   return (
     <div className='conteiner-login'>
       <div className='conteiner-img-lg'>
-        <img className="img-form" src="./imgs/loginImg.png" alt="Img-Pagina-Form" />
+        <img className="img-form-lg" src="./imgs/loginImg.png" alt="Img-Pagina-Form" />
       </div>
       <div className="conteiner-form-lg">
         <div className="login">
