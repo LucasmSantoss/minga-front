@@ -66,7 +66,7 @@ export default function Form() {
 
   return (
     <div className='conteiner-form'>
-    <div className="register-fondo">
+   
       <div className="register">
         <Wellcome />
         <form className="form"  onSubmit={handleSubmit}>
@@ -135,7 +135,7 @@ export default function Form() {
           </p>
         </form>
         </div>
-      </div>
+     
       <div className='conteiner-img'>
 			<img className="img-form" src="./imgs/formImg.png" alt="Img-Pagina-Form" />
 			</div>
